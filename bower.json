@@ -1,0 +1,12 @@
+{
+  "name": "dummy",
+  "description": "A light Sass & coffee base front-end",
+  "version": "0.1.0",
+  "dependencies": {
+    "modernizr": "latest",
+    "jquery": "~1.9.0",
+    "jquery.scrollTo": "latest",
+    "jscrollpane": "~2.0.0"
+  }
+}
+

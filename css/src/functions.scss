@@ -1,0 +1,10 @@
+/*********************************
+************ Functions ***********
+*********************************/
+@function column-width( $ratio, $space , $parent: 100, $gutter: $gutter ) {
+    @return ($parent - $space * $gutter ) * $ratio
+}
+
+@function percent-width( $width, $parentWidth: $max ) {
+    @return $width / $parentWidth * 100%;
+}

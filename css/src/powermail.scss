@@ -1,0 +1,31 @@
+.tx_powermail_pi1_form { text-align: right;
+    fieldset { border: 0; }
+    .tx_powermail_line { clear: both; display: block; position: relative; margin: 10px auto; max-width: 600px; }
+    label { display: inline-block; width: 24%; padding: 4px 1%; vertical-align: top; font-size: 2em; font-family: $font; text-transform: uppercase; }
+
+    .powermail_mandatory { margin-left: 5px; }
+    textarea { height: 80px; }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"],
+    select,
+    textarea { position: relative; padding: 7px 1%; width: 70%; border: 1px solid $black; background-color: $white; text-align: left;}
+    select { width: 72.4%;  cursor: pointer;}
+    input[type="submit"] { width: auto; cursor: pointer; font-size: 2em; font-family: $font; text-transform: uppercase; }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    textarea:focus {box-shadow: 0 0 3px $outlineBlue; outline: 0; }
+    input[type="text"].invalid,
+    input[type="email"].invalid,
+    input[type="password"].invalid,
+    textarea.invalid { box-shadow: 0 0 3px $errorRed; }
+}
+
+.error {
+    padding: 3px 1px 5px 1px; height:auto; background-color: $errorRed; z-index:10; color: $white;
+    p { margin: 0; padding:0; font-weight: bold; }
+    em { display:block; position: absolute; bottom: -10px; left: 5px; width: 0; height: 0; border: 10px solid; border-bottom: 0 none; border-color: $errorRed transparent transparent; }
+}

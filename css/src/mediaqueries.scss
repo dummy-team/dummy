@@ -1,0 +1,11 @@
+@media screen and (min-width: 0px) {
+    //Apply max-width on image for browser capable of handling it
+    .csc-textpic-imagewrap, img { max-width: 100%; height: auto;}
+}
+
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 764px) {
+    .column { display: block; width: auto!important; margin: 0!important; }
+}

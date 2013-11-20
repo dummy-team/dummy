@@ -1,0 +1,8 @@
+a { color: #c11c47 }
+
+h1, p.h1-like { font-size: 30px; }
+h2, p.h2-like, p.introduction  { font-size: 22px; }
+h3, p.h3-like { font-size: 18px; }
+h4, p.h4-like{ font-size: 16px; }
+h5, p.h5-like { font-size: 15px; }
+h6, p.h6-like { font-size: 15px; }

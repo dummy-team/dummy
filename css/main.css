@@ -1,0 +1,328 @@
+/*********************************
+************* Fonts **************
+*********************************/
+/*********************************
+****** Globals Parameters ********
+*********************************/
+/* Font & Background Colors */
+/* Fonts */
+/*********************************
+************** Reset *************
+*********************************/
+html {
+  font-size: 62.5%;
+  line-height: 1.3em; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: #333333;
+  font-weight: 300; }
+
+a {
+  text-decoration: none; }
+  a img {
+    border: 0; }
+
+a:hover {
+  text-decoration: underline; }
+
+/*********************************
+************ Functions ***********
+*********************************/
+/*********************************
+************ Mixins ***********
+*********************************/
+.column {
+  display: inline-block;
+  vertical-align: top; }
+
+.flex8020 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 79.58333%; }
+.flex8020 > .column-2 {
+  margin: 0;
+  width: 18.33333%; }
+
+.flex2080 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 18.33333%; }
+.flex2080 > .column-2 {
+  margin: 0;
+  width: 79.58333%; }
+
+.flex7030 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 65.97222%; }
+.flex7030 > .column-2 {
+  margin: 0;
+  width: 31.94444%; }
+
+.flex3070 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 31.94444%; }
+.flex3070 > .column-2 {
+  margin: 0;
+  width: 65.97222%; }
+
+.flex5050 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 48.95833%; }
+.flex5050 > .column-2 {
+  margin: 0; }
+
+.flex333333 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 31.94444%; }
+.flex333333 > .column-3 {
+  margin: 0; }
+
+.flex25252525 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 23.4375%; }
+.flex25252525 > .column-4 {
+  margin: 0; }
+
+.flex602020 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 18.33333%; }
+.flex602020 > .column-1 {
+  width: 59.16667%; }
+.flex602020 > .column-3 {
+  margin: 0; }
+
+.flex502525 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 23.4375%; }
+.flex502525 > .column-1 {
+  width: 48.95833%; }
+.flex502525 > .column-3 {
+  margin: 0; }
+
+.flex404020 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 38.75%; }
+.flex404020 > .column-3 {
+  margin: 0;
+  width: 18.33333%; }
+
+.flex20202020 > .column {
+  margin: 0 2.08333% 0 0;
+  width: 18.33333%; }
+.flex20202020 > .column-5 {
+  margin: 0; }
+
+.flex {
+  margin: 30px 0;
+  background-color: #d58f26; }
+
+.column {
+  height: 200px;
+  background-color: #333333; }
+
+/*********************************
+*********** Set Margin ***********
+*********************************/
+h1, .h1-like {
+  margin: 30px 0 20px 0; }
+
+h2, .h2-like {
+  margin: 30px 0 20px 0; }
+
+h3, .h3-like {
+  margin: 30px 0 20px 0; }
+
+h4, .h4-like {
+  margin: 20px 0 10px 0; }
+
+h5, .h5-like {
+  margin: 20px 0 10px 0; }
+
+.introduction {
+  margin: 10px 0 20px 0; }
+
+p, p.bodytext {
+  margin: 10px 0 20px 0; }
+
+td p, td p.bodytext {
+  margin: 0; }
+
+ul {
+  margin: 0;
+  padding: 10px 0 10px 0; }
+  ul li {
+    margin: 10px 0 10px 0; }
+
+/*********************************
+*********** Font size ***********
+*********************************/
+p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textarea {
+  font-size: 1.6em;
+  line-height: 1.3em; }
+
+li li, li p, td p, th p, li h1, li .h1-like, li h2, li .h2-like, li h3, li .h3-like, li h4, li .h4-like, li h5, li .h5-like, li h6, li .h6-like, button {
+  font-size: 100%; }
+
+input, select, textarea {
+  font-family: Arial, sans-serif; }
+
+h1, .h1-like, h2, .h2-like, h3, .h3-like, h4, .h4-like, .introduction, h5, .h5-like {
+  line-height: 1em; }
+
+h1, .h1-like {
+  font-size: 4.2em;
+  line-height: 1.3em; }
+
+h2, .h2-like, .introduction {
+  font-size: 3.0em; }
+
+h3, .h3-like {
+  font-size: 2.2em; }
+
+h4, .h4-like {
+  font-size: 1.6em; }
+
+h5, .h5-like {
+  font-size: 1.5em; }
+
+h6, .h6-like {
+  font-size: 1.4em; }
+
+/*********************************
+************ General *************
+*********************************/
+.page {
+  margin: 0 auto;
+  width: 960px; }
+  @media screen and (min-width: 0px) {
+    .page {
+      max-width: 100%; } }
+
+a {
+  color: #c11c47; }
+
+.align-center {
+  text-align: center; }
+
+hr {
+  margin: 0 auto;
+  border: none;
+  height: 2px;
+  background-color: #333333; }
+
+hr.clear {
+  clear: both;
+  height: 0px; }
+
+.nav {
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .nav li {
+    display: inline-block;
+    margin: 5px;
+    padding: 0; }
+
+.content {
+  margin: 0 auto;
+  width: 960px; }
+  @media screen and (min-width: 0px) {
+    .content {
+      max-width: 100%; } }
+
+/********************************
+ ************* Flex *************
+ *******************************/
+/*********************************
+ ************* Header ************
+ *********************************/
+/*********************************
+ ************* Footer ************
+ *********************************/
+.tx_powermail_pi1_form {
+  text-align: right; }
+  .tx_powermail_pi1_form fieldset {
+    border: 0; }
+  .tx_powermail_pi1_form .tx_powermail_line {
+    clear: both;
+    display: block;
+    position: relative;
+    margin: 10px auto;
+    max-width: 600px; }
+  .tx_powermail_pi1_form label {
+    display: inline-block;
+    width: 24%;
+    padding: 4px 1%;
+    vertical-align: top;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase; }
+  .tx_powermail_pi1_form .powermail_mandatory {
+    margin-left: 5px; }
+  .tx_powermail_pi1_form textarea {
+    height: 80px; }
+  .tx_powermail_pi1_form input[type="text"],
+  .tx_powermail_pi1_form input[type="email"],
+  .tx_powermail_pi1_form input[type="password"],
+  .tx_powermail_pi1_form input[type="submit"],
+  .tx_powermail_pi1_form select,
+  .tx_powermail_pi1_form textarea {
+    position: relative;
+    padding: 7px 1%;
+    width: 70%;
+    border: 1px solid #333333;
+    background-color: white;
+    text-align: left; }
+  .tx_powermail_pi1_form select {
+    width: 72.4%;
+    cursor: pointer; }
+  .tx_powermail_pi1_form input[type="submit"] {
+    width: auto;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase; }
+  .tx_powermail_pi1_form input[type="text"]:focus,
+  .tx_powermail_pi1_form input[type="email"]:focus,
+  .tx_powermail_pi1_form input[type="password"]:focus,
+  .tx_powermail_pi1_form textarea:focus {
+    box-shadow: 0 0 3px #aad4ff;
+    outline: 0; }
+  .tx_powermail_pi1_form input[type="text"].invalid,
+  .tx_powermail_pi1_form input[type="email"].invalid,
+  .tx_powermail_pi1_form input[type="password"].invalid,
+  .tx_powermail_pi1_form textarea.invalid {
+    box-shadow: 0 0 3px #e04831; }
+
+.error {
+  padding: 3px 1px 5px 1px;
+  height: auto;
+  background-color: #e04831;
+  z-index: 10;
+  color: white; }
+  .error p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold; }
+  .error em {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-bottom: 0 none;
+    border-color: #e04831 transparent transparent; }
+
+@media screen and (min-width: 0px) {
+  .csc-textpic-imagewrap, img {
+    max-width: 100%;
+    height: auto; } }
+@media screen and (max-width: 764px) {
+  .column {
+    display: block;
+    width: auto !important;
+    margin: 0 !important; } }

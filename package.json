@@ -1,0 +1,14 @@
+{
+  "name": "dummy",
+  "description": "A light Sass & coffee base front-end",
+  "version": "0.1.0",
+  "devDependencies" : {
+    "grunt" : "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-open": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-sass": "*",
+    "matchdep": "*"
+  }
+}
