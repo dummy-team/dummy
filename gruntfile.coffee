@@ -26,7 +26,7 @@ module.exports = (grunt) ->
     connect:
       all:
         options:
-          port: 8080,
+          port: 8000,
           hostname: "0.0.0.0",
           middleware: (connect, options) ->
             return [

@@ -324,5 +324,5 @@ hr.clear {
 @media screen and (max-width: 764px) {
   .column {
     display: block;
-    width: auto !important;
-    margin: 0 !important; } }
+    width: auto!important;
+    margin: 0!important; } }
