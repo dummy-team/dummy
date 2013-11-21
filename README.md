@@ -8,25 +8,26 @@ A light Sass &amp; coffee front-end base
 
 - Clone
 - remove .git folder
-- add *node_modules* & *_bower_components* folders to project .gitignore
-- run [code]npm install && bower install[/code]
-- move needed minified components from *_bower_components* to *components*
+- add *node_modules* & *\_bower\_components* folders to project .gitignore
+- run *npm install && bower install*
+- move needed minified components from *\_bower\_components* to *components*
   - jQuery & Modernizr are needed
 - grunt server
 - work
 
 # To discuss
 
-## CSS File organisation
+## CSS
 - mediaqueries in a separate file / inline in the main sheet
-
+- usage of size unit ($u) : function(value) / value*$u
 
 # Road map
-- add autoprefix
-- auto docs sass & coffeescript
-- add a dinamyc demo for grid system
-- make it a generator whith dependencies and optionnal components
-- custom Modernizr build
+- 0.3.0 : add autoprefix
+- 1.0.0 : create a clean index.html & move test page in an demo/example folder
+- 1.1.0 : auto docs sass & coffeescript
+- 1.1.1 : add a dynamic demo for grid system
+- 2.0.0 : make it a generator whith dependencies and optionnal components
+- 2.1.0 : custom Modernizr build
 
 
 # tree

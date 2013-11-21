@@ -1,6 +1,3 @@
-.column { display: inline-block; vertical-align: top;}
-
-
 $col80 : column-width(.80, .25);
 $col70 : column-width(.66666666666666, .5);
 $col60 : column-width(.60, .6666666666);
@@ -10,62 +7,26 @@ $col30 : column-width(.3333333333, 2);
 $col25 : column-width(.25, 3);
 $col20 : column-width(.20, 4);
 
-.flex8020 {
-    > .column { margin: 0 $gutter 0 0; width: $col80;}
-    > .column-2 { margin: 0; width: $col20; }
+.column { display: inline-block; margin: 0 0 0 $gutter; vertical-align: top;
+    &:first-child { margin: 0; }
+}
+.column-80 { width: $col80; }
+.column-70 { width: $col70; }
+.column-60 { width: $col60; }
+.column-50 { width: $col50; }
+.column-40 { width: $col40; }
+.column-30 { width: $col30; }
+.column-25 { width: $col25; }
+.column-20 { width: $col20; }
+
+
+// custom row
+.row305020 {
+    .column-30 { width: column-width(.333333, 2); }
+    .column-50 { width: column-width(.466666, 2); }
+    .column-20 { width: column-width(.20, 2); }
 }
 
-.flex2080 {
-    > .column { margin: 0 $gutter 0 0; width: $col20;}
-    > .column-2 { margin: 0; width: $col80; }
-}
-
-.flex7030 {
-    > .column { margin: 0 $gutter 0 0; width: $col70;}
-    > .column-2 { margin: 0; width: $col30; }
-}
-
-.flex3070 {
-    > .column { margin: 0 $gutter 0 0; width: $col30;}
-    > .column-2 { margin: 0; width: $col70; }
-}
-
-.flex5050 {
-    > .column { margin: 0 $gutter 0 0; width: $col50;}
-    > .column-2 { margin: 0; }
-}
-
-.flex333333 {
-    > .column { margin: 0 $gutter 0 0; width: $col30;}
-    > .column-3 { margin: 0; }
-}
-
-.flex25252525 {
-    > .column { margin: 0 $gutter 0 0; width: $col25;}
-    > .column-4 { margin: 0; }
-}
-
-.flex602020 {
-    > .column { margin: 0 $gutter 0 0; width: $col20;}
-    > .column-1 { width: $col60;}
-    > .column-3 { margin: 0; }
-}
-
-.flex502525 {
-    > .column { margin: 0 $gutter 0 0; width: $col25;}
-    > .column-1 { width: $col50;}
-    > .column-3 { margin: 0; }
-}
-
-.flex404020 {
-    > .column { margin: 0 $gutter 0 0; width: $col40;}
-    > .column-3 { margin: 0; width: $col20; }
-}
-
-.flex20202020 {
-    > .column { margin: 0 $gutter 0 0; width: $col20;}
-    > .column-5 { margin: 0; }
-}
 // DEBUG
-.flex {  margin: 3*$u 0; background-color: $orange; }
-.column { color: $grey; background-color: $black;}
+.wrap {  margin: 1*$u 0; background-color: $orange; text-align: center;}
+.column { min-height: 100px; color: $grey; background-color: $black;}

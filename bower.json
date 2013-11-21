@@ -1,7 +1,7 @@
 {
   "name": "dummy",
   "description": "A light Sass & coffee base front-end",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "modernizr": "latest",
     "jquery": "~1.9.0",
