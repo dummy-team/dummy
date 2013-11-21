@@ -15,6 +15,7 @@ A light Sass &amp; coffee front-end base
 - grunt server
 - work
 
+
 # To discuss
 
 ## CSS
@@ -22,20 +23,25 @@ A light Sass &amp; coffee front-end base
 - mediaqueries in a separate file / inline in the main sheet
 - usage of size unit ($u) : function(value) / value*$u
 
+
 # Road map
 
-- 0.5.0 : clean CoffeScript
 - 1.0.0 : create a clean index.html & move test page in an demo/example folder
-- 1.0.1 : fix the doc task bug (breaking the chain of tasks)
+- 1.0.1 : rewrite CoffeScript
+- 1.0.2 : fix the doc task bug (breaking the chain of tasks)
 - 1.1.1 : add a dynamic demo for grid system
 - 2.0.0 : make it a generator whith dependencies and optionnal components
 - 2.1.0 : custom Modernizr build
 
+
 #Kown issues
 
 - To build annotated sources for Sass files you need to run *grunt docco:buildSass*
+- To build annotated sources for CoffeeScript files you need to run *grunt docco:buildCoffee*
+
 
 # tree
+
 _generated files*_
 
     css
@@ -72,3 +78,9 @@ _generated files*_
     .bowerrc
     .editorconfig
     .gitignore
+
+# Dependencies
+
+The build and serve tasks use the plugin *grunt-contrib-sass*, it requires you to have *Ruby* and *Sass* installed.
+The sourcemap generator requires *Sass 3.3.0*, which can be installed with *gem install sass --pre*
+

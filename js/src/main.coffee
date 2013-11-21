@@ -1,43 +1,24 @@
-(($) ->
-  $(document).ready ->
+$ ->
+  $(window).ready ->
 
-    # handle src update on hover event
-    $("img.hover").hoverSrc()
+    # ## Handle src update on hover event
+    $(".no-touch img.hover").hoverSrc()
 
-    # enable placeholder management for updated browsers
+    # ## Enable placeholder management for updated browsers
     unless Modernizr.input.placeholder
       $("input").each ->
         $(this).placeholder()  unless $(this).attr("placeholder") is ""
 
-    jQuery("#mainNav").in_jMenu null,
-      $toggleBtn: jQuery("<a href=\"javascript:;\" class=\"in_jMenu-toggleBtn\"></a>")
-      userInterfaces:
-        smallscreen: "jQuery('#header').after($(this).parent());"
-        desktop: "jQuery('#header .page').append($(this).parent());"
-        toggleBtn: "jQuery('#logo').after(o.$toggleBtn);"
-
-      columnsTemplate: []
-
-    jQuery(window).resize ->
-
-      # switch UI handler for the main in_menu
-      if jQuery(window).width() <= 660
-        jQuery("#mainNav").find("br").replaceWith "&nbsp;"
-
-        # jQuery('#mainNav li a').html(jQuery('#mainNav li a').html().replace('&nbsp;','<br />'));
-        jQuery("#mainNav").in_jMenu "setUI",
-          UI: "smallscreen"
-
-      else
-        jQuery("#mainNav li a").each ->
-          jQuery(this).html jQuery(this).html().replace("&nbsp;", "<br />")
-
-        jQuery("#mainNav").in_jMenu "setUI",
-          UI: "desktop"
 
 
+    # ## Add backToTop anchor when half a screen  is scrolled
+    # $('body').append('<a id="backToTop" href="#">Back to top</a>');
+    # $('#backToTop').backToTop($(window).height()/2);
 
-    # trigger a resize event to initalize UI handler
-    jQuery(window).trigger "resize"
+    # ## Handle pulldown
+    # $('.pulldown').pulldown();
 
-) jQuery
+    # ## Refresh scroll offset of backToTop button appearance
+    # $(window).bind('resize', function(){
+    #     $('#backToTop').backToTop($(window).height()/2);
+    # });

@@ -12,29 +12,33 @@ module.exports = (grunt) ->
     coffee:
       build:
         options:
-          join: true,
           sourceMap: true
-        files:
-          './script.js': 'js/src/*.coffee'
+        expand: true
+        flatten: true
+        cwd: 'js/src'
+        src: ['*.coffee']
+        dest: 'js'
+        ext: '.js'
+
 
     # You must build docco last cause it stop the task chain (e.g. not compatible with watch)
     docco:
       buildCoffee:
         src: ['js/src/*.coffee']
         options:
-            output: 'docs/coffee/annotated-source'
+          output: 'docs/coffee/annotated-source'
       buildSass:
         src: ['css/src/*.scss']
         options:
-            output: 'docs/sass/annotated-source'
-
-      sass:
-        src: ['css/src/*.scss']
-        options:
-            output: 'docs/css/annotated-source'
+          output: 'docs/sass/annotated-source'
 
     sass:
       build:
+        options:
+          sourcemap: true
+          style: "compact"
+          precision: 20
+          lineNumbers: true
         files:
           'css/main.css': 'css/src/styles.scss'
           'css/ie.css': 'css/src/ie.scss'
@@ -79,8 +83,6 @@ module.exports = (grunt) ->
       'sass:build'
       'autoprefixer:build'
       'coffee:build'
-      'docco:buildCoffee'
-      'docco:buildSass'
     ]
 
     grunt.registerTask 'server', [

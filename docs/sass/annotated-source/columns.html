@@ -88,29 +88,13 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
+              <p>default display mode and margins</p>
+
             </div>
             
-            <div class="content"><div class='highlight'><pre>$col80 <span class="value">: column-width(.<span class="number">80</span>, .<span class="number">25</span>);</span>
-$col70 <span class="value">: column-width(.<span class="number">66666666666666</span>, .<span class="number">5</span>);</span>
-$col60 <span class="value">: column-width(.<span class="number">60</span>, .<span class="number">6666666666</span>);</span>
-$col50 <span class="value">: column-width(.<span class="number">50</span>, <span class="number">1</span>);</span>
-$col40 <span class="value">: column-width(.<span class="number">40</span>, <span class="number">1.5</span>);</span>
-$col30 <span class="value">: column-width(.<span class="number">3333333333</span>, <span class="number">2</span>);</span>
-$col25 <span class="value">: column-width(.<span class="number">25</span>, <span class="number">3</span>);</span>
-$col20 <span class="value">: column-width(.<span class="number">20</span>, <span class="number">4</span>);</span>
-
-<span class="class">.column</span> { <span class="attribute">display</span><span class="value">: inline-block;</span> <span class="attribute">margin</span><span class="value">: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> $gutter;</span> <span class="attribute">vertical-align</span><span class="value">: top;</span>
+            <div class="content"><div class='highlight'><pre><span class="class">.column</span> { <span class="attribute">display</span><span class="value">: inline-block;</span> <span class="attribute">margin</span><span class="value">: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> $gutter;</span> <span class="attribute">vertical-align</span><span class="value">: top;</span>
     &amp;<span class="pseudo">:first-child</span> { <span class="attribute">margin</span><span class="value">: <span class="number">0</span>;</span> }
-}
-<span class="class">.column-80</span> { <span class="attribute">width</span><span class="value">: $col80;</span> }
-<span class="class">.column-70</span> { <span class="attribute">width</span><span class="value">: $col70;</span> }
-<span class="class">.column-60</span> { <span class="attribute">width</span><span class="value">: $col60;</span> }
-<span class="class">.column-50</span> { <span class="attribute">width</span><span class="value">: $col50;</span> }
-<span class="class">.column-40</span> { <span class="attribute">width</span><span class="value">: $col40;</span> }
-<span class="class">.column-30</span> { <span class="attribute">width</span><span class="value">: $col30;</span> }
-<span class="class">.column-25</span> { <span class="attribute">width</span><span class="value">: $col25;</span> }
-<span class="class">.column-20</span> { <span class="attribute">width</span><span class="value">: $col20;</span> }</pre></div></div>
+}</pre></div></div>
             
         </li>
         
@@ -121,15 +105,29 @@ $col20 <span class="value">: column-width(.<span class="number">20</span>, <span
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <p>custom row</p>
+              <p>preset columns</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="class">.row305020</span> {
-    <span class="class">.column-30</span> { <span class="attribute">width</span><span class="value">: column-width(.<span class="number">333333</span>, <span class="number">2</span>);</span> }
-    <span class="class">.column-50</span> { <span class="attribute">width</span><span class="value">: column-width(.<span class="number">466666</span>, <span class="number">2</span>);</span> }
-    <span class="class">.column-20</span> { <span class="attribute">width</span><span class="value">: column-width(.<span class="number">20</span>, <span class="number">2</span>);</span> }
-}</pre></div></div>
+            <div class="content"><div class='highlight'><pre>$col80 <span class="value">: column-width(.<span class="number">80</span>, .<span class="number">25</span>);</span>
+$col75 <span class="value">: column-width(.<span class="number">75</span>, .<span class="number">3333333333</span>);</span>
+$col70 <span class="value">: column-width(.<span class="number">6666666666</span>, .<span class="number">5</span>);</span>
+$col60 <span class="value">: column-width(.<span class="number">60</span>, .<span class="number">6666666666</span>);</span>
+$col50 <span class="value">: column-width(.<span class="number">50</span>, <span class="number">1</span>);</span>
+$col40 <span class="value">: column-width(.<span class="number">40</span>, <span class="number">1.5</span>);</span>
+$col30 <span class="value">: column-width(.<span class="number">3333333333</span>, <span class="number">2</span>);</span>
+$col25 <span class="value">: column-width(.<span class="number">25</span>, <span class="number">3</span>);</span>
+$col20 <span class="value">: column-width(.<span class="number">20</span>, <span class="number">4</span>);</span>
+
+<span class="class">.column-80</span> { <span class="attribute">width</span><span class="value">: $col80;</span> }
+<span class="class">.column-75</span> { <span class="attribute">width</span><span class="value">: $col75;</span> }
+<span class="class">.column-70</span> { <span class="attribute">width</span><span class="value">: $col70;</span> }
+<span class="class">.column-60</span> { <span class="attribute">width</span><span class="value">: $col60;</span> }
+<span class="class">.column-50</span> { <span class="attribute">width</span><span class="value">: $col50;</span> }
+<span class="class">.column-40</span> { <span class="attribute">width</span><span class="value">: $col40;</span> }
+<span class="class">.column-30</span> { <span class="attribute">width</span><span class="value">: $col30;</span> }
+<span class="class">.column-25</span> { <span class="attribute">width</span><span class="value">: $col25;</span> }
+<span class="class">.column-20</span> { <span class="attribute">width</span><span class="value">: $col20;</span> }</pre></div></div>
             
         </li>
         
@@ -144,7 +142,7 @@ $col20 <span class="value">: column-width(.<span class="number">20</span>, <span
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="class">.wrap</span> {  <span class="attribute">margin</span><span class="value">: <span class="number">1</span>*$u <span class="number">0</span>;</span> <span class="attribute">background-color</span><span class="value">: $orange;</span> <span class="attribute">text-align</span><span class="value">: center;</span>}
+            <div class="content"><div class='highlight'><pre><span class="class">.wrap</span> {  <span class="attribute">margin</span><span class="value">: <span class="number">1</span>*$u <span class="number">0</span>;</span> <span class="attribute">background-color</span><span class="value">: $orange;</span> <span class="attribute">text-align</span><span class="value">: center;</span> <span class="attribute">border-radius</span><span class="value">: <span class="number">5</span>px;</span> <span class="attribute">overflow</span><span class="value">: hidden;</span> }
 <span class="class">.column</span> { <span class="attribute">color</span><span class="value">: $grey;</span> <span class="attribute">background-color</span><span class="value">: $black;</span>
     <span class="tag">h1</span> { <span class="attribute">margin</span><span class="value">:<span class="number">1</span>*$u;</span> }
 }</pre></div></div>

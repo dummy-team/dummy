@@ -1,0 +1,740 @@
+diff --git a/README.md b/README.md index fba410a..d031f2b 100644 --- a/README.md +++ b/README.md @@ -15,6 +15,7 @@ A light Sass &amp; 
+coffee front-end base
+ - grunt server
+ - work
+ 
++
+ # To discuss
+ 
+ ## CSS
+@@ -22,20 +23,24 @@ A light Sass &amp; coffee front-end base
+ - mediaqueries in a separate file / inline in the main sheet
+ - usage of size unit ($u) : function(value) / value*$u
+ 
++
+ # Road map
+ 
+-- 0.5.0 : clean CoffeScript
+ - 1.0.0 : create a clean index.html & move test page in an demo/example folder -- 1.0.1 : fix the doc task bug (breaking the chain of 
+tasks) +- 1.0.1 : rewrite CoffeScript +- 1.0.2 : fix the doc task bug (breaking the chain of tasks)
+ - 1.1.1 : add a dynamic demo for grid system
+ - 2.0.0 : make it a generator whith dependencies and optionnal components
+ - 2.1.0 : custom Modernizr build
+ 
++
+ #Kown issues
+ 
+ - To build annotated sources for Sass files you need to run *grunt docco:buildSass*
+ 
++
+ # tree
++
+ _generated files*_
+ 
+     css @@ -72,3 +77,9 @@ _generated files*_
+     .bowerrc
+     .editorconfig
+     .gitignore + +# Dependencies + +The build and serve tasks use the plugin *grunt-contrib-sass*, it requires you to have *Ruby* and 
+*Sass* installed. +The sourcemap generator requires *Sass 3.3.0*, which can be installed with *gem install sass --pre* + diff --git 
+a/bower.json b/bower.json index 48708c6..b0f9fda 100644 --- a/bower.json +++ b/bower.json @@ -1,7 +1,7 @@
+ {
+   "name": "dummy",
+   "description": "A light Sass & coffee base front-end", - "version": "0.4.0", + "version": "0.5.0",
+   "author": {
+     "name": "Inouit",
+     "url": "www.inouit.fr" diff --git a/css/ie.css b/css/ie.css index 800cc79..ce8f5a1 100644 --- a/css/ie.css +++ b/css/ie.css @@ -1,7 
++1,2 @@ -/********************************* -******** Redefine function ******* -*********************************/ -.setInlineBlock { - 
+display: inline; - zoom: 1; - vertical-align: top; } +.setInlineBlock{display:inline;zoom:1;vertical-align:top} +/*# 
+sourceMappingURL=ie.css.map */ \ No newline at end of file diff --git a/css/ie.css.map b/css/ie.css.map new file mode 100644 index 
+0000000..9e70c2f --- /dev/null +++ b/css/ie.css.map @@ -0,0 +1,6 @@ +{ +"version": "3", +"mappings": 
+"AAGA,eAAgB,CACZ,OAAO,CAAC,MAAM,CACd,IAAI,CAAC,CAAC,CACN,cAAc,CAAC,GAAG", +"sources": ["src/ie.scss"], +"file": "ie.css" +} diff --git 
+a/css/main.css b/css/main.css index 5db3d56..313bfa2 100644 --- a/css/main.css +++ b/css/main.css @@ -1,19 +1,3 @@ 
+-/********************************* -************* Fonts ************** -*********************************/ - 
+-/********************************* -****** Globals Parameters ******** -*********************************/ - -/* Font & Background 
+Colors */ - -/* Fonts */ - -/********************************* -************** Reset ************* -*********************************/ -
+ html {
+   font-size: 62.5%;
+   line-height: 1.3em; @@ -22,9 +6,9 @@ html {
+ body {
+   margin: 0;
+   padding: 0; - font-family: Arial, sans-serif; + font-family: Arial,sans-serif;
+   font-size: 1em; - color: #333333; + color: #333;
+   font-weight: 300;
+ }
+ 
+@@ -40,17 +24,9 @@ a:hover {
+   text-decoration: underline;
+ }
+ 
+-/********************************* -************ Functions *********** -*********************************/ - 
+-/********************************* -************ Mixins *********** -*********************************/ -
+ .column {
+   display: inline-block; - margin: 0 0 0 3.33333%; + margin: 0 0 0 2.5%;
+   vertical-align: top;
+ }
+ 
+@@ -59,58 +35,52 @@ a:hover {
+ }
+ 
+ .column-80 { - width: 79.33333%; + width: 79.5%; +} + +.column-75 { + width: 74.3750000000625%;
+ }
+ 
+ .column-70 { - width: 65.55556%; + width: 65.83333332675%;
+ }
+ 
+ .column-60 { - width: 58.66667%; + width: 59.000000000099995%;
+ }
+ 
+ .column-50 { - width: 48.33333%; + width: 48.75%;
+ }
+ 
+ .column-40 { - width: 38%; + width: 38.5%;
+ }
+ 
+ .column-30 { - width: 31.11111%; + width: 31.666666663499996%;
+ }
+ 
+ .column-25 { - width: 22.5%; + width: 23.125%;
+ }
+ 
+ .column-20 { - width: 17.33333%; -} - -.row305020 .column-30 { - width: 31.11108%; -} - -.row305020 .column-50 { - width: 43.55549%; -} 
+- -.row305020 .column-20 { - width: 18.66667%; + width: 18%;
+ }
+ 
+ .wrap {
+   margin: 10px 0;
+   background-color: #d58f26;
+   text-align: center; + border-radius: 5px; + overflow: hidden;
+ }
+ 
+ .column { - color: #444444; - background-color: #333333; + color: #444; + background-color: #333;
+ }
+ 
+ .column h1 { @@ -204,7 +174,7 @@ button {
+ input,
+ select,
+ textarea { - font-family: Arial, sans-serif; + font-family: Arial,sans-serif;
+ }
+ 
+ h1, @@ -255,7 +225,7 @@ h6,
+ 
+ .page {
+   margin: 0 auto; - width: 900px; + width: 1200px;
+ }
+ 
+ @media screen and (min-width: 0px) { @@ -265,7 +235,7 @@ h6,
+ }
+ 
+ a { - color: #c11c47; + color: #bc2422;
+ }
+ 
+ .align-center { @@ -276,7 +246,7 @@ hr {
+   margin: 0 auto;
+   border: none;
+   height: 2px; - background-color: #333333; + background-color: #333;
+ }
+ 
+ hr.clear { @@ -298,7 +268,7 @@ hr.clear {
+ 
+ .content {
+   margin: 0 auto; - width: 900px; + width: 1200px;
+ }
+ 
+ @media screen and (min-width: 0px) { @@ -329,7 +299,7 @@ hr.clear {
+   padding: 4px 1%;
+   vertical-align: top;
+   font-size: 2em; - font-family: Arial, sans-serif; + font-family: Arial,sans-serif;
+   text-transform: uppercase;
+ }
+ 
+@@ -350,8 +320,8 @@ hr.clear {
+   position: relative;
+   padding: 7px 1%;
+   width: 70%; - border: 1px solid #333333; - background-color: white; + border: 1px solid #333; + background-color: #fff;
+   text-align: left;
+ }
+ 
+@@ -364,7 +334,7 @@ hr.clear {
+   width: auto;
+   cursor: pointer;
+   font-size: 2em; - font-family: Arial, sans-serif; + font-family: Arial,sans-serif;
+   text-transform: uppercase;
+ }
+ 
+@@ -390,7 +360,7 @@ hr.clear {
+   height: auto;
+   background-color: #e04831;
+   z-index: 10; - color: white; + color: #fff;
+ }
+ 
+ .error p { @@ -422,7 +392,9 @@ hr.clear {
+ @media screen and (max-width: 764px) {
+   .column {
+     display: block; - width: auto!important; - margin: 0!important; + width: auto !important; + margin: 0 !important;
+   }
+-} \ No newline at end of file +} + +/*# sourceMappingURL=main.css.map */ \ No newline at end of file diff --git a/css/main.css.map 
+b/css/main.css.map new file mode 100644 index 0000000..40c559e --- /dev/null +++ b/css/main.css.map @@ -0,0 +1,6 @@ +{ +"version": "3", 
++"mappings": 
+"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", 
++"sources": 
+["src/reset.scss","src/config.scss","src/columns.scss","src/main.scss","src/mixins.scss","src/powermail.scss","src/mediaqueries.scss"], 
++"file": "main.css" +} diff --git a/css/src/columns.scss b/css/src/columns.scss index 90a4e16..7b3a3a8 100755 --- a/css/src/columns.scss 
++++ b/css/src/columns.scss @@ -1,5 +1,12 @@ +// default display mode and margins +.column { display: inline-block; margin: 0 0 0 
+$gutter; vertical-align: top; + &:first-child { margin: 0; } +} + +// preset columns
+ $col80 : column-width(.80, .25); -$col70 : column-width(.66666666666666, .5); +$col75 : column-width(.75, .3333333333); +$col70 : 
+column-width(.6666666666, .5);
+ $col60 : column-width(.60, .6666666666);
+ $col50 : column-width(.50, 1);
+ $col40 : column-width(.40, 1.5); @@ -7,10 +14,8 @@ $col30 : column-width(.3333333333, 2);
+ $col25 : column-width(.25, 3);
+ $col20 : column-width(.20, 4);
+ 
+-.column { display: inline-block; margin: 0 0 0 $gutter; vertical-align: top; - &:first-child { margin: 0; } -}
+ .column-80 { width: $col80; } +.column-75 { width: $col75; }
+ .column-70 { width: $col70; }
+ .column-60 { width: $col60; }
+ .column-50 { width: $col50; } @@ -19,16 +24,8 @@ $col20 : column-width(.20, 4);
+ .column-25 { width: $col25; }
+ .column-20 { width: $col20; }
+ 
+- -// custom row -.row305020 { - .column-30 { width: column-width(.333333, 2); } - .column-50 { width: column-width(.466666, 2); } - 
+.column-20 { width: column-width(.20, 2); } -} -
+ // DEBUG -.wrap { margin: 1*$u 0; background-color: $orange; text-align: center;} +.wrap { margin: 1*$u 0; background-color: $orange; 
+text-align: center; border-radius: 5px; overflow: hidden; }
+ .column { color: $grey; background-color: $black;
+     h1 { margin:1*$u; }
+ }
+\ No newline at end of file diff --git a/css/src/config.scss b/css/src/config.scss index 35e2b5b..1c53ba9 100755 --- 
+a/css/src/config.scss +++ b/css/src/config.scss @@ -5,7 +5,7 @@
+ /*********************************
+ ****** Globals Parameters ********
+ *********************************/ -$max : 900; +$max : 1200;
+ $maxWidth : $max * 1px;
+ $u : 10px;
+ $gutter : 30 / $max * 100%; @@ -15,7 +15,7 @@ $white : #FFFFFF;
+ $grey : #444;
+ $black : #333;
+ 
+-$red : #c11c47; +$red : #BC2422;
+ $orange : #D58F26;
+ 
+ $outlineBlue : #aad4ff; diff --git a/css/src/mixins.scss b/css/src/mixins.scss index dcfa199..2340071 100644 --- a/css/src/mixins.scss 
++++ b/css/src/mixins.scss @@ -1,6 +1,4 @@ -/********************************* -************ Mixins *********** 
+-*********************************/ +// Mixins
+ @mixin page { margin: 0 auto; width: $maxWidth;
+     @media screen and (min-width: 0px) { max-width: 100%; }
+ }
+diff --git a/docs/coffee/annotated-source/base.html b/docs/coffee/annotated-source/base.html index 629a823..13afc34 100644 --- 
+a/docs/coffee/annotated-source/base.html +++ b/docs/coffee/annotated-source/base.html @@ -51,123 +51,394 @@
+               
+             </div>
+             
+- <div class="content"><div class='highlight'><pre><span class="function"><span class="params">(($) -&gt; - $.fn.placeholder = -&gt; - 
+emptyMe = -&gt; - $(<span class="keyword">this</span>).val <span class="string">""</span> <span class="keyword">if</span> $(<span 
+class="keyword">this</span>).val() <span class="keyword">is</span> $(<span class="keyword">this</span>).data(<span 
+class="string">"placeholder"</span>) - fullMe = -&gt; + <div class="content"><div class='highlight'><pre>$<span class="function"> 
+-&gt;</span></pre></div></div> + + </li> + + + <li id="section-2"> + <div class="annotation"> + + <div class="pilwrap "> + <a 
+class="pilcrow" href="#section-2">&#182;</a> + </div> + <h2 id="gethash">getHash</h2> + + </div> + + <div class="content"><div 
+class='highlight'><pre> $.<span class="function"><span class="title">getHash</span> = <span class="params">(url)</span> 
+-&gt;</span></pre></div></div> + + </li> + + + <li id="section-3"> + <div class="annotation"> + + <div class="pilwrap "> + <a 
+class="pilcrow" href="#section-3">&#182;</a> + </div> + <p>return the HashTag of the given url : parameter or current</p> + + </div> + + 
+<div class="content"><div class='highlight'><pre> (<span class="keyword">if</span> url <span class="keyword">then</span> 
+url.substring(url.indexOf(<span class="string">"#"</span>) + <span class="number">1</span>) <span class="keyword">else</span> 
+window.location.hash)</pre></div></div> + + </li> + + + <li id="section-4"> + <div class="annotation"> + + <div class="pilwrap "> + <a 
+class="pilcrow" href="#section-4">&#182;</a> + </div> + <h2 id="placeholder">placeholder</h2> +<p>Must only be called for browser not 
+supporting placeholder attribute</p> + + </div> + + <div class="content"><div class='highlight'><pre> $.fn.<span class="function"><span 
+class="title">placeholder</span> = -&gt;</span></pre></div></div> + + </li> + + + <li id="section-5"> + <div class="annotation"> + + 
+<div class="pilwrap "> + <a class="pilcrow" href="#section-5">&#182;</a> + </div> + <p>Store placeholder value and fill the input</p> 
++<p>empty the previous value on focus</p> +<p>reset the value if nothing is found in the input on blur</p> + + </div> + + <div 
+class="content"><div class='highlight'><pre> <span class="function"><span class="title">emptyMe</span> = -&gt;</span> + $(<span 
+class="keyword">this</span>).data <span class="string">"placeholder"</span>, $(<span class="keyword">this</span>).val() + $(<span 
+class="keyword">this</span>).val <span class="string">""</span> + <span class="function"><span class="title">fullMe</span> = 
+-&gt;</span>
+       $(<span class="keyword">this</span>).val $(<span class="keyword">this</span>).data(<span class="string">"placeholder"</span>) 
+<span class="keyword">if</span> $(<span class="keyword">this</span>).val() <span class="keyword">is</span> <span 
+class="string">""</span>
+     $(<span class="keyword">this</span>).data <span class="string">"placeholder"</span>, $(<span 
+class="keyword">this</span>).attr(<span class="string">"placeholder"</span>)
+     $(<span class="keyword">this</span>).val jQuery(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>) 
+- $(<span class="keyword">this</span>).bind <span class="string">"keypress"</span>, emptyMe - $(<span class="keyword">this</span>).bind 
+<span class="string">"click"</span>, emptyMe + $(<span class="keyword">this</span>).focus emptyMe
+     $(<span class="keyword">this</span>).blur fullMe + <span class="keyword">return</span> $(<span 
+class="keyword">this</span>)</pre></div></div> + + </li> + + + <li id="section-6"> + <div class="annotation"> + + <div class="pilwrap "> 
++ <a class="pilcrow" href="#section-6">&#182;</a> + </div> + <h2 id="hoversrc">hoverSrc</h2> +<p>Emulate a hover state for images</p> + 
++ </div> + + <div class="content"><div class='highlight'><pre> $.fn.<span class="function"><span class="title">hoverSrc</span> = <span 
+class="params">(on_, off_)</span> -&gt;</span></pre></div></div> + + </li> + + + <li id="section-7"> + <div class="annotation"> + + <div 
+class="pilwrap "> + <a class="pilcrow" href="#section-7">&#182;</a> + </div> + <p>Use hover / off suffixes or those given</p> +<p>bind 
+events</p> +<p>Add the on suffixe to the image name</p>
+ 
+- $.fn.hoverSrc = (on_, off_) -&gt; - hoverIn = -&gt; - <span class="keyword">unless</span> jQuery(<span 
+class="keyword">this</span>).hasClass(<span class="string">"active"</span>) - srcName = jQuery(<span 
+class="keyword">this</span>).attr(<span class="string">"src"</span>) + </div> + + <div class="content"><div class='highlight'><pre> 
+<span class="function"><span class="title">hoverIn</span> = -&gt;</span> + <span class="keyword">unless</span> $(<span 
+class="keyword">this</span>).hasClass(<span class="string">"active"</span>) + srcName = $(<span class="keyword">this</span>).attr(<span 
+class="string">"src"</span>)
+         srcName = srcName.replace(suffixeOff, suffixeOn) - jQuery(<span class="keyword">this</span>).attr src: srcName - hoverOut = 
+-&gt; - <span class="keyword">unless</span> jQuery(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>) - 
+srcName = jQuery(<span class="keyword">this</span>).attr(<span class="string">"src"</span>) + $(<span class="keyword">this</span>).attr 
+<span class="attribute">src</span>: srcName</pre></div></div> + + </li> + + + <li id="section-8"> + <div class="annotation"> + + <div 
+class="pilwrap "> + <a class="pilcrow" href="#section-8">&#182;</a> + </div> + <p>Add the off suffixe to the image name</p> + + </div> + 
++ <div class="content"><div class='highlight'><pre> <span class="function"><span class="title">hoverOut</span> = -&gt;</span> + <span 
+class="keyword">unless</span> $(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>) + srcName = $(<span 
+class="keyword">this</span>).attr(<span class="string">"src"</span>)
+         srcName = srcName.replace(suffixeOn, suffixeOff) - jQuery(<span class="keyword">this</span>).attr src: srcName + $(<span 
+class="keyword">this</span>).attr <span class="attribute">src</span>: srcName
+     suffixeOn = (<span class="keyword">if</span> on_ <span class="keyword">then</span> on_ <span class="keyword">else</span> <span 
+class="string">"-hover"</span>)
+     suffixeOff = (<span class="keyword">if</span> off_ <span class="keyword">then</span> off_ <span class="keyword">else</span> <span 
+class="string">"-off"</span>) - $(<span class="keyword">this</span>).hover hoverIn, hoverOut - $(<span 
+class="keyword">this</span>).focus hoverIn - $(<span class="keyword">this</span>).blur hoverOut + $(<span 
+class="keyword">this</span>).each<span class="function"> -&gt;</span> + $(<span class="keyword">this</span>).bind <span 
+class="string">"focus mouseenter"</span>, hoverIn + $(<span class="keyword">this</span>).bind <span class="string">"blur 
+mouseleave"</span>, hoverOut + (<span class="keyword">new</span> Image()).src = $(<span class="keyword">this</span>).attr(<span 
+class="string">"src"</span>).replace(<span class="string">"-off"</span>, <span class="string">"-hover"</span>)
+ 
+-</span></span></pre></div></div> + <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div>
+             
+         </li>
+         
+         
+- <li id="section-2"> + <li id="section-9">
+             <div class="annotation">
+               
+               <div class="pilwrap "> - <a class="pilcrow" href="#section-2">&#182;</a> + <a class="pilcrow" 
+href="#section-9">&#182;</a>
+               </div> - <p>Return the hash of the given or current url</p> + <h2 id="fixtotop">fixToTop</h2> +<p>fix any element to the 
+top when scroll pass it</p>
+ 
+             </div>
+             
+- <div class="content"><div class='highlight'><pre> $.<span class="function"><span class="title">getHash</span> = <span 
+class="params">(url)</span> -&gt;</span> - (<span class="keyword">if</span> url <span class="keyword">then</span> 
+url.substring(url.indexOf(<span class="string">"#"</span>) + <span class="number">1</span>) <span class="keyword">else</span> 
+window.location.hash) - - $.fn.<span class="function"><span class="title">fixToTop</span> = <span class="params">(gap)</span> 
+-&gt;</span> + <div class="content"><div class='highlight'><pre> $.fn.<span class="function"><span class="title">fixToTop</span> = <span 
+class="params">(gap)</span> -&gt;</span>
+     <span class="function"><span class="title">fix</span> = -&gt;</span> - <span class="keyword">if</span> $(<span 
+class="built_in">window</span>).scrollTop() &gt; origin - $that.addClass(<span class="string">"fixed"</span>).trigger(<span 
+class="string">"fixed"</span>).next().css <span class="string">"marginTop"</span>, offSet + <span class="string">"px"</span> - <span 
+class="keyword">else</span> - $that.removeClass(<span class="string">"fixed"</span>).trigger(<span 
+class="string">"unfixed"</span>).next().css <span class="string">"marginTop"</span>, originOffSet + <span class="string">"px"</span> + 
+<span class="keyword">unless</span> $that.hasClass(<span class="string">"fixed"</span>) + offSet = parseFloat($that.height()) + 
+parseFloat($that.next().css(<span class="string">"marginTop"</span>)) + $that.addClass <span class="string">"fixed"</span> + 
+$that.next().css <span class="string">"marginTop"</span>, offSet + <span class="string">"px"</span> + <span class="function"><span 
+class="title">free</span> = -&gt;</span> + $that.removeClass <span class="string">"fixed"</span> + $that.next().css <span 
+class="string">"marginTop"</span>, originOffSet + <span class="string">"px"</span>
+     $that = $(<span class="keyword">this</span>) - origin = $that[<span class="number">0</span>].offsetTop + origin = (<span 
+class="keyword">if</span> gap <span class="keyword">then</span> $that[<span class="number">0</span>].offsetTop + gap <span 
+class="keyword">else</span> $that[<span class="number">0</span>].offsetTop)
+     originOffSet = parseFloat($that.next().css(<span class="string">"marginTop"</span>))
+     offSet = parseFloat($that.height()) + parseFloat($that.next().css(<span class="string">"marginTop"</span>)) - origin = origin + gap 
+<span class="keyword">if</span> gap - fix()
+     $(<span class="built_in">window</span>).scroll<span class="function"> -&gt;</span> - fix() + <span class="keyword">if</span> 
+$that.css(<span class="string">"visibility"</span>) <span class="keyword">isnt</span> <span class="string">"hidden"</span> <span 
+class="keyword">and</span> $(<span class="built_in">window</span>).scrollTop() &gt; origin + fix() + <span class="keyword">else</span> + 
+free() + + <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div> + + </li> + + + <li 
+id="section-10"> + <div class="annotation"> + + <div class="pilwrap "> + <a class="pilcrow" href="#section-10">&#182;</a> + </div> + <h2 
+id="pulldown">Pulldown</h2> +<p>Show/Hide content of pulldown element on click on the first child (button) of each elements +Use css to 
+do the toggle.</p> + + </div> + + <div class="content"><div class='highlight'><pre> $.fn.<span class="function"><span 
+class="title">pulldown</span> = -&gt;</span></pre></div></div> + + </li> + + + <li id="section-11"> + <div class="annotation"> + + <div 
+class="pilwrap "> + <a class="pilcrow" href="#section-11">&#182;</a> + </div> + <p>initialize</p> + + </div> + + <div 
+class="content"><div class='highlight'><pre> $list = $(<span class="keyword">this</span>) + $items = $list.children() + $buttons = 
+$items.find(<span class="string">"&gt; *:first-child"</span>) + $items.addClass <span class="string">"close"</span> + $buttons.addClass 
+<span class="string">"pulldownButton"</span> + $buttons.unbind <span class="string">" click"</span> + $buttons.bind <span 
+class="string">"click"</span>, <span class="function"><span class="params">(e)</span> -&gt;</span> + 
+e.preventDefault()</pre></div></div> + + </li> + + + <li id="section-12"> + <div class="annotation"> + + <div class="pilwrap "> + <a 
+class="pilcrow" href="#section-12">&#182;</a> + </div> + <p>Add class to hide non-button elements</p> + + </div> + + <div 
+class="content"><div class='highlight'><pre> $items.children().<span class="keyword">not</span>($buttons).addClass <span 
+class="string">"pulldownContent"</span> + $items.data <span class="string">"state"</span>, <span 
+class="number">0</span></pre></div></div> + + </li> + + + <li id="section-13"> + <div class="annotation"> + + <div class="pilwrap "> + 
+<a class="pilcrow" href="#section-13">&#182;</a> + </div> + <p>bind click and focus event</p> + + </div> + + <div class="content"><div 
+class='highlight'><pre> $items.bind <span class="string">"click"</span>, <span class="function"><span class="params">(e)</span> 
+-&gt;</span> + e.preventDefault() + $item = $(<span class="keyword">this</span>) + <span class="keyword">if</span> $item.data(<span 
+class="string">"state"</span>)</pre></div></div> + + </li> + + + <li id="section-14"> + <div class="annotation"> + + <div class="pilwrap 
+"> + <a class="pilcrow" href="#section-14">&#182;</a> + </div> + <p>close</p> + + </div> + + <div class="content"><div 
+class='highlight'><pre> $item.data(<span class="string">"state"</span>, <span class="number">0</span>).addClass <span 
+class="string">"close"</span> + <span class="keyword">else</span></pre></div></div> + + </li> + + + <li id="section-15"> + <div 
+class="annotation"> + + <div class="pilwrap "> + <a class="pilcrow" href="#section-15">&#182;</a> + </div> + <p>open</p> + + </div> + + 
+<div class="content"><div class='highlight'><pre> $item.data(<span class="string">"state"</span>, <span 
+class="number">1</span>).removeClass <span class="string">"close"</span> + $items.<span class="keyword">not</span>($item).data(<span 
+class="string">"state"</span>, <span class="number">0</span>).addClass <span class="string">"close"</span> + + $list.data <span 
+class="string">"pulldown"</span>, <span class="number">1</span> + <span class="keyword">return</span> $(<span 
+class="keyword">this</span>)</pre></div></div> + + </li> + + + <li id="section-16"> + <div class="annotation"> + + <div class="pilwrap 
+"> + <a class="pilcrow" href="#section-16">&#182;</a> + </div> + <h2 id="backtotop">backToTop</h2> +<p>display / hide a <em>back to 
+top</em> button when scrolling under the gap</p> + + </div> + + <div class="content"><div class='highlight'><pre> $.fn.<span 
+class="function"><span class="title">backToTop</span> = <span class="params">(gap)</span> -&gt;</span> + $that = $(<span 
+class="keyword">this</span>) + gap = (<span class="keyword">if</span> gap <span class="keyword">then</span> gap <span 
+class="keyword">else</span> <span class="number">0</span>) + $(<span class="keyword">this</span>).unbind <span 
+class="string">"click"</span> + $<span class="function"><span class="params">(<span class="keyword">this</span>)</span>.<span 
+class="title">bind</span> "<span class="title">click</span>", <span class="params">(e)</span> -&gt;</span> + e.preventDefault() + 
+$(<span class="string">"html"</span>).scrollTo <span class="number">0</span>, + <span class="attribute">duration</span>: <span 
+class="number">800</span> + + + $(<span class="keyword">this</span>).unbind <span class="string">"backToTop.scroll"</span> + $(<span 
+class="keyword">this</span>).bind <span class="string">"backToTop.scroll"</span>,<span class="function"> -&gt;</span> + <span 
+class="keyword">if</span> $(<span class="built_in">window</span>).scrollTop() &gt;= gap + $that.fadeIn() + <span 
+class="keyword">else</span> + $that.fadeOut()</pre></div></div> + + </li> + + + <li id="section-17"> + <div class="annotation"> + + <div 
+class="pilwrap "> + <a class="pilcrow" href="#section-17">&#182;</a> + </div> + <p>if backToTop isn&#39;t initiated we trigger a scroll 
+event on the element</p>
+ 
++ </div> + + <div class="content"><div class='highlight'><pre> <span class="keyword">unless</span> $(<span 
+class="keyword">this</span>).data(<span class="string">"backToTop"</span>) + $(<span class="built_in">window</span>).scroll<span 
+class="function"> -&gt;</span> + $that.trigger <span class="string">"backToTop.scroll"</span> + + $(<span 
+class="keyword">this</span>).data <span class="string">"backToTop"</span>, <span class="number">1</span> + <span 
+class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div> + + </li> + + + <li id="section-18"> + <div 
+class="annotation"> + + <div class="pilwrap "> + <a class="pilcrow" href="#section-18">&#182;</a> + </div> + <h2 
+id="smoothanchors">smoothAnchors</h2> +<p>Add an automatic smooth Scroll to the section menu of typo3 or any child link matching 
+<strong> a[href*=&quot;#c&quot;] </strong></p>
+ 
+- $.fn.<span class="function"><span class="title">smoothAnchors</span> = <span class="params">(offsetTop, screenOffset)</span> 
+-&gt;</span> + </div> + + <div class="content"><div class='highlight'><pre> $.fn.<span class="function"><span 
+class="title">smoothAnchors</span> = <span class="params">(offsetTop, screenOffset)</span> -&gt;</span>
+     $anchors = $(<span class="keyword">this</span>).find(<span class="string">"a[href*=\"#c\"]"</span>)
+     anchorsOffsets = []
+     offsetTop = (<span class="keyword">if</span> offsetTop <span class="keyword">then</span> offsetTop <span 
+class="keyword">else</span> <span class="number">50</span>)
+     screenOffset = (<span class="keyword">if</span> screenOffset <span class="keyword">then</span> screenOffset <span 
+class="keyword">else</span> $(<span class="built_in">window</span>).height() / <span class="number">6</span>)
+     $anchors.each<span class="function"> -&gt;</span> - byID = $((<span class="string">"#"</span> + $.getHash($(<span 
+class="keyword">this</span>).attr(<span class="string">"href"</span>)))) - byName = $(<span class="string">"[name=\""</span> + 
+$.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)) + <span class="string">"\"]"</span>) - target = 
+<span class="literal">undefined</span> - <span class="keyword">unless</span> byID.index() <span class="keyword">is</span> <span 
+class="string">"-1"</span> - target = byID - <span class="keyword">else</span> - target = byName - <span class="keyword">unless</span> 
+target.index() <span class="keyword">is</span> <span class="string">"-1"</span> - anchorsOffsets.push target.offset().top - screenOffset 
+- <span class="keyword">else</span> - anchorsOffsets.push <span class="number">0</span> + anchorsOffsets.push $((<span 
+class="string">"#"</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)))).offset().top
+ 
+     anchorsOffsetsLength = anchorsOffsets.length + $anchors.unbind <span class="string">"click"</span>
+     $anchors.click <span class="function"><span class="params">(e)</span> -&gt;</span> - byID = $((<span class="string">"#"</span> + 
+$.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)))) - byName = $(<span 
+class="string">"[name=\""</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)) + <span 
+class="string">"\"]"</span>) - target = <span class="literal">undefined</span> - <span class="keyword">unless</span> byID.index() <span 
+class="keyword">is</span> <span class="string">"-1"</span> - target = byID - <span class="keyword">else</span> - target = byName - <span 
+class="keyword">unless</span> target.index() <span class="keyword">is</span> <span class="string">"-1"</span> - e.preventDefault() - 
+$(<span class="string">"html"</span>).scrollTo target, - <span class="attribute">offset</span>: - <span class="attribute">top</span>: 
+offsetTop + e.preventDefault() + $(<span class="string">"html"</span>).scrollTo $((<span class="string">"#"</span> + $.getHash($(<span 
+class="keyword">this</span>).attr(<span class="string">"href"</span>)))), + <span class="attribute">offset</span>: + <span 
+class="attribute">top</span>: -offsetTop
+ 
+- <span class="attribute">duration</span>: <span class="number">800</span> + <span class="attribute">duration</span>: <span 
+class="number">800</span>
+ 
+ 
++ timeWindow = <span class="number">500</span> + lastExecution = <span class="keyword">new</span> Date((<span class="keyword">new</span> 
+Date()).getTime())
+     $<span class="function"><span class="params">(<span class="built_in">window</span>)</span>.<span class="title">scroll</span> <span 
+class="params">(e)</span> -&gt;</span> - scrollTop = $(<span class="built_in">window</span>).scrollTop() + offsetTop - 
+$anchors.removeClass <span class="string">"active"</span> - i = <span class="number">0</span> - - <span class="keyword">while</span> i 
+&lt; anchorsOffsetsLength - j = i + <span class="number">1</span> - <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] 
+<span class="keyword">and</span> <span class="keyword">not</span> anchorsOffsets[j] - $anchors.<span 
+class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span> - $($anchors[i]).addClass <span 
+class="string">"active"</span> - <span class="keyword">return</span> - <span class="keyword">else</span> <span class="keyword">if</span> 
+scrollTop &gt;= anchorsOffsets[i] <span class="keyword">and</span> scrollTop &lt; anchorsOffsets[j] - $anchors.<span 
+class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span> - $($anchors[i]).addClass <span 
+class="string">"active"</span> - <span class="keyword">return</span> - i++ - -) jQuery</pre></div></div> + <span 
+class="keyword">if</span> (lastExecution.getTime() + timeWindow) &lt;= (<span class="keyword">new</span> Date()).getTime() + scrollTop = 
+$(<span class="built_in">window</span>).scrollTop() + offsetTop + screenOffset + $anchors.removeClass <span 
+class="string">"active"</span> + i = <span class="number">0</span> + + <span class="keyword">while</span> i &lt; anchorsOffsetsLength + 
+j = i + <span class="number">1</span> + <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] <span 
+class="keyword">and</span> <span class="keyword">not</span> anchorsOffsets[j] + $anchors.<span 
+class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span> + $($anchors[i]).addClass <span 
+class="string">"active"</span> + lastExecution = <span class="keyword">new</span> Date((<span class="keyword">new</span> 
+Date()).getTime()) + <span class="keyword">return</span> + <span class="keyword">else</span> <span class="keyword">if</span> scrollTop 
+&gt;= anchorsOffsets[i] <span class="keyword">and</span> scrollTop &lt; anchorsOffsets[j] + $anchors.<span 
+class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span> + $($anchors[i]).addClass <span 
+class="string">"active"</span> + lastExecution = <span class="keyword">new</span> Date((<span class="keyword">new</span> 
+Date()).getTime()) + <span class="keyword">return</span> + i++ + + <span class="keyword">return</span> $(<span 
+class="keyword">this</span>)</pre></div></div>
+             
+         </li>
+         
+diff --git a/docs/coffee/annotated-source/main.html b/docs/coffee/annotated-source/main.html index 7a732b0..b4e6747 100644 --- 
+a/docs/coffee/annotated-source/main.html +++ b/docs/coffee/annotated-source/main.html @@ -51,10 +51,8 @@
+               
+             </div>
+             
+- <div class="content"><div class='highlight'><pre><span class="function"><span class="params">(($) -&gt; - $(<span 
+class="built_in">document</span>).ready -&gt; - -</span></span></pre></div></div> + <div class="content"><div 
+class='highlight'><pre>$<span class="function"> -&gt;</span> + $(<span class="built_in">window</span>).ready<span class="function"> 
+-&gt;</span></pre></div></div>
+             
+         </li>
+         
+@@ -65,11 +63,11 @@
+               <div class="pilwrap ">
+                 <a class="pilcrow" href="#section-2">&#182;</a>
+               </div> - <p>handle src update on hover event</p> + <h2 id="handle-src-update-on-hover-event">Handle src update on hover 
+event</h2>
+ 
+             </div>
+             
+- <div class="content"><div class='highlight'><pre> $(<span class="string">"img.hover"</span>).hoverSrc()</pre></div></div> + <div 
+class="content"><div class='highlight'><pre> $(<span class="string">".no-touch img.hover"</span>).hoverSrc()</pre></div></div>
+             
+         </li>
+         
+@@ -80,24 +78,13 @@
+               <div class="pilwrap ">
+                 <a class="pilcrow" href="#section-3">&#182;</a>
+               </div> - <p>enable placeholder management for updated browsers</p> + <h2 
+id="enable-placeholder-management-for-updated-browsers">Enable placeholder management for updated browsers</h2>
+ 
+             </div>
+             
+             <div class="content"><div class='highlight'><pre> <span class="keyword">unless</span> Modernizr.input.placeholder
+       $(<span class="string">"input"</span>).each<span class="function"> -&gt;</span> - $(<span 
+class="keyword">this</span>).placeholder() <span class="keyword">unless</span> $(<span class="keyword">this</span>).attr(<span 
+class="string">"placeholder"</span>) <span class="keyword">is</span> <span class="string">""</span> - - jQuery(<span 
+class="string">"#mainNav"</span>).in_jMenu <span class="literal">null</span>, - <span class="attribute">$toggleBtn</span>: jQuery(<span 
+class="string">"&lt;a href=\"javascript:;\" class=\"in_jMenu-toggleBtn\"&gt;&lt;/a&gt;"</span>) - <span 
+class="attribute">userInterfaces</span>: - <span class="attribute">smallscreen</span>: <span 
+class="string">"jQuery('#header').after($(this).parent());"</span> - <span class="attribute">desktop</span>: <span 
+class="string">"jQuery('#header .page').append($(this).parent());"</span> - <span class="attribute">toggleBtn</span>: <span 
+class="string">"jQuery('#logo').after(o.$toggleBtn);"</span> - - <span class="attribute">columnsTemplate</span>: [] - - jQuery(<span 
+class="built_in">window</span>).resize<span class="function"> -&gt;</span></pre></div></div> + $(<span 
+class="keyword">this</span>).placeholder() <span class="keyword">unless</span> $(<span class="keyword">this</span>).attr(<span 
+class="string">"placeholder"</span>) <span class="keyword">is</span> <span class="string">""</span></pre></div></div>
+             
+         </li>
+         
+@@ -108,53 +95,18 @@
+               <div class="pilwrap ">
+                 <a class="pilcrow" href="#section-4">&#182;</a>
+               </div> - <p>switch UI handler for the main in_menu</p> - - </div> - - <div class="content"><div class='highlight'><pre> 
+<span class="keyword">if</span> jQuery(<span class="built_in">window</span>).width() &lt;= <span class="number">660</span> - 
+jQuery(<span class="string">"#mainNav"</span>).find(<span class="string">"br"</span>).replaceWith <span 
+class="string">"&amp;nbsp;"</span></pre></div></div> - - </li> - - - <li id="section-5"> - <div class="annotation"> - - <div 
+class="pilwrap "> - <a class="pilcrow" href="#section-5">&#182;</a> - </div> - <p>jQuery(&#39;#mainNav li 
+a&#39;).html(jQuery(&#39;#mainNav li a&#39;).html().replace(&#39;&nbsp;&#39;,&#39;<br />&#39;));</p> + <h2 
+id="add-backtotop-anchor-when-half-a-screen-is-scrolled">Add backToTop anchor when half a screen is scrolled</h2> 
++<p>$(&#39;body&#39;).append(&#39;<a id="backToTop" href="#">Back to top</a>&#39;); 
++$(&#39;#backToTop&#39;).backToTop($(window).height()/2);</p> +<h2 id="handle-pulldown">Handle pulldown</h2> 
++<p>$(&#39;.pulldown&#39;).pulldown();</p> +<h2 id="refresh-scroll-offset-of-backtotop-button-appearance">Refresh scroll offset of 
+backToTop button appearance</h2> +<p>$(window).bind(&#39;resize&#39;, function(){ + 
+$(&#39;#backToTop&#39;).backToTop($(window).height()/2); +});</p>
+ 
+             </div>
+             
+- <div class="content"><div class='highlight'><pre> jQuery(<span class="string">"#mainNav"</span>).in_jMenu <span 
+class="string">"setUI"</span>, - <span class="attribute">UI</span>: <span class="string">"smallscreen"</span> - - <span 
+class="keyword">else</span> - jQuery(<span class="string">"#mainNav li a"</span>).each<span class="function"> -&gt;</span> - 
+jQuery(<span class="keyword">this</span>).html jQuery(<span class="keyword">this</span>).html().replace(<span 
+class="string">"&amp;nbsp;"</span>, <span class="string">"&lt;br /&gt;"</span>) - - jQuery(<span 
+class="string">"#mainNav"</span>).in_jMenu <span class="string">"setUI"</span>, - <span class="attribute">UI</span>: <span 
+class="string">"desktop"</span></pre></div></div> - - </li> - - - <li id="section-6"> - <div class="annotation"> - - <div class="pilwrap 
+"> - <a class="pilcrow" href="#section-6">&#182;</a> - </div> - <p>trigger a resize event to initalize UI handler</p> - - </div> - - 
+<div class="content"><div class='highlight'><pre> jQuery(<span class="built_in">window</span>).trigger <span 
+class="string">"resize"</span> - -) jQuery</pre></div></div> -
+         </li>
+         
+     </ul> diff --git a/docs/sass/annotated-source/columns.html b/docs/sass/annotated-source/columns.html index ab330ad..509cbe1 100644 
+--- a/docs/sass/annotated-source/columns.html +++ b/docs/sass/annotated-source/columns.html @@ -88,11 +88,30 @@
+               <div class="pilwrap ">
+                 <a class="pilcrow" href="#section-1">&#182;</a>
+               </div> + <p>default display mode and margins</p> + + </div> + + <div class="content"><div class='highlight'><pre><span 
+class="class">.column</span> { <span class="attribute">display</span><span class="value">: inline-block;</span> <span 
+class="attribute">margin</span><span class="value">: <span class="number">0</span> <span class="number">0</span> <span 
+class="number">0</span> $gutter;</span> <span class="attribute">vertical-align</span><span class="value">: top;</span> + &amp;<span 
+class="pseudo">:first-child</span> { <span class="attribute">margin</span><span class="value">: <span class="number">0</span>;</span> } 
++}</pre></div></div> + + </li> + + + <li id="section-2"> + <div class="annotation">
+               
++ <div class="pilwrap "> + <a class="pilcrow" href="#section-2">&#182;</a> + </div> + <p>preset columns</p> +
+             </div>
+             
+             <div class="content"><div class='highlight'><pre>$col80 <span class="value">: column-width(.<span class="number">80</span>, 
+.<span class="number">25</span>);</span> -$col70 <span class="value">: column-width(.<span class="number">66666666666666</span>, .<span 
+class="number">5</span>);</span> +$col75 <span class="value">: column-width(.<span class="number">75</span>, .<span 
+class="number">3333333333</span>);</span> +$col70 <span class="value">: column-width(.<span class="number">6666666666</span>, .<span 
+class="number">5</span>);</span>
+ $col60 <span class="value">: column-width(.<span class="number">60</span>, .<span class="number">6666666666</span>);</span>
+ $col50 <span class="value">: column-width(.<span class="number">50</span>, <span class="number">1</span>);</span>
+ $col40 <span class="value">: column-width(.<span class="number">40</span>, <span class="number">1.5</span>);</span> @@ -100,10 +119,8 
+@@ $col30 <span class="value">: column-width(.<span class="number">3333333333</span
+ $col25 <span class="value">: column-width(.<span class="number">25</span>, <span class="number">3</span>);</span>
+ $col20 <span class="value">: column-width(.<span class="number">20</span>, <span class="number">4</span>);</span>
+ 
+-<span class="class">.column</span> { <span class="attribute">display</span><span class="value">: inline-block;</span> <span 
+class="attribute">margin</span><span class="value">: <span class="number">0</span> <span class="number">0</span> <span 
+class="number">0</span> $gutter;</span> <span class="attribute">vertical-align</span><span class="value">: top;</span> - &amp;<span 
+class="pseudo">:first-child</span> { <span class="attribute">margin</span><span class="value">: <span class="number">0</span>;</span> } 
+-}
+ <span class="class">.column-80</span> { <span class="attribute">width</span><span class="value">: $col80;</span> } +<span 
+class="class">.column-75</span> { <span class="attribute">width</span><span class="value">: $col75;</span> }
+ <span class="class">.column-70</span> { <span class="attribute">width</span><span class="value">: $col70;</span> }
+ <span class="class">.column-60</span> { <span class="attribute">width</span><span class="value">: $col60;</span> }
+ <span class="class">.column-50</span> { <span class="attribute">width</span><span class="value">: $col50;</span> } @@ -115,25 +132,6 @@ 
+$col20 <span class="value">: column-width(.<span class="number">20</span>, <span
+         </li>
+         
+         
+- <li id="section-2"> - <div class="annotation"> - - <div class="pilwrap "> - <a class="pilcrow" href="#section-2">&#182;</a> - </div> - 
+<p>custom row</p> - - </div> - - <div class="content"><div class='highlight'><pre><span class="class">.row305020</span> { - <span 
+class="class">.column-30</span> { <span class="attribute">width</span><span class="value">: column-width(.<span 
+class="number">333333</span>, <span class="number">2</span>);</span> } - <span class="class">.column-50</span> { <span 
+class="attribute">width</span><span class="value">: column-width(.<span class="number">466666</span>, <span 
+class="number">2</span>);</span> } - <span class="class">.column-20</span> { <span class="attribute">width</span><span class="value">: 
+column-width(.<span class="number">20</span>, <span class="number">2</span>);</span> } -}</pre></div></div> - - </li> - -
+         <li id="section-3">
+             <div class="annotation">
+               
+@@ -144,7 +142,7 @@ $col20 <span class="value">: column-width(.<span class="number">20</span>, <span
+ 
+             </div>
+             
+- <div class="content"><div class='highlight'><pre><span class="class">.wrap</span> { <span class="attribute">margin</span><span 
+class="value">: <span class="number">1</span>*$u <span class="number">0</span>;</span> <span 
+class="attribute">background-color</span><span class="value">: $orange;</span> <span class="attribute">text-align</span><span 
+class="value">: center;</span>} + <div class="content"><div class='highlight'><pre><span class="class">.wrap</span> { <span 
+class="attribute">margin</span><span class="value">: <span class="number">1</span>*$u <span class="number">0</span>;</span> <span 
+class="attribute">background-color</span><span class="value">: $orange;</span> <span class="attribute">text-align</span><span 
+class="value">: center;</span> <span class="attribute">border-radius</span><span class="value">: <span class="number">5</span>px;</span> 
+<span class="attribute">overflow</span><span class="value">: hidden;</span> }
+ <span class="class">.column</span> { <span class="attribute">color</span><span class="value">: $grey;</span> <span 
+class="attribute">background-color</span><span class="value">: $black;</span>
+     <span class="tag">h1</span> { <span class="attribute">margin</span><span class="value">:<span class="number">1</span>*$u;</span> }
+ }</pre></div></div>
+diff --git a/docs/sass/annotated-source/config.html b/docs/sass/annotated-source/config.html index 1ba432c..cc3b8a5 100644 --- 
+a/docs/sass/annotated-source/config.html +++ b/docs/sass/annotated-source/config.html @@ -98,7 +98,7 @@
+ <span class="comment">/*********************************
+ ****** Globals Parameters ********
+ *********************************/</span> -$max <span class="value">: <span class="number">900</span>;</span> +$max <span 
+class="value">: <span class="number">1200</span>;</span>
+ $maxWidth <span class="value">: $max * <span class="number">1</span>px;</span>
+ $u <span class="value">: <span class="number">10</span>px;</span>
+ $gutter <span class="value">: <span class="number">30</span> / $max * <span class="number">100</span>%;</span> @@ -108,7 +108,7 @@ 
+$white <span class="value">: <span class="hexcolor">#FFFFFF</span>;</sp
+ $grey <span class="value">: <span class="hexcolor">#444</span>;</span>
+ $black <span class="value">: <span class="hexcolor">#333</span>;</span>
+ 
+-$red <span class="value">: <span class="hexcolor">#c11c47</span>;</span> +$red <span class="value">: <span 
+class="hexcolor">#BC2422</span>;</span>
+ $orange <span class="value">: <span class="hexcolor">#D58F26</span>;</span>
+ 
+ $outlineBlue <span class="value">: <span class="hexcolor">#aad4ff</span>;</span> diff --git a/docs/sass/annotated-source/mixins.html 
+b/docs/sass/annotated-source/mixins.html index fddfe09..b6e1b5c 100644 --- a/docs/sass/annotated-source/mixins.html +++ 
+b/docs/sass/annotated-source/mixins.html @@ -88,13 +88,11 @@
+               <div class="pilwrap ">
+                 <a class="pilcrow" href="#section-1">&#182;</a>
+               </div> - + <p>Mixins</p> +
+             </div>
+             
+- <div class="content"><div class='highlight'><pre><span class="comment">/********************************* -************ Mixins 
+*********** -*********************************/</span> -<span class="at_rule">@<span class="keyword">mixin</span><span 
+class="preprocessor"> page</span> {</span> <span class="attribute">margin</span><span class="value">: <span class="number">0</span> 
+auto;</span> <span class="attribute">width</span><span class="value">: $maxWidth;</span> + <div class="content"><div 
+class='highlight'><pre><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> page</span> {</span> <span 
+class="attribute">margin</span><span class="value">: <span class="number">0</span> auto;</span> <span 
+class="attribute">width</span><span class="value">: $maxWidth;</span>
+     <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> screen</span><span class="preprocessor"> 
+and</span> (min-width:<span class="preprocessor"> 0px</span>) {</span> <span class="attribute">max-width</span><span class="value">: 
+<span class="number">100</span>%;</span> }
+ }
+ 
+diff --git a/gruntfile.coffee b/gruntfile.coffee index 991f9d6..f3838f1 100644 --- a/gruntfile.coffee +++ b/gruntfile.coffee @@ -12,29 
++12,28 @@ module.exports = (grunt) ->
+     coffee:
+       build:
+         options: - join: true, - sourceMap: true + join: true + sourceMap: false
+         files: - './script.js': 'js/src/*.coffee' + 'js/script.js': ['js/src/*.coffee']
+ 
+     # You must build docco last cause it stop the task chain (e.g. not compatible with watch)
+     docco:
+       buildCoffee:
+         src: ['js/src/*.coffee']
+         options: - output: 'docs/coffee/annotated-source' + output: 'docs/coffee/annotated-source'
+       buildSass:
+         src: ['css/src/*.scss']
+         options: - output: 'docs/sass/annotated-source' - - sass: - src: ['css/src/*.scss'] - options: - output: 
+'docs/css/annotated-source' + output: 'docs/sass/annotated-source'
+ 
+     sass:
+       build: + options: + sourcemap: true + style: "compressed" + precision: 20
+         files:
+           'css/main.css': 'css/src/styles.scss'
+           'css/ie.css': 'css/src/ie.scss' diff --git a/index.html b/index.html index cec85a4..ca9209c 100755 --- a/index.html +++ 
+b/index.html @@ -10,7 +10,7 @@
+         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+ 
+         <link rel="stylesheet" type="text/css" href="css/main.css" media="all" /> - <script 
+src="js/components/modernizr.min.js"></script> + <script src="js/components/modernizr.js"></script>
+ 
+         <!--[if lte IE 7]><link href="style/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+ 
+@@ -40,11 +40,11 @@
+                 <h4>A euismod non, dapibus vel arcu</h4>
+                 <h5>Nullam sed leo diam</h5>
+                 <h6>Nam nisl orci, auctor sit amet venenatis non, lacinia eget lorem</h6> - <p class="introduction">Lorem ipsum dolor 
+sit amet, <span style="font-weight: bold;">consectetur adipiscing</span> elit. Vestibulum laoreet placerat vestibulum. Pellentesque 
+turpis dui, posuere a euismod non, dapibus vel arcu. Suspendisse sed mauris elit. Nullam sed leo diam. <a href="interne.html" 
+target="_self" class="internal-link">Nam nisl orci</a>, auctor sit amet venenatis non, lacinia eget lorem. <span style="font-style: 
+italic;">Donec sed dui ante.</span> Proin feugiat diam fringilla orci ullamcorper blandit. Cras id sem scelerisque velit porttitor 
+molestie. Curabitur auctor, ante non accumsan facilisis, <span style="text-decoration: underline;">metus ipsum malesuada lacus</span>, 
+quis egestas arcu risus eget leo. </p> + <p class="introduction">Lorem ipsum dolor sit amet, <span style="font-weight: 
+bold;">consectetur adipiscing</span> elit. Vestibulum laoreet placerat vestibulum. Pellentesque turpis dui, posuere a euismod non, 
+dapibus vel arcu. Suspendisse sed mauris elit. Nullam sed leo diam. <a href="#header" target="_self" class="internal-link">Nam nisl 
+orci</a>, auctor sit amet venenatis non, lacinia eget lorem. <span style="font-style: italic;">Donec sed dui ante.</span> Proin feugiat 
+diam fringilla orci ullamcorper blandit. Cras id sem scelerisque velit porttitor molestie. Curabitur auctor, ante non accumsan 
+facilisis, <span style="text-decoration: underline;">metus ipsum malesuada lacus</span>, quis egestas arcu risus eget leo. </p>
+                 <ul>
+                     <li>Nam scelerisque luctus purus at semper.</li>
+                     <li>Mauris elit neque, accumsan sed sollicitudin sed, ornare ac mauris.</li> - <li>Etiam sollicitudin <a 
+href="interne.html" target="_self" class="internal-link">sapien vel libero aliquet</a> gravida. + <li>Etiam sollicitudin <a 
+href="#footer" target="_self" class="internal-link">sapien vel libero aliquet</a> gravida.
+                         <ul>
+                             <li>Nam scelerisque luctus purus at semper.</li>
+                             <li>Mauris elit neque, accumsan sed sollicitudin sed, ornare ac mauris.</li> @@ -90,19 +90,16 @@
+                 </div>
+             </div>
+             <div class="wrap"> - <div class="column column-70"> - <h1>70</h1> + <div class="column column-75"> + <h1>75</h1>
+                 </div><!-- - --><div class="column column-30"> - <h1>30</h1> + --><div class="column column-25"> + <h1>25</h1>
+                 </div>
+             </div> - <div class="wrap row305020"> - <div class="column column-20"> - <h1>20</h1> - </div><!-- - --><div class="column 
+column-50"> - <h1>50</h1> + <div class="wrap"> + <div class="column column-70"> + <h1>70</h1>
+                 </div><!--
+              --><div class="column column-30">
+                     <h1>30</h1> @@ -181,6 +178,7 @@
+         </div>
+ 
+         <script src="js/components/jquery.min.js"></script> + <script src="js/components/jquery.scrollTo.min.js"></script>
+         <script src="js/script.js"></script>
+         <script src="//0.0.0.0:1337/livereload.js"></script>
+     </body> diff --git a/js/base.js b/js/base.js deleted file mode 100755 index 9daaf74..0000000 --- a/js/base.js +++ /dev/null @@ 
+-1,150 +0,0 @@ -(function($) { - - $.fn.placeholder = function() { - $(this).data('placeholder', $(this).attr('placeholder')); - 
+$(this).val(jQuery(this).attr('placeholder')); - $(this).bind('keypress', emptyMe); - $(this).bind('click', emptyMe); - 
+$(this).blur(fullMe); - - function emptyMe() { - if ($(this).val() == $(this).data('placeholder')) $(this).val(''); - } - - function 
+fullMe() { - if ($(this).val() == '') $(this).val($(this).data('placeholder')); - } - }; - - $.fn.hoverSrc = function(on, off) { - var 
+suffixeOn = on ? on : '-hover'; - var suffixeOff = off ? off : '-off'; - $(this).hover(hoverIn, hoverOut); - $(this).focus(hoverIn); - 
+$(this).blur(hoverOut); - - function hoverIn() { - if (!jQuery(this).hasClass('active')) { - var srcName = jQuery(this).attr('src'); - 
+srcName = srcName.replace(suffixeOff, suffixeOn); - jQuery(this).attr({ - src: srcName - }); - } - } - - function hoverOut() { - if 
+(!jQuery(this).hasClass('active')) { - var srcName = jQuery(this).attr('src'); - srcName = srcName.replace(suffixeOn, suffixeOff); - 
+jQuery(this).attr({ - src: srcName - }); - } - } - }; - - - $.fn.verticalCenter = function(height) { - if(height){ - 
+$(this).each(function(){ - if (parseFloat($(this).height()) < 1 ) { return this; } - $(this).css('padding-top', ( height - 
+parseFloat($(this).height()))/2); - }) - } - else { - $(this).each(function(){ - if (parseFloat($(this).height()) < 1 ) { return this; } 
+- $(this).css('padding-top', (parseFloat($(this).parent().height()) - parseFloat($(this).height()))/2); - }) - } - }; - - - $.getHash = 
+function(url){ - return url ? url.substring(url.indexOf('#')+1) : window.location.hash; - }; - - $.fn.fixToTop = function(gap) { - var 
+$that = $(this), - origin = $that[0].offsetTop; - originOffSet = parseFloat($that.next().css('marginTop')); - offSet = 
+parseFloat($that.height()) + parseFloat($that.next().css('marginTop')); - if (gap) origin = origin + gap; - fix(); - 
+$(window).scroll(function() { - fix(); - }); - function fix() { - if ($(window).scrollTop() > origin) { - $that.addClass('fixed') - 
+.trigger('fixed') - .next().css('marginTop', offSet+'px'); - } else { - $that.removeClass('fixed') - .trigger('unfixed') - 
+.next().css('marginTop', originOffSet+'px'); - } - }; - }; - - $.fn.smoothAnchors = function(offsetTop, screenOffset) { - var $anchors = 
+$(this).find('a[href*="#c"]'), - anchorsOffsets = []; - - offsetTop = offsetTop ? offsetTop : 50; - screenOffset = screenOffset ? 
+screenOffset : $(window).height()/6; - - $anchors.each(function(){ - var byID = $(('#'+$.getHash($(this).attr('href')))); - var byName = 
+$('[name="'+$.getHash($(this).attr('href'))+'"]'); - var target; - if (byID.index() != '-1') { - target = byID; - } else { - target = 
+byName; - } - if (target.index() != '-1') { - anchorsOffsets.push(target.offset().top - screenOffset); - } else { - 
+anchorsOffsets.push(0); - } - }); - - var anchorsOffsetsLength = anchorsOffsets.length; - $anchors.click(function(e){ - var byID = 
+$(('#'+$.getHash($(this).attr('href')))); - var byName = $('[name="'+$.getHash($(this).attr('href'))+'"]'); - var target; - - if 
+(byID.index() != '-1') { - target = byID; - } else { - target = byName; - } - if (target.index() != '-1') { - e.preventDefault(); - 
+$('html').scrollTo(target,{ offset : {top:offsetTop}, duration: 800 }); - } - }); - - $(window).scroll(function(e){ - var scrollTop = 
+$(window).scrollTop()+offsetTop; - $anchors.removeClass("active"); - for ( var i = 0; i < anchorsOffsetsLength; i++ ) { - var j = i+1; - 
+if ( scrollTop >= anchorsOffsets[i] && !anchorsOffsets[j] ) { - $anchors.not($anchors[i]).removeClass("active"); - 
+$($anchors[i]).addClass("active"); - return; - } - else if ( scrollTop >= anchorsOffsets[i] && scrollTop < anchorsOffsets[j] ) { - 
+$anchors.not($anchors[i]).removeClass("active"); - $($anchors[i]).addClass("active"); - return; - } - } - }); - }; - -}(jQuery)); \ No 
+newline at end of file diff --git a/js/main.js b/js/main.js deleted file mode 100755 index b9f0e16..0000000 --- a/js/main.js +++ 
+/dev/null @@ -1,40 +0,0 @@ -(function($) { - $(document).ready(function(){ - // handle src update on hover event - 
+$('img.hover').hoverSrc(); - // enable placeholder management for updated browsers - if(!Modernizr.input.placeholder) { - 
+$('input').each(function(){ - if ($(this).attr('placeholder') != ''){ - $(this).placeholder(); - } - }) - } - - - 
+jQuery('#mainNav').in_jMenu(null, { - $toggleBtn : jQuery('<a href="javascript:;" class="in_jMenu-toggleBtn"></a>'), - userInterfaces : 
+{ - smallscreen : "jQuery('#header').after($(this).parent());", - desktop : "jQuery('#header .page').append($(this).parent());", - 
+toggleBtn : "jQuery('#logo').after(o.$toggleBtn);" - }, - columnsTemplate: [] - }); - jQuery(window).resize(function(){ - // switch UI 
+handler for the main in_menu - if ( jQuery(window).width() <= 660) { - jQuery('#mainNav').find('br').replaceWith('&nbsp;'); - // 
+jQuery('#mainNav li a').html(jQuery('#mainNav li a').html().replace('&nbsp;','<br />')); - jQuery('#mainNav').in_jMenu("setUI", { UI : 
+'smallscreen' }); - }else { - jQuery('#mainNav li a').each(function() { - jQuery(this).html(jQuery(this).html().replace('&nbsp;','<br 
+/>')); - }); - jQuery('#mainNav').in_jMenu("setUI", { UI : 'desktop'}); - } - }); - // trigger a resize event to initalize UI handler - jQuery(window).trigger('resize'); - }) -})(jQuery); \ No newline at end of file diff --git a/js/script.js b/js/script.js new file mode 100644 index 0000000..8261be0 --- /dev/null +++ b/js/script.js @@ -0,0 +1,201 @@ +(function() { + $(function() { + $.getHash = function(url) { + if (url) { + return url.substring(url.indexOf("#") + 1); + } else { + return window.location.hash; + } + }; + $.fn.placeholder = function() { + var emptyMe, fullMe; + emptyMe = function() { + $(this).data("placeholder", $(this).val()); + return $(this).val(""); + }; + fullMe = function() { + if ($(this).val() === "") { + return $(this).val($(this).data("placeholder")); + } + }; + $(this).data("placeholder", $(this).attr("placeholder")); + $(this).val(jQuery(this).attr("placeholder")); + $(this).focus(emptyMe); + $(this).blur(fullMe); + return $(this); + }; + $.fn.hoverSrc = function(on_, off_) { + var hoverIn, hoverOut, suffixeOff, suffixeOn; + hoverIn = function() { + var srcName; + if (!$(this).hasClass("active")) { + srcName = $(this).attr("src"); + srcName = srcName.replace(suffixeOff, suffixeOn); + return $(this).attr({ + src: srcName + }); + } + }; + hoverOut = function() { + var srcName; + if (!$(this).hasClass("active")) { + srcName = $(this).attr("src"); + srcName = srcName.replace(suffixeOn, suffixeOff); + return $(this).attr({ + src: srcName + }); + } + }; + suffixeOn = (on_ ? on_ : "-hover"); + suffixeOff = (off_ ? off_ : "-off"); + $(this).each(function() { + $(this).bind("focus mouseenter", hoverIn); + $(this).bind("blur mouseleave", hoverOut); + return (new Image()).src = $(this).attr("src").replace("-off", "-hover"); + }); + return $(this); + }; + $.fn.fixToTop = function(gap) { + var $that, fix, free, offSet, origin, originOffSet; + fix = function() { + var offSet; + if (!$that.hasClass("fixed")) { + offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop")); + $that.addClass("fixed"); + return $that.next().css("marginTop", offSet + "px"); + } + }; + free = function() { + $that.removeClass("fixed"); + return $that.next().css("marginTop", originOffSet + "px"); + }; + $that = $(this); + origin = (gap ? $that[0].offsetTop + gap : $that[0].offsetTop); + originOffSet = parseFloat($that.next().css("marginTop")); + offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop")); + $(window).scroll(function() { + if ($that.css("visibility") !== "hidden" && $(window).scrollTop() > origin) { + return fix(); + } else { + return free(); + } + }); + return $(this); + }; + $.fn.pulldown = function() { + var $buttons, $items, $list; + $list = $(this); + $items = $list.children(); + $buttons = $items.find("> *:first-child"); + $items.addClass("close"); + $buttons.addClass("pulldownButton"); + $buttons.unbind(" click"); + $buttons.bind("click", function(e) { + return e.preventDefault(); + }); + $items.children().not($buttons).addClass("pulldownContent"); + $items.data("state", 0); + $items.bind("click", function(e) { + var $item; + e.preventDefault(); + $item = $(this); + if ($item.data("state")) { + return $item.data("state", 0).addClass("close"); + } else { + $item.data("state", 1).removeClass("close"); + return $items.not($item).data("state", 0).addClass("close"); + } + }); + $list.data("pulldown", 1); + return $(this); + }; + $.fn.backToTop = function(gap) { + var $that; + $that = $(this); + gap = (gap ? gap : 0); + $(this).unbind("click"); + $(this).bind("click", function(e) { + e.preventDefault(); + return $("html").scrollTo(0, { + duration: 800 + }); + }); + $(this).unbind("backToTop.scroll"); + $(this).bind("backToTop.scroll", function() { + if ($(window).scrollTop() >= gap) { + return $that.fadeIn(); + } else { + return $that.fadeOut(); + } + }); + if (!$(this).data("backToTop")) { + $(window).scroll(function() { + return $that.trigger("backToTop.scroll"); + }); + } + $(this).data("backToTop", 1); + return $(this); + }; + return $.fn.smoothAnchors = function(offsetTop, screenOffset) { + var $anchors, anchorsOffsets, anchorsOffsetsLength, lastExecution, timeWindow; + $anchors = $(this).find("a[href*=\"#c\"]"); + anchorsOffsets = []; + offsetTop = (offsetTop ? offsetTop : 50); + screenOffset = (screenOffset ? screenOffset : $(window).height() / 6); + $anchors.each(function() { + return anchorsOffsets.push($("#" + $.getHash($(this).attr("href"))).offset().top); + }); + anchorsOffsetsLength = anchorsOffsets.length; + $anchors.unbind("click"); + $anchors.click(function(e) { + e.preventDefault(); + return $("html").scrollTo($("#" + $.getHash($(this).attr("href"))), { + offset: { + top: -offsetTop + }, + duration: 800 + }); + }); + timeWindow = 500; + lastExecution = new Date((new Date()).getTime()); + $(window).scroll(function(e) { + var i, j, scrollTop; + if ((lastExecution.getTime() + timeWindow) <= (new Date()).getTime()) { + scrollTop = $(window).scrollTop() + offsetTop + screenOffset; + $anchors.removeClass("active"); + i = 0; + while (i < anchorsOffsetsLength) { + j = i + 1; + if (scrollTop >= anchorsOffsets[i] && !anchorsOffsets[j]) { + $anchors.not($anchors[i]).removeClass("active"); + $($anchors[i]).addClass("active"); + lastExecution = new Date((new Date()).getTime()); + return; + } else if (scrollTop >= anchorsOffsets[i] && scrollTop < anchorsOffsets[j]) { + $anchors.not($anchors[i]).removeClass("active"); + $($anchors[i]).addClass("active"); + lastExecution = new Date((new Date()).getTime()); + return; + } + i++; + } + } + }); + return $(this); + }; + }); + + $(function() { + return $(window).ready(function() { + $(".no-touch img.hover").hoverSrc(); + if (!Modernizr.input.placeholder) { + return $("input").each(function() { + if ($(this).attr("placeholder") !== "") { + return $(this).placeholder(); + } + }); + } + }); + }); + +}).call(this); diff --git a/js/script.js.map b/js/script.js.map new file mode 100644 index 0000000..96ccea7 --- /dev/null +++ b/js/script.js.map @@ -0,0 +1,10 @@ +{

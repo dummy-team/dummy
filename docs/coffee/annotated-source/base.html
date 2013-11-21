@@ -51,36 +51,7 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="function"><span class="params">(($) -&gt;
-  $.fn.placeholder = -&gt;
-    emptyMe = -&gt;
-      $(<span class="keyword">this</span>).val <span class="string">""</span>  <span class="keyword">if</span> $(<span class="keyword">this</span>).val() <span class="keyword">is</span> $(<span class="keyword">this</span>).data(<span class="string">"placeholder"</span>)
-    fullMe = -&gt;
-      $(<span class="keyword">this</span>).val $(<span class="keyword">this</span>).data(<span class="string">"placeholder"</span>)  <span class="keyword">if</span> $(<span class="keyword">this</span>).val() <span class="keyword">is</span> <span class="string">""</span>
-    $(<span class="keyword">this</span>).data <span class="string">"placeholder"</span>, $(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>)
-    $(<span class="keyword">this</span>).val jQuery(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>)
-    $(<span class="keyword">this</span>).bind <span class="string">"keypress"</span>, emptyMe
-    $(<span class="keyword">this</span>).bind <span class="string">"click"</span>, emptyMe
-    $(<span class="keyword">this</span>).blur fullMe
-
-  $.fn.hoverSrc = (on_, off_) -&gt;
-    hoverIn = -&gt;
-      <span class="keyword">unless</span> jQuery(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>)
-        srcName = jQuery(<span class="keyword">this</span>).attr(<span class="string">"src"</span>)
-        srcName = srcName.replace(suffixeOff, suffixeOn)
-        jQuery(<span class="keyword">this</span>).attr src: srcName
-    hoverOut = -&gt;
-      <span class="keyword">unless</span> jQuery(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>)
-        srcName = jQuery(<span class="keyword">this</span>).attr(<span class="string">"src"</span>)
-        srcName = srcName.replace(suffixeOn, suffixeOff)
-        jQuery(<span class="keyword">this</span>).attr src: srcName
-    suffixeOn = (<span class="keyword">if</span> on_ <span class="keyword">then</span> on_ <span class="keyword">else</span> <span class="string">"-hover"</span>)
-    suffixeOff = (<span class="keyword">if</span> off_ <span class="keyword">then</span> off_ <span class="keyword">else</span> <span class="string">"-off"</span>)
-    $(<span class="keyword">this</span>).hover hoverIn, hoverOut
-    $(<span class="keyword">this</span>).focus hoverIn
-    $(<span class="keyword">this</span>).blur hoverOut
-
-</span></span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>$<span class="function"> -&gt;</span></pre></div></div>
             
         </li>
         
@@ -91,83 +62,384 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <p>Return the hash of the given or current url</p>
+              <h2 id="gethash">getHash</h2>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  $.<span class="function"><span class="title">getHash</span> = <span class="params">(url)</span> -&gt;</span>
-    (<span class="keyword">if</span> url <span class="keyword">then</span> url.substring(url.indexOf(<span class="string">"#"</span>) + <span class="number">1</span>) <span class="keyword">else</span> window.location.hash)
+            <div class="content"><div class='highlight'><pre>  $.<span class="function"><span class="title">getHash</span> = <span class="params">(url)</span> -&gt;</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>return the HashTag of the given url : parameter or current</p>
 
-  $.fn.<span class="function"><span class="title">fixToTop</span> = <span class="params">(gap)</span> -&gt;</span>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    (<span class="keyword">if</span> url <span class="keyword">then</span> url.substring(url.indexOf(<span class="string">"#"</span>) + <span class="number">1</span>) <span class="keyword">else</span> window.location.hash)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2 id="placeholder">placeholder</h2>
+<p>Must only be called for browser not supporting placeholder attribute</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  $.fn.<span class="function"><span class="title">placeholder</span> = -&gt;</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Store placeholder value and fill the input</p>
+<p>empty the previous value on focus</p>
+<p>reset the value if nothing is found in the input on blur</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="function"><span class="title">emptyMe</span> = -&gt;</span>
+      $(<span class="keyword">this</span>).data <span class="string">"placeholder"</span>, $(<span class="keyword">this</span>).val()
+      $(<span class="keyword">this</span>).val <span class="string">""</span>
+    <span class="function"><span class="title">fullMe</span> = -&gt;</span>
+      $(<span class="keyword">this</span>).val $(<span class="keyword">this</span>).data(<span class="string">"placeholder"</span>)  <span class="keyword">if</span> $(<span class="keyword">this</span>).val() <span class="keyword">is</span> <span class="string">""</span>
+    $(<span class="keyword">this</span>).data <span class="string">"placeholder"</span>, $(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>)
+    $(<span class="keyword">this</span>).val jQuery(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>)
+    $(<span class="keyword">this</span>).focus emptyMe
+    $(<span class="keyword">this</span>).blur fullMe
+    <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <h2 id="hoversrc">hoverSrc</h2>
+<p>Emulate a hover state for images</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  $.fn.<span class="function"><span class="title">hoverSrc</span> = <span class="params">(on_, off_)</span> -&gt;</span>
+    console.log <span class="string">"bim"</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Use hover / off suffixes or those given</p>
+<p>bind events</p>
+<p>Add the on suffixe to the image name</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="function"><span class="title">hoverIn</span> = -&gt;</span>
+      <span class="keyword">unless</span> $(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>)
+        srcName = $(<span class="keyword">this</span>).attr(<span class="string">"src"</span>)
+        srcName = srcName.replace(suffixeOff, suffixeOn)
+        $(<span class="keyword">this</span>).attr <span class="attribute">src</span>: srcName</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Add the off suffixe to the image name</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="function"><span class="title">hoverOut</span> = -&gt;</span>
+      <span class="keyword">unless</span> $(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>)
+        srcName = $(<span class="keyword">this</span>).attr(<span class="string">"src"</span>)
+        srcName = srcName.replace(suffixeOn, suffixeOff)
+        $(<span class="keyword">this</span>).attr <span class="attribute">src</span>: srcName
+    suffixeOn = (<span class="keyword">if</span> on_ <span class="keyword">then</span> on_ <span class="keyword">else</span> <span class="string">"-hover"</span>)
+    suffixeOff = (<span class="keyword">if</span> off_ <span class="keyword">then</span> off_ <span class="keyword">else</span> <span class="string">"-off"</span>)
+    $(<span class="keyword">this</span>).each<span class="function"> -&gt;</span>
+      $(<span class="keyword">this</span>).bind <span class="string">"focus mouseenter"</span>, hoverIn
+      $(<span class="keyword">this</span>).bind <span class="string">"blur mouseleave"</span>, hoverOut
+      (<span class="keyword">new</span> Image()).src = $(<span class="keyword">this</span>).attr(<span class="string">"src"</span>).replace(<span class="string">"-off"</span>, <span class="string">"-hover"</span>)
+
+    <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <h2 id="fixtotop">fixToTop</h2>
+<p>fix any element to the top when scroll pass it</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  $.fn.<span class="function"><span class="title">fixToTop</span> = <span class="params">(gap)</span> -&gt;</span>
     <span class="function"><span class="title">fix</span> = -&gt;</span>
-      <span class="keyword">if</span> $(<span class="built_in">window</span>).scrollTop() &gt; origin
-        $that.addClass(<span class="string">"fixed"</span>).trigger(<span class="string">"fixed"</span>).next().css <span class="string">"marginTop"</span>, offSet + <span class="string">"px"</span>
-      <span class="keyword">else</span>
-        $that.removeClass(<span class="string">"fixed"</span>).trigger(<span class="string">"unfixed"</span>).next().css <span class="string">"marginTop"</span>, originOffSet + <span class="string">"px"</span>
+      <span class="keyword">unless</span> $that.hasClass(<span class="string">"fixed"</span>)
+        offSet = parseFloat($that.height()) + parseFloat($that.next().css(<span class="string">"marginTop"</span>))
+        $that.addClass <span class="string">"fixed"</span>
+        $that.next().css <span class="string">"marginTop"</span>, offSet + <span class="string">"px"</span>
+    <span class="function"><span class="title">free</span> = -&gt;</span>
+      $that.removeClass <span class="string">"fixed"</span>
+      $that.next().css <span class="string">"marginTop"</span>, originOffSet + <span class="string">"px"</span>
     $that = $(<span class="keyword">this</span>)
-    origin = $that[<span class="number">0</span>].offsetTop
+    origin = (<span class="keyword">if</span> gap <span class="keyword">then</span> $that[<span class="number">0</span>].offsetTop + gap <span class="keyword">else</span> $that[<span class="number">0</span>].offsetTop)
     originOffSet = parseFloat($that.next().css(<span class="string">"marginTop"</span>))
     offSet = parseFloat($that.height()) + parseFloat($that.next().css(<span class="string">"marginTop"</span>))
-    origin = origin + gap  <span class="keyword">if</span> gap
-    fix()
     $(<span class="built_in">window</span>).scroll<span class="function"> -&gt;</span>
-      fix()
+      <span class="keyword">if</span> $that.css(<span class="string">"visibility"</span>) <span class="keyword">isnt</span> <span class="string">"hidden"</span> <span class="keyword">and</span> $(<span class="built_in">window</span>).scrollTop() &gt; origin
+        fix()
+      <span class="keyword">else</span>
+        free()
+
+    <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <h2 id="pulldown">Pulldown</h2>
+<p>Show/Hide content of pulldown element on click on the first child (button) of each elements
+Use css to do the toggle.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  $.fn.<span class="function"><span class="title">pulldown</span> = -&gt;</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>initialize</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    $list = $(<span class="keyword">this</span>)
+    $items = $list.children()
+    $buttons = $items.find(<span class="string">"&gt; *:first-child"</span>)
+    $items.addClass <span class="string">"close"</span>
+    $buttons.addClass <span class="string">"pulldownButton"</span>
+    $buttons.unbind <span class="string">" click"</span>
+    $buttons.bind <span class="string">"click"</span>, <span class="function"><span class="params">(e)</span> -&gt;</span>
+      e.preventDefault()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Add class to hide non-button elements</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    $items.children().<span class="keyword">not</span>($buttons).addClass <span class="string">"pulldownContent"</span>
+    $items.data <span class="string">"state"</span>, <span class="number">0</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>bind click and focus event</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    $items.bind <span class="string">"click"</span>, <span class="function"><span class="params">(e)</span> -&gt;</span>
+      e.preventDefault()
+      $item = $(<span class="keyword">this</span>)
+      <span class="keyword">if</span> $item.data(<span class="string">"state"</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>close</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        $item.data(<span class="string">"state"</span>, <span class="number">0</span>).addClass <span class="string">"close"</span>
+      <span class="keyword">else</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>open</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        $item.data(<span class="string">"state"</span>, <span class="number">1</span>).removeClass <span class="string">"close"</span>
+        $items.<span class="keyword">not</span>($item).data(<span class="string">"state"</span>, <span class="number">0</span>).addClass <span class="string">"close"</span>
+
+    $list.data <span class="string">"pulldown"</span>, <span class="number">1</span>
+    <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <h2 id="backtotop">backToTop</h2>
+<p>display / hide a <em>back to top</em> button when scrolling under the gap</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  $.fn.<span class="function"><span class="title">backToTop</span> = <span class="params">(gap)</span> -&gt;</span>
+    $that = $(<span class="keyword">this</span>)
+    gap = (<span class="keyword">if</span> gap <span class="keyword">then</span> gap <span class="keyword">else</span> <span class="number">0</span>)
+    $(<span class="keyword">this</span>).unbind <span class="string">"click"</span>
+    $<span class="function"><span class="params">(<span class="keyword">this</span>)</span>.<span class="title">bind</span> "<span class="title">click</span>", <span class="params">(e)</span> -&gt;</span>
+      e.preventDefault()
+      $(<span class="string">"html"</span>).scrollTo <span class="number">0</span>,
+        <span class="attribute">duration</span>: <span class="number">800</span>
 
 
-  $.fn.<span class="function"><span class="title">smoothAnchors</span> = <span class="params">(offsetTop, screenOffset)</span> -&gt;</span>
+    $(<span class="keyword">this</span>).unbind <span class="string">"backToTop.scroll"</span>
+    $(<span class="keyword">this</span>).bind <span class="string">"backToTop.scroll"</span>,<span class="function"> -&gt;</span>
+      <span class="keyword">if</span> $(<span class="built_in">window</span>).scrollTop() &gt;= gap
+        $that.fadeIn()
+      <span class="keyword">else</span>
+        $that.fadeOut()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>if backToTop isn&#39;t initiated we trigger a scroll event on the element</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="keyword">unless</span> $(<span class="keyword">this</span>).data(<span class="string">"backToTop"</span>)
+      $(<span class="built_in">window</span>).scroll<span class="function"> -&gt;</span>
+        $that.trigger <span class="string">"backToTop.scroll"</span>
+
+    $(<span class="keyword">this</span>).data <span class="string">"backToTop"</span>, <span class="number">1</span>
+    <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <h2 id="smoothanchors">smoothAnchors</h2>
+<p>Add an automatic smooth Scroll to the section menu of typo3 or any child link matching <strong> a[href*=&quot;#c&quot;] </strong></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  $.fn.<span class="function"><span class="title">smoothAnchors</span> = <span class="params">(offsetTop, screenOffset)</span> -&gt;</span>
     $anchors = $(<span class="keyword">this</span>).find(<span class="string">"a[href*=\"#c\"]"</span>)
     anchorsOffsets = []
     offsetTop = (<span class="keyword">if</span> offsetTop <span class="keyword">then</span> offsetTop <span class="keyword">else</span> <span class="number">50</span>)
     screenOffset = (<span class="keyword">if</span> screenOffset <span class="keyword">then</span> screenOffset <span class="keyword">else</span> $(<span class="built_in">window</span>).height() / <span class="number">6</span>)
     $anchors.each<span class="function"> -&gt;</span>
-      byID = $((<span class="string">"#"</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>))))
-      byName = $(<span class="string">"[name=\""</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)) + <span class="string">"\"]"</span>)
-      target = <span class="literal">undefined</span>
-      <span class="keyword">unless</span> byID.index() <span class="keyword">is</span> <span class="string">"-1"</span>
-        target = byID
-      <span class="keyword">else</span>
-        target = byName
-      <span class="keyword">unless</span> target.index() <span class="keyword">is</span> <span class="string">"-1"</span>
-        anchorsOffsets.push target.offset().top - screenOffset
-      <span class="keyword">else</span>
-        anchorsOffsets.push <span class="number">0</span>
+      anchorsOffsets.push $((<span class="string">"#"</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)))).offset().top
 
     anchorsOffsetsLength = anchorsOffsets.length
+    $anchors.unbind <span class="string">"click"</span>
     $anchors.click <span class="function"><span class="params">(e)</span> -&gt;</span>
-      byID = $((<span class="string">"#"</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>))))
-      byName = $(<span class="string">"[name=\""</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)) + <span class="string">"\"]"</span>)
-      target = <span class="literal">undefined</span>
-      <span class="keyword">unless</span> byID.index() <span class="keyword">is</span> <span class="string">"-1"</span>
-        target = byID
-      <span class="keyword">else</span>
-        target = byName
-      <span class="keyword">unless</span> target.index() <span class="keyword">is</span> <span class="string">"-1"</span>
-        e.preventDefault()
-        $(<span class="string">"html"</span>).scrollTo target,
-          <span class="attribute">offset</span>:
-            <span class="attribute">top</span>: offsetTop
+      e.preventDefault()
+      $(<span class="string">"html"</span>).scrollTo $((<span class="string">"#"</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)))),
+        <span class="attribute">offset</span>:
+          <span class="attribute">top</span>: -offsetTop
 
-          <span class="attribute">duration</span>: <span class="number">800</span>
+        <span class="attribute">duration</span>: <span class="number">800</span>
 
 
+    timeWindow = <span class="number">500</span>
+    lastExecution = <span class="keyword">new</span> Date((<span class="keyword">new</span> Date()).getTime())
     $<span class="function"><span class="params">(<span class="built_in">window</span>)</span>.<span class="title">scroll</span> <span class="params">(e)</span> -&gt;</span>
-      scrollTop = $(<span class="built_in">window</span>).scrollTop() + offsetTop
-      $anchors.removeClass <span class="string">"active"</span>
-      i = <span class="number">0</span>
+      <span class="keyword">if</span> (lastExecution.getTime() + timeWindow) &lt;= (<span class="keyword">new</span> Date()).getTime()
+        scrollTop = $(<span class="built_in">window</span>).scrollTop() + offsetTop + screenOffset
+        $anchors.removeClass <span class="string">"active"</span>
+        i = <span class="number">0</span>
 
-      <span class="keyword">while</span> i &lt; anchorsOffsetsLength
-        j = i + <span class="number">1</span>
-        <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] <span class="keyword">and</span> <span class="keyword">not</span> anchorsOffsets[j]
-          $anchors.<span class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span>
-          $($anchors[i]).addClass <span class="string">"active"</span>
-          <span class="keyword">return</span>
-        <span class="keyword">else</span> <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] <span class="keyword">and</span> scrollTop &lt; anchorsOffsets[j]
-          $anchors.<span class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span>
-          $($anchors[i]).addClass <span class="string">"active"</span>
-          <span class="keyword">return</span>
-        i++
+        <span class="keyword">while</span> i &lt; anchorsOffsetsLength
+          j = i + <span class="number">1</span>
+          <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] <span class="keyword">and</span> <span class="keyword">not</span> anchorsOffsets[j]
+            $anchors.<span class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span>
+            $($anchors[i]).addClass <span class="string">"active"</span>
+            lastExecution = <span class="keyword">new</span> Date((<span class="keyword">new</span> Date()).getTime())
+            <span class="keyword">return</span>
+          <span class="keyword">else</span> <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] <span class="keyword">and</span> scrollTop &lt; anchorsOffsets[j]
+            $anchors.<span class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span>
+            $($anchors[i]).addClass <span class="string">"active"</span>
+            lastExecution = <span class="keyword">new</span> Date((<span class="keyword">new</span> Date()).getTime())
+            <span class="keyword">return</span>
+          i++
 
-) jQuery</pre></div></div>
+    <span class="keyword">return</span> $(<span class="keyword">this</span>)</pre></div></div>
             
         </li>
         

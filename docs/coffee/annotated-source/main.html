@@ -51,10 +51,8 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="function"><span class="params">(($) -&gt;
-  $(<span class="built_in">document</span>).ready -&gt;
-
-</span></span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>$<span class="function"> -&gt;</span>
+  $(<span class="built_in">window</span>).ready<span class="function"> -&gt;</span></pre></div></div>
             
         </li>
         
@@ -65,11 +63,11 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <p>handle src update on hover event</p>
+              <h2 id="handle-src-update-on-hover-event">Handle src update on hover event</h2>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    $(<span class="string">"img.hover"</span>).hoverSrc()</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    $(<span class="string">".no-touch img.hover"</span>).hoverSrc()</pre></div></div>
             
         </li>
         
@@ -80,24 +78,13 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
-              <p>enable placeholder management for updated browsers</p>
+              <h2 id="enable-placeholder-management-for-updated-browsers">Enable placeholder management for updated browsers</h2>
 
             </div>
             
             <div class="content"><div class='highlight'><pre>    <span class="keyword">unless</span> Modernizr.input.placeholder
       $(<span class="string">"input"</span>).each<span class="function"> -&gt;</span>
-        $(<span class="keyword">this</span>).placeholder()  <span class="keyword">unless</span> $(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>) <span class="keyword">is</span> <span class="string">""</span>
-
-    jQuery(<span class="string">"#mainNav"</span>).in_jMenu <span class="literal">null</span>,
-      <span class="attribute">$toggleBtn</span>: jQuery(<span class="string">"&lt;a href=\"javascript:;\" class=\"in_jMenu-toggleBtn\"&gt;&lt;/a&gt;"</span>)
-      <span class="attribute">userInterfaces</span>:
-        <span class="attribute">smallscreen</span>: <span class="string">"jQuery('#header').after($(this).parent());"</span>
-        <span class="attribute">desktop</span>: <span class="string">"jQuery('#header .page').append($(this).parent());"</span>
-        <span class="attribute">toggleBtn</span>: <span class="string">"jQuery('#logo').after(o.$toggleBtn);"</span>
-
-      <span class="attribute">columnsTemplate</span>: []
-
-    jQuery(<span class="built_in">window</span>).resize<span class="function"> -&gt;</span></pre></div></div>
+        $(<span class="keyword">this</span>).placeholder()  <span class="keyword">unless</span> $(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>) <span class="keyword">is</span> <span class="string">""</span></pre></div></div>
             
         </li>
         
@@ -108,52 +95,17 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-4">&#182;</a>
               </div>
-              <p>switch UI handler for the main in_menu</p>
+              <h2 id="add-backtotop-anchor-when-half-a-screen-is-scrolled">Add backToTop anchor when half a screen  is scrolled</h2>
+<p>$(&#39;body&#39;).append(&#39;<a id="backToTop" href="#">Back to top</a>&#39;);
+$(&#39;#backToTop&#39;).backToTop($(window).height()/2);</p>
+<h2 id="handle-pulldown">Handle pulldown</h2>
+<p>$(&#39;.pulldown&#39;).pulldown();</p>
+<h2 id="refresh-scroll-offset-of-backtotop-button-appearance">Refresh scroll offset of backToTop button appearance</h2>
+<p>$(window).bind(&#39;resize&#39;, function(){
+    $(&#39;#backToTop&#39;).backToTop($(window).height()/2);
+});</p>
 
             </div>
-            
-            <div class="content"><div class='highlight'><pre>      <span class="keyword">if</span> jQuery(<span class="built_in">window</span>).width() &lt;= <span class="number">660</span>
-        jQuery(<span class="string">"#mainNav"</span>).find(<span class="string">"br"</span>).replaceWith <span class="string">"&amp;nbsp;"</span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-5">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-5">&#182;</a>
-              </div>
-              <p>jQuery(&#39;#mainNav li a&#39;).html(jQuery(&#39;#mainNav li a&#39;).html().replace(&#39;&nbsp;&#39;,&#39;<br />&#39;));</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>        jQuery(<span class="string">"#mainNav"</span>).in_jMenu <span class="string">"setUI"</span>,
-          <span class="attribute">UI</span>: <span class="string">"smallscreen"</span>
-
-      <span class="keyword">else</span>
-        jQuery(<span class="string">"#mainNav li a"</span>).each<span class="function"> -&gt;</span>
-          jQuery(<span class="keyword">this</span>).html jQuery(<span class="keyword">this</span>).html().replace(<span class="string">"&amp;nbsp;"</span>, <span class="string">"&lt;br /&gt;"</span>)
-
-        jQuery(<span class="string">"#mainNav"</span>).in_jMenu <span class="string">"setUI"</span>,
-          <span class="attribute">UI</span>: <span class="string">"desktop"</span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-6">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-6">&#182;</a>
-              </div>
-              <p>trigger a resize event to initalize UI handler</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>    jQuery(<span class="built_in">window</span>).trigger <span class="string">"resize"</span>
-
-) jQuery</pre></div></div>
             
         </li>
         

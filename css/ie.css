@@ -1,7 +1,7 @@
 /*********************************
 ******** Redefine function *******
 *********************************/
-.setInlineBlock {
-  display: inline;
-  zoom: 1;
-  vertical-align: top; }
+/* line 4, src/ie.scss */
+.setInlineBlock { display: inline; zoom: 1; vertical-align: top; }
+
+/*# sourceMappingURL=ie.css.map */
