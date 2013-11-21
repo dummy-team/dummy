@@ -75,22 +75,27 @@ _generated files*_
          └─ reset.scss
          └─ styles.scss
      └─ ie.css*
+     └─ ie.map.css*
      └─ main.css*
+     └─ main.map.css*
      └─ rte.css
     docs
-    img
     js
      └─ components
+         └─ jquery.min.js
+         └─ jquery.scrollTo.min.js
+         └─ modernizr.js
      └─ htc
          └─ backgroundsize.min.htc
      └─ src
          └─ base.coffee
-         └─ min.coffee
+         └─ main.coffee
+     └─ base.js*
      └─ main.js*
     index.html
     bower.json
     gruntfile.coffee
-    package.josn
+    package.json
     LICENCE
     README.md
     .bowerrc
