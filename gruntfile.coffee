@@ -27,10 +27,12 @@ module.exports = (grunt) ->
         src: ['js/src/*.coffee']
         options:
           output: 'docs/coffee/annotated-source'
+          css: 'docs/assets/custom.css'
       buildSass:
         src: ['css/src/*.scss']
         options:
           output: 'docs/sass/annotated-source'
+          css: 'docs/assets/custom.css'
 
     sass:
       build:

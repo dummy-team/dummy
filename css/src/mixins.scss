@@ -1,11 +1,16 @@
-// Mixins
-@mixin page { margin: 0 auto; width: $maxWidth;
-    @media screen and (min-width: 0px) { max-width: 100%; }
+// Set the default page width
+@mixin page { margin: 0 auto; width: $baseWidth;
+    @media screen and (min-width: 0px) { width: $maxWidth; max-width: 100%; }
 }
 
+// Preset navigation layout
 @mixin nav {
     display: block; margin: 0; padding: 0;
     li { display: inline-block; margin: 5px; padding: 0; }
 }
 
-
+// emulate background sizing for Internet Explorer 8
+@mixin backgound-size( $size... ) {
+    background-size: $size;
+    -ms-behavior: url(/backgroundsize.min.htc);
+}

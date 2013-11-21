@@ -2,7 +2,7 @@ $ ->
   # ## getHash
   $.getHash = (url) ->
 
-    # return the HashTag of the given url : parameter or current
+    # Return the HashTag of the given url : parameter or current
     (if url then url.substring(url.indexOf("#") + 1) else window.location.hash)
 
 
@@ -12,9 +12,9 @@ $ ->
 
     # Store placeholder value and fill the input
 
-    # empty the previous value on focus
+    # Empty the previous value on focus
 
-    # reset the value if nothing is found in the input on blur
+    # Reset the value if nothing is found in the input on blur
     emptyMe = ->
       $(this).data "placeholder", $(this).val()
       $(this).val ""
@@ -30,10 +30,9 @@ $ ->
   # ## hoverSrc
   # Emulate a hover state for images
   $.fn.hoverSrc = (on_, off_) ->
-    console.log "bim"
     # Use hover / off suffixes or those given
 
-    # bind events
+    # Bind events
 
     # Add the on suffixe to the image name
     hoverIn = ->
@@ -59,7 +58,7 @@ $ ->
 
 
   # ## fixToTop
-  # fix any element to the top when scroll pass it
+  # Fix any element to the top when scroll pass it
   $.fn.fixToTop = (gap) ->
     fix = ->
       unless $that.hasClass("fixed")
@@ -87,7 +86,7 @@ $ ->
   # Use css to do the toggle.
   $.fn.pulldown = ->
 
-    # initialize
+    # Initialize
     $list = $(this)
     $items = $list.children()
     $buttons = $items.find("> *:first-child")
@@ -102,17 +101,15 @@ $ ->
     $items.children().not($buttons).addClass "pulldownContent"
     $items.data "state", 0
 
-    # bind click and focus event
+    # Bind click and focus event
     $items.bind "click", (e) ->
       e.preventDefault()
       $item = $(this)
       if $item.data("state")
-
-        # close
+        # Close
         $item.data("state", 0).addClass "close"
       else
-
-        # open
+        # Open
         $item.data("state", 1).removeClass "close"
         $items.not($item).data("state", 0).addClass "close"
 
@@ -121,7 +118,7 @@ $ ->
 
 
   # ## backToTop
-  # display / hide a *back to top* button when scrolling under the gap
+  # Display / hide a *back to top* button when scrolling under the gap
   $.fn.backToTop = (gap) ->
     $that = $(this)
     gap = (if gap then gap else 0)
@@ -140,7 +137,7 @@ $ ->
         $that.fadeOut()
 
 
-    # if backToTop isn't initiated we trigger a scroll event on the element
+    # If backToTop isn't initiated we trigger a scroll event on the element
     unless $(this).data("backToTop")
       $(window).scroll ->
         $that.trigger "backToTop.scroll"

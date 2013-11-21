@@ -1,10 +1,10 @@
-/*********************************
-************ Functions ***********
-*********************************/
+// Return the column width in percentage based of parent size and gutter count
+// work better for evenly distribued columns
 @function column-width( $ratio, $space , $parent: 100, $gutter: $gutter ) {
     @return ($parent - $space * $gutter ) * $ratio
 }
 
+// Return a percentage of the parent from fixed sizes
 @function percent-width( $width, $parentWidth: $max ) {
     @return $width / $parentWidth * 100%;
 }

@@ -2,10 +2,10 @@
 
 <html>
 <head>
-  <title>Global sizing</title>
+  <title>config.scss</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="docco.css" />
+  <link rel="stylesheet" media="all" href="custom.css" />
 </head>
 <body>
   <div id="container">
@@ -74,6 +74,12 @@
     
     <ul class="sections">
         
+          <li id="title">
+              <div class="annotation">
+                  <h1>config.scss</h1>
+              </div>
+          </li>
+        
         
         
         <li id="section-1">
@@ -82,14 +88,11 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <h1 id="global-sizing">Global sizing</h1>
+              <p>Fallback for no mediaquery support (gutter will no longer be the default one)</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>$max                <span class="value">: <span class="number">1200</span>;</span>
-$maxWidth           <span class="value">: $max * <span class="number">1</span>px;</span>
-$u                  <span class="value">: <span class="number">10</span>px;</span>
-$gutter             <span class="value">: <span class="number">30</span> / $max * <span class="number">100</span>%;</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>$baseWidth  <span class="value">: <span class="number">990</span>px;</span></pre></div></div>
             
         </li>
         
@@ -99,6 +102,52 @@ $gutter             <span class="value">: <span class="number">30</span> / $max 
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Max size of the page</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>$max        <span class="value">: <span class="number">1200</span>;</span>
+$maxWidth   <span class="value">: $max * <span class="number">1</span>px;</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Margin and padding base unit</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>$u          <span class="value">: <span class="number">10</span>px;</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Gutter width for the grid system</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>$gutter     <span class="value">: <span class="number">30</span> / $max * <span class="number">100</span>%;</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
               </div>
               <h1 id="colors">Colors</h1>
 
@@ -117,11 +166,11 @@ $errorRed       <span class="value">: <span class="hexcolor">#e04831</span>;</sp
         </li>
         
         
-        <li id="section-3">
+        <li id="section-6">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-3">&#182;</a>
+                <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
               <h1 id="fonts">Fonts</h1>
 

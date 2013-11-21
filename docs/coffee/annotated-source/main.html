@@ -5,7 +5,7 @@
   <title>main.coffee</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="docco.css" />
+  <link rel="stylesheet" media="all" href="custom.css" />
 </head>
 <body>
   <div id="container">
@@ -63,7 +63,7 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <h2 id="handle-src-update-on-hover-event">Handle src update on hover event</h2>
+              <p>Handle src update on hover event</p>
 
             </div>
             
@@ -78,7 +78,7 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
-              <h2 id="enable-placeholder-management-for-updated-browsers">Enable placeholder management for updated browsers</h2>
+              <p>Enable placeholder management for updated browsers</p>
 
             </div>
             
@@ -95,15 +95,55 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-4">&#182;</a>
               </div>
-              <h2 id="add-backtotop-anchor-when-half-a-screen-is-scrolled">Add backToTop anchor when half a screen  is scrolled</h2>
-<p>$(&#39;body&#39;).append(&#39;<a id="backToTop" href="#">Back to top</a>&#39;);
-$(&#39;#backToTop&#39;).backToTop($(window).height()/2);</p>
-<h2 id="handle-pulldown">Handle pulldown</h2>
-<p>$(&#39;.pulldown&#39;).pulldown();</p>
-<h2 id="refresh-scroll-offset-of-backtotop-button-appearance">Refresh scroll offset of backToTop button appearance</h2>
-<p>$(window).bind(&#39;resize&#39;, function(){
-    $(&#39;#backToTop&#39;).backToTop($(window).height()/2);
-});</p>
+              <h1 id="-">#</h1>
+<p>Add backToTop anchor when half a screen  is scrolled</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    $(<span class="string">'body'</span>).append(<span class="string">'&lt;a id="backToTop" href="#"&gt;Back to top&lt;/a&gt;'</span>)
+    $(<span class="string">'#backToTop'</span>).backToTop($(<span class="built_in">window</span>).height()/<span class="number">2</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Handle pulldown</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    $(<span class="string">'.pulldown'</span>).pulldown()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Refresh scroll offset of backToTop button appearance</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    $(<span class="built_in">window</span>).bind <span class="string">'resize'</span>,<span class="function"> -&gt;</span>
+      $(<span class="string">'#backToTop'</span>).backToTop($(<span class="built_in">window</span>).height()/<span class="number">2</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <h1 id="-">#</h1>
 
             </div>
             

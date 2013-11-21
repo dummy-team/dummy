@@ -1,9 +1,9 @@
-// default display mode and margins
+// Default display mode and margins
 .column { display: inline-block; margin: 0 0 0 $gutter; vertical-align: top;
     &:first-child { margin: 0; }
 }
 
-// preset columns
+// Preset columns sizes
 $col80 : column-width(.80, .25);
 $col75 : column-width(.75, .3333333333);
 $col70 : column-width(.6666666666, .5);
@@ -14,6 +14,7 @@ $col30 : column-width(.3333333333, 2);
 $col25 : column-width(.25, 3);
 $col20 : column-width(.20, 4);
 
+// Columns classes
 .column-80 { width: $col80; }
 .column-75 { width: $col75; }
 .column-70 { width: $col70; }

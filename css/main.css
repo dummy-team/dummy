@@ -1,15 +1,11 @@
-/*********************************
-************** Reset *************
-*********************************/
-
-/* line 4, src/reset.scss */
+/* line 3, src/reset.scss */
 
 html {
   font-size: 62.5%;
   line-height: 1.3em;
 }
 
-/* line 5, src/reset.scss */
+/* line 4, src/reset.scss */
 
 body {
   margin: 0;
@@ -38,10 +34,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/*********************************
-************ Functions ***********
-*********************************/
-
 /* line 2, src/columns.scss */
 
 .column {
@@ -56,61 +48,61 @@ a:hover {
   margin: 0;
 }
 
-/* line 17, src/columns.scss */
+/* line 18, src/columns.scss */
 
 .column-80 {
   width: 79.5%;
 }
 
-/* line 18, src/columns.scss */
+/* line 19, src/columns.scss */
 
 .column-75 {
   width: 74.3750000000625%;
 }
 
-/* line 19, src/columns.scss */
+/* line 20, src/columns.scss */
 
 .column-70 {
   width: 65.83333332675%;
 }
 
-/* line 20, src/columns.scss */
+/* line 21, src/columns.scss */
 
 .column-60 {
   width: 59.000000000099995%;
 }
 
-/* line 21, src/columns.scss */
+/* line 22, src/columns.scss */
 
 .column-50 {
   width: 48.75%;
 }
 
-/* line 22, src/columns.scss */
+/* line 23, src/columns.scss */
 
 .column-40 {
   width: 38.5%;
 }
 
-/* line 23, src/columns.scss */
+/* line 24, src/columns.scss */
 
 .column-30 {
   width: 31.666666663499996%;
 }
 
-/* line 24, src/columns.scss */
+/* line 25, src/columns.scss */
 
 .column-25 {
   width: 23.125%;
 }
 
-/* line 25, src/columns.scss */
+/* line 26, src/columns.scss */
 
 .column-20 {
   width: 18%;
 }
 
-/* line 28, src/columns.scss */
+/* line 29, src/columns.scss */
 
 .wrap {
   margin: 10px 0;
@@ -120,14 +112,14 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 29, src/columns.scss */
+/* line 30, src/columns.scss */
 
 .column {
   color: #444444;
   background-color: #333333;
 }
 
-/* line 30, src/columns.scss */
+/* line 31, src/columns.scss */
 
 .column h1 {
   margin: 10px;
@@ -313,13 +305,14 @@ h6,
 
 .page {
   margin: 0 auto;
-  width: 1200px;
+  width: 990px;
 }
 
 @media screen and (min-width: 0px) {
   /* line 33, src/main.scss */
 
   .page {
+    width: 1200px;
     max-width: 100%;
   }
 }
@@ -360,7 +353,7 @@ hr.clear {
   padding: 0;
 }
 
-/* line 8, src/mixins.scss */
+/* line 9, src/mixins.scss */
 
 .nav li {
   display: inline-block;
@@ -372,13 +365,14 @@ hr.clear {
 
 .content {
   margin: 0 auto;
-  width: 1200px;
+  width: 990px;
 }
 
 @media screen and (min-width: 0px) {
   /* line 46, src/main.scss */
 
   .content {
+    width: 1200px;
     max-width: 100%;
   }
 }
@@ -526,7 +520,7 @@ hr.clear {
 }
 
 @media screen and (max-width: 764px) {
-  /* line 10, src/mediaqueries.scss */
+  /* line 9, src/mediaqueries.scss */
 
   .column {
     display: block;

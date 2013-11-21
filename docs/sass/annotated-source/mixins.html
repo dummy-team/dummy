@@ -5,7 +5,7 @@
   <title>mixins.scss</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="docco.css" />
+  <link rel="stylesheet" media="all" href="custom.css" />
 </head>
 <body>
   <div id="container">
@@ -88,17 +88,48 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <p>Mixins</p>
+              <p>Set the default page width</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> page</span> {</span> <span class="attribute">margin</span><span class="value">: <span class="number">0</span> auto;</span> <span class="attribute">width</span><span class="value">: $maxWidth;</span>
-    <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 0px</span>) {</span> <span class="attribute">max-width</span><span class="value">: <span class="number">100</span>%;</span> }
-}
+            <div class="content"><div class='highlight'><pre><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> page</span> {</span> <span class="attribute">margin</span><span class="value">: <span class="number">0</span> auto;</span> <span class="attribute">width</span><span class="value">: $baseWidth;</span>
+    <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 0px</span>) {</span> <span class="attribute">width</span><span class="value">: $maxWidth;</span> <span class="attribute">max-width</span><span class="value">: <span class="number">100</span>%;</span> }
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Preset navigation layout</p>
 
-<span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> nav</span> {</span>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> nav</span> {</span>
     <span class="attribute">display</span><span class="value">: block;</span> <span class="attribute">margin</span><span class="value">: <span class="number">0</span>;</span> <span class="attribute">padding</span><span class="value">: <span class="number">0</span>;</span>
     <span class="tag">li</span> { <span class="attribute">display</span><span class="value">: inline-block;</span> <span class="attribute">margin</span><span class="value">: <span class="number">5</span>px;</span> <span class="attribute">padding</span><span class="value">: <span class="number">0</span>;</span> }
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>emulate background sizing for Internet Explorer 8</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> backgound-size</span>( $size... ) {</span>
+    <span class="attribute">background-size</span><span class="value">: $size;</span>
+    -ms-behavior<span class="value">: url(/backgroundsize.min.htc);</span>
 }</pre></div></div>
             
         </li>

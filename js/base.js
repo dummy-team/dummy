@@ -26,7 +26,6 @@
     };
     $.fn.hoverSrc = function(on_, off_) {
       var hoverIn, hoverOut, suffixeOff, suffixeOn;
-      console.log("bim");
       hoverIn = function() {
         var srcName;
         if (!$(this).hasClass("active")) {

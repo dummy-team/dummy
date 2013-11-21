@@ -1,6 +1,6 @@
 {
 "version": "3",
-"mappings": ";;;;AAGA,eAAgB,GACZ,OAAO,EAAC,MAAM,EACd,IAAI,EAAC,CAAC,EACN,cAAc,EAAC,GAAG",
-"sources": ["src/ie.scss"],
+"mappings": "",
+"sources": [],
 "file": "ie.css"
 }

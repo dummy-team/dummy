@@ -3,9 +3,8 @@
     .csc-textpic-imagewrap, img { max-width: 100%; height: auto;}
 }
 
-@media screen and (max-width: 990px) {
-}
-
+// 764px is the vertical iPad width, you should edit it to match the wanted layout breakpoint
 @media screen and (max-width: 764px) {
+    // Reset layout to one column
     .column { display: block; width: auto!important; margin: 0!important; }
 }

@@ -1,8 +1,15 @@
-// # Global sizing
-$max                : 1200;
-$maxWidth           : $max * 1px;
-$u                  : 10px;
-$gutter             : 30 / $max * 100%;
+// Fallback for no mediaquery support (gutter will no longer be the default one)
+$baseWidth  : 990px;
+
+// Max size of the page
+$max        : 1200;
+$maxWidth   : $max * 1px;
+
+// Margin and padding base unit
+$u          : 10px;
+
+// Gutter width for the grid system
+$gutter     : 30 / $max * 100%;
 
 // # Colors
 $white          : #FFFFFF;
