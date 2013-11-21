@@ -38,6 +38,15 @@ A light Sass &amp; coffee front-end base
 - usage of size unit ($u) : function(value) / value*$u
 
 
+# Release notes
+
+- 0.1.0           First Sass & Coffe version of the Dummy
+- 0.2.0           Reworked grid system : You can now use *class="column column-value"* in any wrapper to get your columns right
+- 0.3.0           Vendors prefixe are now automatically added to the main.css file
+- 0.4.0           The default grunt task now build coffeescript annotated sources
+- 0.5.0           Sourcemapping for sass & coffescript files enabled
+- 0.5.1           Improved documentation
+
 # Road map
 
 - 1.0.0 :
