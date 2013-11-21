@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>base.coffee</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="base.html">
+                base.coffee
+              </a>
+            
+              
+              <a class="source" href="main.html">
+                main.coffee
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>base.coffee</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="function"><span class="params">(($) -&gt;
+  $.fn.placeholder = -&gt;
+    emptyMe = -&gt;
+      $(<span class="keyword">this</span>).val <span class="string">""</span>  <span class="keyword">if</span> $(<span class="keyword">this</span>).val() <span class="keyword">is</span> $(<span class="keyword">this</span>).data(<span class="string">"placeholder"</span>)
+    fullMe = -&gt;
+      $(<span class="keyword">this</span>).val $(<span class="keyword">this</span>).data(<span class="string">"placeholder"</span>)  <span class="keyword">if</span> $(<span class="keyword">this</span>).val() <span class="keyword">is</span> <span class="string">""</span>
+    $(<span class="keyword">this</span>).data <span class="string">"placeholder"</span>, $(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>)
+    $(<span class="keyword">this</span>).val jQuery(<span class="keyword">this</span>).attr(<span class="string">"placeholder"</span>)
+    $(<span class="keyword">this</span>).bind <span class="string">"keypress"</span>, emptyMe
+    $(<span class="keyword">this</span>).bind <span class="string">"click"</span>, emptyMe
+    $(<span class="keyword">this</span>).blur fullMe
+
+  $.fn.hoverSrc = (on_, off_) -&gt;
+    hoverIn = -&gt;
+      <span class="keyword">unless</span> jQuery(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>)
+        srcName = jQuery(<span class="keyword">this</span>).attr(<span class="string">"src"</span>)
+        srcName = srcName.replace(suffixeOff, suffixeOn)
+        jQuery(<span class="keyword">this</span>).attr src: srcName
+    hoverOut = -&gt;
+      <span class="keyword">unless</span> jQuery(<span class="keyword">this</span>).hasClass(<span class="string">"active"</span>)
+        srcName = jQuery(<span class="keyword">this</span>).attr(<span class="string">"src"</span>)
+        srcName = srcName.replace(suffixeOn, suffixeOff)
+        jQuery(<span class="keyword">this</span>).attr src: srcName
+    suffixeOn = (<span class="keyword">if</span> on_ <span class="keyword">then</span> on_ <span class="keyword">else</span> <span class="string">"-hover"</span>)
+    suffixeOff = (<span class="keyword">if</span> off_ <span class="keyword">then</span> off_ <span class="keyword">else</span> <span class="string">"-off"</span>)
+    $(<span class="keyword">this</span>).hover hoverIn, hoverOut
+    $(<span class="keyword">this</span>).focus hoverIn
+    $(<span class="keyword">this</span>).blur hoverOut
+
+</span></span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Return the hash of the given or current url</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  $.<span class="function"><span class="title">getHash</span> = <span class="params">(url)</span> -&gt;</span>
+    (<span class="keyword">if</span> url <span class="keyword">then</span> url.substring(url.indexOf(<span class="string">"#"</span>) + <span class="number">1</span>) <span class="keyword">else</span> window.location.hash)
+
+  $.fn.<span class="function"><span class="title">fixToTop</span> = <span class="params">(gap)</span> -&gt;</span>
+    <span class="function"><span class="title">fix</span> = -&gt;</span>
+      <span class="keyword">if</span> $(<span class="built_in">window</span>).scrollTop() &gt; origin
+        $that.addClass(<span class="string">"fixed"</span>).trigger(<span class="string">"fixed"</span>).next().css <span class="string">"marginTop"</span>, offSet + <span class="string">"px"</span>
+      <span class="keyword">else</span>
+        $that.removeClass(<span class="string">"fixed"</span>).trigger(<span class="string">"unfixed"</span>).next().css <span class="string">"marginTop"</span>, originOffSet + <span class="string">"px"</span>
+    $that = $(<span class="keyword">this</span>)
+    origin = $that[<span class="number">0</span>].offsetTop
+    originOffSet = parseFloat($that.next().css(<span class="string">"marginTop"</span>))
+    offSet = parseFloat($that.height()) + parseFloat($that.next().css(<span class="string">"marginTop"</span>))
+    origin = origin + gap  <span class="keyword">if</span> gap
+    fix()
+    $(<span class="built_in">window</span>).scroll<span class="function"> -&gt;</span>
+      fix()
+
+
+  $.fn.<span class="function"><span class="title">smoothAnchors</span> = <span class="params">(offsetTop, screenOffset)</span> -&gt;</span>
+    $anchors = $(<span class="keyword">this</span>).find(<span class="string">"a[href*=\"#c\"]"</span>)
+    anchorsOffsets = []
+    offsetTop = (<span class="keyword">if</span> offsetTop <span class="keyword">then</span> offsetTop <span class="keyword">else</span> <span class="number">50</span>)
+    screenOffset = (<span class="keyword">if</span> screenOffset <span class="keyword">then</span> screenOffset <span class="keyword">else</span> $(<span class="built_in">window</span>).height() / <span class="number">6</span>)
+    $anchors.each<span class="function"> -&gt;</span>
+      byID = $((<span class="string">"#"</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>))))
+      byName = $(<span class="string">"[name=\""</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)) + <span class="string">"\"]"</span>)
+      target = <span class="literal">undefined</span>
+      <span class="keyword">unless</span> byID.index() <span class="keyword">is</span> <span class="string">"-1"</span>
+        target = byID
+      <span class="keyword">else</span>
+        target = byName
+      <span class="keyword">unless</span> target.index() <span class="keyword">is</span> <span class="string">"-1"</span>
+        anchorsOffsets.push target.offset().top - screenOffset
+      <span class="keyword">else</span>
+        anchorsOffsets.push <span class="number">0</span>
+
+    anchorsOffsetsLength = anchorsOffsets.length
+    $anchors.click <span class="function"><span class="params">(e)</span> -&gt;</span>
+      byID = $((<span class="string">"#"</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>))))
+      byName = $(<span class="string">"[name=\""</span> + $.getHash($(<span class="keyword">this</span>).attr(<span class="string">"href"</span>)) + <span class="string">"\"]"</span>)
+      target = <span class="literal">undefined</span>
+      <span class="keyword">unless</span> byID.index() <span class="keyword">is</span> <span class="string">"-1"</span>
+        target = byID
+      <span class="keyword">else</span>
+        target = byName
+      <span class="keyword">unless</span> target.index() <span class="keyword">is</span> <span class="string">"-1"</span>
+        e.preventDefault()
+        $(<span class="string">"html"</span>).scrollTo target,
+          <span class="attribute">offset</span>:
+            <span class="attribute">top</span>: offsetTop
+
+          <span class="attribute">duration</span>: <span class="number">800</span>
+
+
+    $<span class="function"><span class="params">(<span class="built_in">window</span>)</span>.<span class="title">scroll</span> <span class="params">(e)</span> -&gt;</span>
+      scrollTop = $(<span class="built_in">window</span>).scrollTop() + offsetTop
+      $anchors.removeClass <span class="string">"active"</span>
+      i = <span class="number">0</span>
+
+      <span class="keyword">while</span> i &lt; anchorsOffsetsLength
+        j = i + <span class="number">1</span>
+        <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] <span class="keyword">and</span> <span class="keyword">not</span> anchorsOffsets[j]
+          $anchors.<span class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span>
+          $($anchors[i]).addClass <span class="string">"active"</span>
+          <span class="keyword">return</span>
+        <span class="keyword">else</span> <span class="keyword">if</span> scrollTop &gt;= anchorsOffsets[i] <span class="keyword">and</span> scrollTop &lt; anchorsOffsets[j]
+          $anchors.<span class="keyword">not</span>($anchors[i]).removeClass <span class="string">"active"</span>
+          $($anchors[i]).addClass <span class="string">"active"</span>
+          <span class="keyword">return</span>
+        i++
+
+) jQuery</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

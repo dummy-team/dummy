@@ -34,7 +34,7 @@
                 jQuery('#mainNav').in_jMenu("setUI", { UI : 'desktop'});
             }
         });
-        // trigger a resize event to initalize UI handler 
+        // trigger a resize event to initalize UI handler
         jQuery(window).trigger('resize');
     })
 })(jQuery);

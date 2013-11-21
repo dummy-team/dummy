@@ -18,19 +18,24 @@ A light Sass &amp; coffee front-end base
 # To discuss
 
 ## CSS
+
 - mediaqueries in a separate file / inline in the main sheet
 - usage of size unit ($u) : function(value) / value*$u
 
 # Road map
+
+- 0.5.0 : clean CoffeScript
 - 1.0.0 : create a clean index.html & move test page in an demo/example folder
-- 1.1.0 : auto docs sass & coffeescript
+- 1.0.1 : fix the doc task bug (breaking the chain of tasks)
 - 1.1.1 : add a dynamic demo for grid system
 - 2.0.0 : make it a generator whith dependencies and optionnal components
 - 2.1.0 : custom Modernizr build
 
+#Kown issues
+
+- To build annotated sources for Sass files you need to run *grunt docco:buildSass*
 
 # tree
-
 _generated files*_
 
     css

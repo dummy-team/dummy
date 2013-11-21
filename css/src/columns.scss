@@ -29,4 +29,6 @@ $col20 : column-width(.20, 4);
 
 // DEBUG
 .wrap {  margin: 1*$u 0; background-color: $orange; text-align: center;}
-.column { min-height: 100px; color: $grey; background-color: $black;}
+.column { color: $grey; background-color: $black;
+    h1 { margin:1*$u; }
+}

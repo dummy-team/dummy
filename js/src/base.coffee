@@ -27,18 +27,7 @@
     $(this).focus hoverIn
     $(this).blur hoverOut
 
-  $.fn.verticalCenter = (height) ->
-    if height
-      $(this).each ->
-        return this  if parseFloat($(this).height()) < 1
-        $(this).css "padding-top", (height - parseFloat($(this).height())) / 2
-
-    else
-      $(this).each ->
-        return this  if parseFloat($(this).height()) < 1
-        $(this).css "padding-top", (parseFloat($(this).parent().height()) - parseFloat($(this).height())) / 2
-
-
+  # Return the hash of the given or current url
   $.getHash = (url) ->
     (if url then url.substring(url.indexOf("#") + 1) else window.location.hash)
 

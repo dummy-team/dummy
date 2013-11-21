@@ -1,6 +1,5 @@
-/*********************************
-*********** Set Margin ***********
-*********************************/
+// Set Margin
+
 h1, .h1-like { margin: 3*$u 0 2*$u 0; }
 h2, .h2-like { margin: 3*$u 0 2*$u 0; }
 h3, .h3-like { margin: 3*$u 0 2*$u 0; }
@@ -14,9 +13,8 @@ ul{
   li{ margin: $u 0 $u 0; }
 }
 
-/*********************************
-*********** Font size ***********
-*********************************/
+// Font size
+
 p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textarea { font-size: 1.6em; line-height: 1.3em; }
 li li, li p, td p, th p, li h1, li .h1-like, li h2, li .h2-like, li h3, li .h3-like, li h4, li .h4-like, li h5, li .h5-like, li h6, li .h6-like, button { font-size: 100%; }
 input, select, textarea { font-family: $font; }
@@ -29,9 +27,8 @@ h5, .h5-like { font-size: 1.5em; }
 h6, .h6-like { font-size: 1.4em; }
 
 
-/*********************************
-************ General *************
-*********************************/
+// General
+
 body {  }
 .page { @include page; }
 
@@ -48,16 +45,12 @@ hr.clear {clear: both;  height: 0px; }
 
 .content { @include page; }
 
-/********************************
- ************* Flex *************
- *******************************/
+// Flex
 
 
-/*********************************
- ************* Header ************
- *********************************/
+
+// Header
 
 
-/*********************************
- ************* Footer ************
- *********************************/
+
+// Footer

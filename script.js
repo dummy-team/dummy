@@ -46,23 +46,6 @@
       $(this).focus(hoverIn);
       return $(this).blur(hoverOut);
     };
-    $.fn.verticalCenter = function(height) {
-      if (height) {
-        return $(this).each(function() {
-          if (parseFloat($(this).height()) < 1) {
-            return this;
-          }
-          return $(this).css("padding-top", (height - parseFloat($(this).height())) / 2);
-        });
-      } else {
-        return $(this).each(function() {
-          if (parseFloat($(this).height()) < 1) {
-            return this;
-          }
-          return $(this).css("padding-top", (parseFloat($(this).parent().height()) - parseFloat($(this).height())) / 2);
-        });
-      }
-    };
     $.getHash = function(url) {
       if (url) {
         return url.substring(url.indexOf("#") + 1);
