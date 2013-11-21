@@ -22,7 +22,6 @@ A light Sass &amp; coffee front-end base
 - usage of size unit ($u) : function(value) / value*$u
 
 # Road map
-- 0.3.0 : add autoprefix
 - 1.0.0 : create a clean index.html & move test page in an demo/example folder
 - 1.1.0 : auto docs sass & coffeescript
 - 1.1.1 : add a dynamic demo for grid system

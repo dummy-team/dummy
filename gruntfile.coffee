@@ -23,6 +23,11 @@ module.exports = (grunt) ->
           'css/main.css': 'css/src/styles.scss'
           'css/ie.css': 'css/src/ie.scss'
 
+    autoprefixer:
+      build:
+        browsers: ["last 3 version", "ie 8", "ie 7"]
+        src: 'css/main.css'
+
     connect:
       all:
         options:
@@ -45,7 +50,10 @@ module.exports = (grunt) ->
         files:'*.html'
       sass:
         files:'css/src/*.scss'
-        tasks: 'sass:build'
+        tasks: [
+          'sass:build',
+          'autoprefixer:build'
+        ]
       coffee:
         files: 'js/src/*.coffee'
         tasks: 'coffee:build'
@@ -53,12 +61,14 @@ module.exports = (grunt) ->
     grunt.registerTask 'default', [
       'sass:build'
       'coffee:build'
+      'autoprefixer:build'
     ]
 
     grunt.registerTask 'server', [
       'sass:build'
       'coffee:build'
-      'connect',
+      'autoprefixer:build'
+      'connect'
       'open'
       'watch'
     ]

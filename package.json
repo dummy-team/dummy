@@ -1,7 +1,25 @@
 {
   "name": "dummy",
   "description": "A light Sass & coffee base front-end",
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "author": {
+    "name": "Inouit",
+    "url": "www.inouit.fr"
+  },
+  "contributors": [
+    "Plou <cl.plou@gmail.com> (http://plou.github.io/)",
+    "Gregcop1 <gregcop1@gmail.com>",
+    "Toofff <prouyann@gmail.com> (http://yanoucrea.fr)",
+    "Shatimes <contact@shatimes.fr> (http://www.shatimes.fr)",
+    "JViste <jviste@inouit.com>"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/in8/dummy.git"
+  },
+  "bugs" : {
+    "url" : "https://github.com/in8/dummy/issues"
+  },
   "devDependencies" : {
     "grunt" : "*",
     "grunt-contrib-coffee": "*",
@@ -9,6 +27,7 @@
     "grunt-open": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-sass": "*",
+    "grunt-autoprefixer": "*",
     "matchdep": "*"
   }
 }
