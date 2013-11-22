@@ -44,17 +44,19 @@ A light Sass &amp; coffee front-end base
 
 # Release notes
 
-- 0.1.0           First Sass & Coffe version of the Dummy
-- 0.2.0           Reworked grid system : You can now use *class="column column-value"* in any wrapper to get your columns right
-- 0.3.0           Vendors prefixe are now automatically added to the main.css file
-- 0.4.0           The default grunt task now build coffeescript annotated sources
-- 0.5.0           Sourcemapping for sass & coffescript files enabled
-- 0.5.1           Improved documentation
+- 0.1.0 :    First Sass & Coffe version of the Dummy
+- 0.2.0 :    Reworked grid system : You can now use *class="column column-value"* in any wrapper to get your columns right
+- 0.3.0 :    Vendors prefixe are now automatically added to the main.css file
+- 0.4.0 :    The default grunt task now build coffeescript annotated sources
+- 0.5.0 :    Sourcemapping for sass & coffescript files enabled
+- 0.5.1 :    Improved documentation
+- 0.6.0 :
+  - Removed livereload script from html, you must use a browser extension listenning port 35729
+  - Until generator is built, a gruntFile for typo3 has been added
 
 # Road map
 
 - 1.0.0 :
-  - Full compatibility (livereloading) with *skin* for *Typo3*
   - Create a clean index.html & move test page in an demo/example folder
 - 1.0.1 : rewrite CoffeScript
 - 1.0.2 : fix the doc task bug (breaking the chain of tasks)
@@ -63,6 +65,7 @@ A light Sass &amp; coffee front-end base
 - 2.1.0 : custom Modernizr build
 
 - Keep improving the grid system
+- Full compatibility (livereloading) with *skinFlex* for *Typo3*
 
 
 #Kown issues

@@ -67,7 +67,7 @@ module.exports = (grunt) ->
 
     watch:
       options:
-        livereload: 1337
+        livereload: 35729
       html:
         files:'*.html'
       sass:
