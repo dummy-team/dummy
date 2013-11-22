@@ -8,7 +8,7 @@ A light Sass &amp; coffee front-end base
 
 - Clone
 - remove .git folder
-- add *node_modules* & *\_bower\_components* folders to project .gitignore
+- add *node_modules*, *.sass-cache* & *\_bower\_components* folders to project .gitignore
 - run *npm install && bower install*
 - move needed minified components from *\_bower\_components* to *components*
   - jQuery, Modernizr & scrollTo are needed
@@ -36,6 +36,10 @@ A light Sass &amp; coffee front-end base
 
 - mediaqueries in a separate file / inline in the main sheet
 - usage of size unit ($u) : function(value) / value*$u
+
+## Structure
+
+- symling required components from js/\_bower\_components to js/components
 
 
 # Release notes
@@ -104,6 +108,7 @@ _generated files*_
     index.html
     bower.json
     gruntfile.coffee
+    gruntfile_typo3.coffee
     package.json
     LICENCE
     README.md
