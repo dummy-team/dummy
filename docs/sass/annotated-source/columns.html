@@ -128,11 +128,27 @@ $col20 <span class="value">: column-width(.<span class="number">20</span>, <span
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
-              <p>Columns classes</p>
+              <h2 id="columns-classes">Columns classes</h2>
+<p>Used width inline-block display mode, you&#39;ll need to use comments
+to remove white-space size between columns</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="class">.column-80</span> { <span class="attribute">width</span><span class="value">: $col80;</span> }
+            <div class="content"><div class='highlight'><pre><span class="comment">/*
+HTML columns :
+    &lt;div&gt;
+       &lt;div class="column column-50"&gt;
+           &lt;h1&gt;50&lt;/h1&gt;
+       &lt;/div&gt;&lt;!--
+    --&gt;&lt;div class="column column-25"&gt;
+           &lt;h1&gt;25&lt;/h1&gt;
+       &lt;/div&gt;&lt;!--
+    --&gt;&lt;div class="column column-25"&gt;
+           &lt;h1&gt;25&lt;/h1&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+*/</span>
+<span class="class">.column-80</span> { <span class="attribute">width</span><span class="value">: $col80;</span> }
 <span class="class">.column-75</span> { <span class="attribute">width</span><span class="value">: $col75;</span> }
 <span class="class">.column-70</span> { <span class="attribute">width</span><span class="value">: $col70;</span> }
 <span class="class">.column-60</span> { <span class="attribute">width</span><span class="value">: $col60;</span> }

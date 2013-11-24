@@ -56,8 +56,7 @@ A light Sass &amp; coffee front-end base
 
 # Road map
 
-- 1.0.0 :
-  - Create a clean index.html & move test page in an demo/example folder
+- 1.0.0 : Create a clean index.html & move test page in an demo/example folder
 - 1.0.1 : rewrite CoffeScript
 - 1.0.2 : fix the doc task bug (breaking the chain of tasks)
 - 1.1.1 : add a dynamic demo for grid system
