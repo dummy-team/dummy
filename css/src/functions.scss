@@ -1,5 +1,6 @@
 // Return the column width in percentage based of parent size and gutter count
-// work better for evenly distribued columns
+// work better for evenly distribued columns.
+// Go to columns.scss to see an example.
 @function column-width( $ratio, $space , $parent: 100, $gutter: $gutter ) {
     @return ($parent - $space * $gutter ) * $ratio
 }

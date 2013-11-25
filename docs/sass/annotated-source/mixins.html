@@ -112,7 +112,7 @@
             <div class="content"><div class='highlight'><pre><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> nav</span> {</span>
     <span class="attribute">display</span><span class="value">: block;</span> <span class="attribute">margin</span><span class="value">: <span class="number">0</span>;</span> <span class="attribute">padding</span><span class="value">: <span class="number">0</span>;</span>
     <span class="tag">li</span> { <span class="attribute">display</span><span class="value">: inline-block;</span> <span class="attribute">margin</span><span class="value">: <span class="number">5</span>px;</span> <span class="attribute">padding</span><span class="value">: <span class="number">0</span>;</span> }
-}</pre></div></div>
+    <span class="tag">li</span><span class="pseudo">:hover</span> {</pre></div></div>
             
         </li>
         
@@ -123,7 +123,39 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
-              <p>emulate background sizing for Internet Explorer 8</p>
+              <p>Show second navigation level on hover</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="class">.second</span> { <span class="attribute">display</span><span class="value">: block;</span>}
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Hide second navigation level</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="class">.second</span> { <span class="attribute">position</span><span class="value">: absolute;</span> <span class="attribute">display</span><span class="value">: none;</span>}
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Emulate background sizing for Internet Explorer 8</p>
 
             </div>
             

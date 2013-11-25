@@ -69,7 +69,10 @@ module.exports = (grunt) ->
       options:
         livereload: 35729
       html:
-        files:'*.html'
+        files:[
+          '*.html'
+          '**/*.html'
+        ]
       sass:
         files:'css/src/*.scss'
         tasks: [

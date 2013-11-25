@@ -111,7 +111,6 @@ module.exports = (grunt) ->
       'sass:build'
       'autoprefixer:build'
       'coffee:build'
-      'open'
       'watch'
     ]
 

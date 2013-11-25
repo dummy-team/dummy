@@ -110,68 +110,70 @@ HTML columns : <div> <div class="column column-50"> <h1>50</h1> </div><!-- --><d
 
 h1,
 .h1-like {
-  margin: 30px 0 20px 0;
+  margin: 25px 0;
 }
 
 /* line 4, src/main.scss */
 
 h2,
 .h2-like {
-  margin: 30px 0 20px 0;
+  margin: 25px 0;
 }
 
 /* line 5, src/main.scss */
 
 h3,
 .h3-like {
-  margin: 30px 0 20px 0;
+  margin: 25px 0;
 }
 
 /* line 6, src/main.scss */
 
 h4,
 .h4-like {
-  margin: 20px 0 10px 0;
+  margin: 20px 0;
 }
 
 /* line 7, src/main.scss */
 
 h5,
 .h5-like {
-  margin: 20px 0 10px 0;
+  margin: 20px 0;
 }
 
 /* line 8, src/main.scss */
 
-.introduction {
-  margin: 10px 0 20px 0;
-}
-
-/* line 9, src/main.scss */
-
-p,
-p.bodytext {
-  margin: 10px 0 20px 0;
+.introduction,
+.important {
+  margin: 30px 0;
 }
 
 /* line 10, src/main.scss */
+
+p,
+p.bodytext,
+h6,
+.h6-like {
+  margin: 25px 0;
+}
+
+/* line 11, src/main.scss */
 
 td p,
 td p.bodytext {
   margin: 0;
 }
 
-/* line 11, src/main.scss */
+/* line 12, src/main.scss */
 
 ul {
-  margin: 0;
-  padding: 10px 0 10px 0;
+  margin: 30px 0;
 }
 
 /* line 13, src/main.scss */
 
 ul li {
-  margin: 10px 0 10px 0;
+  margin: 5px 0;
 }
 
 /* line 18, src/main.scss */
@@ -188,8 +190,8 @@ label,
 input,
 select,
 textarea {
-  font-size: 1.6em;
-  line-height: 1.3em;
+  font-size: 1.4em;
+  line-height: 1.7em;
 }
 
 /* line 19, src/main.scss */
@@ -232,7 +234,6 @@ h3,
 .h3-like,
 h4,
 .h4-like,
-.introduction,
 h5,
 .h5-like {
   line-height: 1em;
@@ -242,37 +243,37 @@ h5,
 
 h1,
 .h1-like {
-  font-size: 4.2em;
-  line-height: 1.3em;
+  font-size: 3.5em;
 }
 
 /* line 23, src/main.scss */
 
 h2,
 .h2-like,
-.introduction {
-  font-size: 3.0em;
+.important {
+  font-size: 2.4em;
 }
 
 /* line 24, src/main.scss */
 
 h3,
 .h3-like {
-  font-size: 2.2em;
+  font-size: 1.9em;
 }
 
 /* line 25, src/main.scss */
 
 h4,
-.h4-like {
-  font-size: 1.6em;
+.h4-like,
+.introduction {
+  font-size: 1.7em;
 }
 
 /* line 26, src/main.scss */
 
 h5,
 .h5-like {
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 /* line 27, src/main.scss */
@@ -282,7 +283,13 @@ h6,
   font-size: 1.4em;
 }
 
-/* line 33, src/main.scss */
+/* line 31, src/main.scss */
+
+body {
+  color: #444444;
+}
+
+/* line 32, src/main.scss */
 
 .page {
   margin: 0 auto;
@@ -290,7 +297,7 @@ h6,
 }
 
 @media screen and (min-width: 0px) {
-  /* line 33, src/main.scss */
+  /* line 32, src/main.scss */
 
   .page {
     width: 1200px;
@@ -298,35 +305,47 @@ h6,
   }
 }
 
-/* line 35, src/main.scss */
+/* line 34, src/main.scss */
 
 a {
   color: #bc2422;
 }
 
-/* line 37, src/main.scss */
+/* line 36, src/main.scss */
 
 .align-center {
   text-align: center;
 }
 
-/* line 39, src/main.scss */
+/* line 37, src/main.scss */
 
-hr {
-  margin: 0 auto;
-  border: none;
-  height: 2px;
-  background-color: #333333;
+.align-justify {
+  text-align: justify;
 }
 
-/* line 40, src/main.scss */
+/* line 39, src/main.scss */
+
+.important {
+  color: #bc2422;
+}
+
+/* line 43, src/main.scss */
+
+hr {
+  margin: 40px auto;
+  border: none;
+  height: 1px;
+  background-color: #444444;
+}
+
+/* line 45, src/main.scss */
 
 hr.clear {
   clear: both;
   height: 0px;
 }
 
-/* line 42, src/main.scss */
+/* line 48, src/main.scss */
 
 .nav {
   display: block;
@@ -342,7 +361,20 @@ hr.clear {
   padding: 0;
 }
 
-/* line 46, src/main.scss */
+/* line 12, src/mixins.scss */
+
+.nav li:hover .second {
+  display: block;
+}
+
+/* line 15, src/mixins.scss */
+
+.nav .second {
+  position: absolute;
+  display: none;
+}
+
+/* line 53, src/main.scss */
 
 .content {
   margin: 0 auto;
@@ -350,7 +382,7 @@ hr.clear {
 }
 
 @media screen and (min-width: 0px) {
-  /* line 46, src/main.scss */
+  /* line 53, src/main.scss */
 
   .content {
     width: 1200px;

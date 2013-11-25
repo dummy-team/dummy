@@ -12,7 +12,7 @@ A light Sass &amp; coffee front-end base
 - run *npm install && bower install*
 - move needed minified components from *\_bower\_components* to *components*
   - jQuery, Modernizr & scrollTo are needed
-- grunt server
+- run *grunt server*
 - work
 
 
@@ -36,6 +36,12 @@ A light Sass &amp; coffee front-end base
 
 - mediaqueries in a separate file / inline in the main sheet
 - usage of size unit ($u) : function(value) / value*$u
+- gutter multiple of $ u
+- use .column + .column to handle margins in grid
+
+## HTML
+
+- Use of templates ?
 
 ## Structure
 
@@ -44,25 +50,29 @@ A light Sass &amp; coffee front-end base
 
 # Release notes
 
-- 0.1.0 :    First Sass & Coffe version of the Dummy
-- 0.2.0 :    Reworked grid system : You can now use *class="column column-value"* in any wrapper to get your columns right
-- 0.3.0 :    Vendors prefixe are now automatically added to the main.css file
-- 0.4.0 :    The default grunt task now build coffeescript annotated sources
-- 0.5.0 :    Sourcemapping for sass & coffescript files enabled
-- 0.5.1 :    Improved documentation
+- 0.6.1 :    Moved examples from index.html to demo/index.html
 - 0.6.0 :
   - Removed livereload script from html, you must use a browser extension listenning port 35729
   - Until generator is built, a gruntFile for typo3 has been added
+- 0.5.1 :    Improved documentation
+- 0.5.0 :    Sourcemapping for sass & coffescript files enabled
+- 0.3.0 :    Vendors prefixe are now automatically added to the main.css file
+- 0.4.0 :    The default grunt task now build coffeescript annotated sources
+- 0.2.0 :    Reworked grid system : You can now use *class="column column-value"* in any wrapper to get your columns right
+- 0.1.0 :    First Sass & Coffe version of the Dummy
 
 # Road map
 
-- 1.0.0 : Create a clean index.html & move test page in an demo/example folder
+- before 1.0.0 : solve discussions questions and implement them
 - 1.0.1 : rewrite CoffeScript
-- 1.0.2 : fix the doc task bug (breaking the chain of tasks)
-- 1.1.1 : add a dynamic demo for grid system
-- 2.0.0 : make it a generator whith dependencies and optionnal components
+- 1.1.0 : add a dynamic demo for grid system
+- 1.2.0 : add jshint
+- 1.3.0 : prepare for testing
+- 2.0.0 : make it a generator with dependencies and optionnal components
 - 2.1.0 : custom Modernizr build
 
+- Write Inouit's coding guidelines.
+- Fix the doc task bug (breaking the chain of tasks)
 - Keep improving the grid system
 - Full compatibility (livereloading) with *skinFlex* for *Typo3*
 
@@ -95,11 +105,14 @@ _generated files*_
      └─ main.map.css*
      └─ rte.css
     docs
+     └─ assets
+         └─ custom.css
+     └─ coffee
+         └─ annotated-source
+     └─ sass
+         └─ annotated-source
     js
      └─ components
-         └─ jquery.min.js
-         └─ jquery.scrollTo.min.js
-         └─ modernizr.js
      └─ htc
          └─ backgroundsize.min.htc
      └─ src

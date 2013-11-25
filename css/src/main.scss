@@ -1,56 +1,63 @@
 // Set Margin
 
-h1, .h1-like { margin: 3*$u 0 2*$u 0; }
-h2, .h2-like { margin: 3*$u 0 2*$u 0; }
-h3, .h3-like { margin: 3*$u 0 2*$u 0; }
-h4, .h4-like { margin: 2*$u 0 $u 0; }
-h5, .h5-like { margin: 2*$u 0 $u 0; }
-.introduction { margin: $u 0 2*$u 0; }
-p,p.bodytext{ margin: $u 0 2*$u 0; }
+h1, .h1-like { margin: 2.5*$u 0; }
+h2, .h2-like { margin: 2.5*$u 0; }
+h3, .h3-like { margin: 2.5*$u 0; }
+h4, .h4-like { margin: 2*$u 0; }
+h5, .h5-like { margin: 2*$u 0; }
+.introduction, .important  { margin: 3*$u 0; }
+
+p, p.bodytext, h6, .h6-like{ margin: 2.5*$u 0; }
 td p, td p.bodytext{ margin: 0; }
-ul{
-  margin: 0; padding: $u 0 $u 0;
-  li{ margin: $u 0 $u 0; }
+ul{ margin: 3*$u 0;
+  li{ margin: $u/2 0; }
 }
 
-// Font size
+// # Font size
 
-p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textarea { font-size: 1.6em; line-height: 1.3em; }
+p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textarea { font-size: 1.4em; line-height: 1.7em; }
 li li, li p, td p, th p, li h1, li .h1-like, li h2, li .h2-like, li h3, li .h3-like, li h4, li .h4-like, li h5, li .h5-like, li h6, li .h6-like, button { font-size: 100%; }
 input, select, textarea { font-family: $font; }
-h1, .h1-like , h2, .h2-like , h3, .h3-like , h4, .h4-like, .introduction, h5, .h5-like { line-height: 1em; }
-h1, .h1-like { font-size: 4.2em; line-height: 1.3em; }
-h2, .h2-like, .introduction { font-size: 3.0em; }
-h3, .h3-like { font-size: 2.2em; }
-h4, .h4-like { font-size: 1.6em; }
-h5, .h5-like { font-size: 1.5em; }
+h1, .h1-like , h2, .h2-like , h3, .h3-like , h4, .h4-like, h5, .h5-like { line-height: 1em; }
+h1, .h1-like { font-size: 3.5em; }
+h2, .h2-like, .important { font-size: 2.4em; }
+h3, .h3-like { font-size: 1.9em; }
+h4, .h4-like, .introduction { font-size: 1.7em; }
+h5, .h5-like { font-size: 1.6em; }
 h6, .h6-like { font-size: 1.4em; }
 
+// # General
 
-// General
-
-body {  }
+body { color: $grey; }
 .page { @include page; }
 
 a { color: $red; }
 
 .align-center { text-align: center; }
+.align-justify { text-align: justify; }
 
-hr { margin: 0 auto; border: none; height: 2px; background-color: $black; }
+.important { color: $red; }
+
+
+// The light separator
+hr { margin: 4*$u auto; border: none; height: 1px; background-color: $grey; }
+
 hr.clear {clear: both;  height: 0px; }
+
 
 .nav {
     @include nav;
 }
 
-.content { @include page; }
+// Set content width
+.content { @include page;}
 
-// Flex
-
-
-
-// Header
+// # Flex
 
 
 
-// Footer
+// # Header
+
+
+
+// # Footer
