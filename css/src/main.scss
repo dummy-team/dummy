@@ -1,11 +1,11 @@
-// Set Margin
+// ## Default margins
 
-h1, .h1-like { margin: 2.5*$u 0; }
-h2, .h2-like { margin: 2.5*$u 0; }
-h3, .h3-like { margin: 2.5*$u 0; }
-h4, .h4-like { margin: 2*$u 0; }
-h5, .h5-like { margin: 2*$u 0; }
-.introduction, .important  { margin: 3*$u 0; }
+h1, .h1-like  { margin: 2.5*$u 0; }
+h2, .h2-like  { margin: 2.5*$u 0; }
+h3, .h3-like  { margin: 2.5*$u 0; }
+h4, .h4-like  { margin: 2*$u 0; }
+h5, .h5-like  { margin: 2*$u 0; }
+.introduction { margin: 3*$u 0; }
 
 p, p.bodytext, h6, .h6-like{ margin: 2.5*$u 0; }
 td p, td p.bodytext{ margin: 0; }
@@ -13,7 +13,7 @@ ul{ margin: 3*$u 0;
   li{ margin: $u/2 0; }
 }
 
-// # Font size
+// ## Font size
 
 p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textarea { font-size: 1.4em; line-height: 1.7em; }
 li li, li p, td p, th p, li h1, li .h1-like, li h2, li .h2-like, li h3, li .h3-like, li h4, li .h4-like, li h5, li .h5-like, li h6, li .h6-like, button { font-size: 100%; }
@@ -26,17 +26,18 @@ h4, .h4-like, .introduction { font-size: 1.7em; }
 h5, .h5-like { font-size: 1.6em; }
 h6, .h6-like { font-size: 1.4em; }
 
-// # General
+// ## General
 
 body { color: $grey; }
+
+// Use class **page** to set the max-width of the website
 .page { @include page; }
 
+// Links
 a { color: $red; }
 
 .align-center { text-align: center; }
 .align-justify { text-align: justify; }
-
-.important { color: $red; }
 
 
 // The light separator
@@ -49,15 +50,12 @@ hr.clear {clear: both;  height: 0px; }
     @include nav;
 }
 
-// Set content width
-.content { @include page;}
-
-// # Flex
+// ## Flex
 
 
 
-// # Header
+// ## Header
 
 
 
-// # Footer
+// ## Footer

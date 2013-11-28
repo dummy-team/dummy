@@ -143,8 +143,7 @@ h5,
 
 /* line 8, src/main.scss */
 
-.introduction,
-.important {
+.introduction {
   margin: 30px 0;
 }
 
@@ -289,7 +288,7 @@ body {
   color: #444444;
 }
 
-/* line 32, src/main.scss */
+/* line 34, src/main.scss */
 
 .page {
   margin: 0 auto;
@@ -297,7 +296,7 @@ body {
 }
 
 @media screen and (min-width: 0px) {
-  /* line 32, src/main.scss */
+  /* line 34, src/main.scss */
 
   .page {
     width: 1200px;
@@ -305,31 +304,25 @@ body {
   }
 }
 
-/* line 34, src/main.scss */
+/* line 37, src/main.scss */
 
 a {
   color: #bc2422;
 }
 
-/* line 36, src/main.scss */
+/* line 39, src/main.scss */
 
 .align-center {
   text-align: center;
 }
 
-/* line 37, src/main.scss */
+/* line 40, src/main.scss */
 
 .align-justify {
   text-align: justify;
 }
 
-/* line 39, src/main.scss */
-
-.important {
-  color: #bc2422;
-}
-
-/* line 43, src/main.scss */
+/* line 44, src/main.scss */
 
 hr {
   margin: 40px auto;
@@ -338,14 +331,14 @@ hr {
   background-color: #444444;
 }
 
-/* line 45, src/main.scss */
+/* line 46, src/main.scss */
 
 hr.clear {
   clear: both;
   height: 0px;
 }
 
-/* line 48, src/main.scss */
+/* line 49, src/main.scss */
 
 .nav {
   display: block;
@@ -372,22 +365,6 @@ hr.clear {
 .nav .second {
   position: absolute;
   display: none;
-}
-
-/* line 53, src/main.scss */
-
-.content {
-  margin: 0 auto;
-  width: 990px;
-}
-
-@media screen and (min-width: 0px) {
-  /* line 53, src/main.scss */
-
-  .content {
-    width: 1200px;
-    max-width: 100%;
-  }
 }
 
 /* line 1, src/powermail.scss */

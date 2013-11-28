@@ -88,16 +88,16 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <p>Set Margin</p>
+              <h2 id="default-margins">Default margins</h2>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="tag">h1</span>, <span class="class">.h1-like</span> { <span class="attribute">margin</span><span class="value">: <span class="number">2.5</span>*$u <span class="number">0</span>;</span> }
-<span class="tag">h2</span>, <span class="class">.h2-like</span> { <span class="attribute">margin</span><span class="value">: <span class="number">2.5</span>*$u <span class="number">0</span>;</span> }
-<span class="tag">h3</span>, <span class="class">.h3-like</span> { <span class="attribute">margin</span><span class="value">: <span class="number">2.5</span>*$u <span class="number">0</span>;</span> }
-<span class="tag">h4</span>, <span class="class">.h4-like</span> { <span class="attribute">margin</span><span class="value">: <span class="number">2</span>*$u <span class="number">0</span>;</span> }
-<span class="tag">h5</span>, <span class="class">.h5-like</span> { <span class="attribute">margin</span><span class="value">: <span class="number">2</span>*$u <span class="number">0</span>;</span> }
-<span class="class">.introduction</span>, <span class="class">.important</span>  { <span class="attribute">margin</span><span class="value">: <span class="number">3</span>*$u <span class="number">0</span>;</span> }
+            <div class="content"><div class='highlight'><pre><span class="tag">h1</span>, <span class="class">.h1-like</span>  { <span class="attribute">margin</span><span class="value">: <span class="number">2.5</span>*$u <span class="number">0</span>;</span> }
+<span class="tag">h2</span>, <span class="class">.h2-like</span>  { <span class="attribute">margin</span><span class="value">: <span class="number">2.5</span>*$u <span class="number">0</span>;</span> }
+<span class="tag">h3</span>, <span class="class">.h3-like</span>  { <span class="attribute">margin</span><span class="value">: <span class="number">2.5</span>*$u <span class="number">0</span>;</span> }
+<span class="tag">h4</span>, <span class="class">.h4-like</span>  { <span class="attribute">margin</span><span class="value">: <span class="number">2</span>*$u <span class="number">0</span>;</span> }
+<span class="tag">h5</span>, <span class="class">.h5-like</span>  { <span class="attribute">margin</span><span class="value">: <span class="number">2</span>*$u <span class="number">0</span>;</span> }
+<span class="class">.introduction</span> { <span class="attribute">margin</span><span class="value">: <span class="number">3</span>*$u <span class="number">0</span>;</span> }
 
 <span class="tag">p</span>, <span class="tag">p</span><span class="class">.bodytext</span>, <span class="tag">h6</span>, <span class="class">.h6-like</span>{ <span class="attribute">margin</span><span class="value">: <span class="number">2.5</span>*$u <span class="number">0</span>;</span> }
 <span class="tag">td</span> <span class="tag">p</span>, <span class="tag">td</span> <span class="tag">p</span><span class="class">.bodytext</span>{ <span class="attribute">margin</span><span class="value">: <span class="number">0</span>;</span> }
@@ -114,7 +114,7 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <h1 id="font-size">Font size</h1>
+              <h2 id="font-size">Font size</h2>
 
             </div>
             
@@ -138,19 +138,11 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
-              <h1 id="general">General</h1>
+              <h2 id="general">General</h2>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="tag">body</span> { <span class="attribute">color</span><span class="value">: $grey;</span> }
-<span class="class">.page</span> { <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> page</span>;</span> }
-
-<span class="tag">a</span> { <span class="attribute">color</span><span class="value">: $red;</span> }
-
-<span class="class">.align-center</span> { <span class="attribute">text-align</span><span class="value">: center;</span> }
-<span class="class">.align-justify</span> { <span class="attribute">text-align</span><span class="value">: justify;</span> }
-
-<span class="class">.important</span> { <span class="attribute">color</span><span class="value">: $red;</span> }</pre></div></div>
+            <div class="content"><div class='highlight'><pre><span class="tag">body</span> { <span class="attribute">color</span><span class="value">: $grey;</span> }</pre></div></div>
             
         </li>
         
@@ -160,6 +152,39 @@
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Use class <strong>page</strong> to set the max-width of the website</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class">.page</span> { <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> page</span>;</span> }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Links</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="tag">a</span> { <span class="attribute">color</span><span class="value">: $red;</span> }
+
+<span class="class">.align-center</span> { <span class="attribute">text-align</span><span class="value">: center;</span> }
+<span class="class">.align-justify</span> { <span class="attribute">text-align</span><span class="value">: justify;</span> }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
               <p>The light separator</p>
 
@@ -177,30 +202,15 @@
         </li>
         
         
-        <li id="section-5">
+        <li id="section-7">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-5">&#182;</a>
+                <a class="pilcrow" href="#section-7">&#182;</a>
               </div>
-              <p>Set content width</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre><span class="class">.content</span> { <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> page</span>;</span>}</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-6">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-6">&#182;</a>
-              </div>
-              <h1 id="flex">Flex</h1>
-<h1 id="header">Header</h1>
-<h1 id="footer">Footer</h1>
+              <h2 id="flex">Flex</h2>
+<h2 id="header">Header</h2>
+<h2 id="footer">Footer</h2>
 
             </div>
             

@@ -1,4 +1,3 @@
-# Generated on 2013-11-13 using generator-bower 0.0.2
 'use strict'
 
 mountFolder = (connect, dir) ->
@@ -8,6 +7,22 @@ module.exports = (grunt) ->
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
   grunt.initConfig
+
+    # You can't run the docco task alone, coffeFiles & sassFiles don't chain.
+    # You have to call them separatly.
+    docco:
+      coffeeFiles:
+        files:
+          src: ['js/src/*.coffee']
+        options:
+          output: 'docs/coffee/annotated-source'
+          css: 'docs/assets/custom.css'
+      sassFiles:
+        files:
+          src: ['css/src/*.scss']
+        options:
+          output: 'docs/sass/annotated-source'
+          css: 'docs/assets/custom.css'
 
     coffee:
       build:
@@ -20,19 +35,6 @@ module.exports = (grunt) ->
         dest: 'js'
         ext: '.js'
 
-
-    # You must build docco last cause it stop the task chain (e.g. not compatible with watch)
-    docco:
-      buildCoffee:
-        src: ['js/src/*.coffee']
-        options:
-          output: 'docs/coffee/annotated-source'
-          css: 'docs/assets/custom.css'
-      buildSass:
-        src: ['css/src/*.scss']
-        options:
-          output: 'docs/sass/annotated-source'
-          css: 'docs/assets/custom.css'
 
     sass:
       build:
@@ -78,11 +80,14 @@ module.exports = (grunt) ->
         tasks: [
           'sass:build',
           'autoprefixer:build'
+          'docco:sassFiles'
         ]
       coffee:
         files: 'js/src/*.coffee'
-        tasks: 'coffee:build'
-
+        tasks: [
+          'coffee:build'
+          'docco:coffeeFiles'
+        ]
 
     grunt.registerTask 'default', [
       'sass:build'

@@ -50,6 +50,7 @@ A light Sass &amp; coffee front-end base
 
 # Release notes
 
+- 0.7.0 :    Documentation build is now automated
 - 0.6.1 :    Moved examples from index.html to demo/index.html
 - 0.6.0 :
   - Removed livereload script from html, you must use a browser extension listenning port 35729
@@ -66,21 +67,18 @@ A light Sass &amp; coffee front-end base
 - before 1.0.0 : solve discussions questions and implement them
 - 1.0.1 : rewrite CoffeScript
 - 1.1.0 : add a dynamic demo for grid system
-- 1.2.0 : add jshint
 - 1.3.0 : prepare for testing
 - 2.0.0 : make it a generator with dependencies and optionnal components
 - 2.1.0 : custom Modernizr build
 
 - Write Inouit's coding guidelines.
-- Fix the doc task bug (breaking the chain of tasks)
 - Keep improving the grid system
 - Full compatibility (livereloading) with *skinFlex* for *Typo3*
 
 
 #Kown issues
 
-- To build annotated sources for Sass files you need to run *grunt docco:buildSass*
-- To build annotated sources for CoffeeScript files you need to run *grunt docco:buildCoffee*
+- *docco* tasks don't chain.
 
 
 # tree
