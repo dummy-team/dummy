@@ -53,7 +53,7 @@ module.exports = (grunt) ->
     connect:
       all:
         options:
-          port: 8000,
+          port: grunt.option('port') || 8080
           hostname: "0.0.0.0",
           middleware: (connect, options) ->
             return [
@@ -67,7 +67,7 @@ module.exports = (grunt) ->
 
     watch:
       options:
-        livereload: 35729
+        port: grunt.option('liveport') || 35729
 
       typoscript:
         files:'../typoscript/**/*.ts'
