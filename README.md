@@ -47,6 +47,9 @@ A light Sass &amp; coffee front-end base
 
 - symling required components from js/\_bower\_components to js/components
 
+## Tasks
+
+- Add a task checking git freshness before running any task. (grunt-git ?)
 
 # Release notes
 
@@ -74,6 +77,7 @@ A light Sass &amp; coffee front-end base
 - Write Inouit's coding guidelines.
 - Keep improving the grid system
 - Full compatibility (livereloading) with *skinFlex* for *Typo3*
+- Add grunt-notify https://github.com/dylang/grunt-notify
 
 
 #Kown issues
