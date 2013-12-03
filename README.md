@@ -46,6 +46,7 @@ A light Sass &amp; coffee front-end base
 
 - symling required components from js/\_bower\_components to js/components : add to generator ?
 - lint files / check for code syntax conventions
+- ignore doccumentation ?
 
 ## Tasks
 
