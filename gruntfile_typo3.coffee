@@ -53,7 +53,7 @@ module.exports = (grunt) ->
     connect:
       all:
         options:
-          port: grunt.option('port') || 8080
+          port: grunt.option('port') || 0
           hostname: "0.0.0.0",
           middleware: (connect, options) ->
             return [
@@ -98,7 +98,7 @@ module.exports = (grunt) ->
       'coffee:build'
     ]
 
-    grunt.registerTask 'server', [
+    grunt.registerTask 'serve', [
       'sass:build'
       'autoprefixer:build'
       'coffee:build'

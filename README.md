@@ -44,7 +44,8 @@ A light Sass &amp; coffee front-end base
 
 ## Structure
 
-- symling required components from js/\_bower\_components to js/components
+- symling required components from js/\_bower\_components to js/components : add to generator ?
+- lint files / check for code syntax conventions
 
 ## Tasks
 
@@ -52,6 +53,9 @@ A light Sass &amp; coffee front-end base
 
 # Release notes
 
+- 0.8.0 :
+  - Changed server task to serve (best practice)
+  - Switched default port to 0 to enable simple multiple server running simultaneously
 - 0.7.0 :    Documentation build is now automated
 - 0.6.1 :    Moved examples from index.html to demo/index.html
 - 0.6.0 :
