@@ -55,7 +55,7 @@ module.exports = (grunt) ->
     connect:
       all:
         options:
-          port: grunt.option('liveport') || 8080
+          port: grunt.option('port') || 8080
           hostname: "0.0.0.0",
           middleware: (connect, options) ->
             return [

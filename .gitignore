@@ -2,16 +2,16 @@ node_modules
 js/_bower_components
 .sass-cache
 js/components/*.js
+Gemfile.lock
 
 css/*.css
 css/*.css.map
+!rte.css
 
 js/base.js
 js/base.js.map
 js/main.js
 js/main.js.map
 
-Gemfile.lock
 
-!rte.css
 !.gitkeep
