@@ -46,6 +46,7 @@ A light Sass &amp; coffee front-end base
 
 - symling required components from js/\_bower\_components to js/components : add to generator ?
 - lint files / check for code syntax conventions
+- ignore doccumentation ?
 
 ## Tasks
 
@@ -78,10 +79,12 @@ A light Sass &amp; coffee front-end base
 - 2.0.0 : make it a generator with dependencies and optionnal components
 - 2.1.0 : custom Modernizr build
 
+
 - Write Inouit's coding guidelines.
 - Keep improving the grid system
 - Full compatibility (livereloading) with *skinFlex* for *Typo3*
 - Add grunt-notify https://github.com/dylang/grunt-notify
+- 3.0.0 : Browserify / CommonJS
 
 
 #Kown issues
