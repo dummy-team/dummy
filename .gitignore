@@ -3,4 +3,15 @@ js/_bower_components
 .sass-cache
 js/components/*.js
 
+css/*.css
+css/*.css.map
+
+js/base.js
+js/base.js.map
+js/main.js
+js/main.js.map
+
+Gemfile.lock
+
+!rte.css
 !.gitkeep

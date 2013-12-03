@@ -15,7 +15,6 @@ A light Sass &amp; coffee front-end base
 - run *grunt server*
 - work
 
-
 # Features
 
 - A full css light grid system (/docs/sass/annotated-source/columns.html)
@@ -71,6 +70,7 @@ A light Sass &amp; coffee front-end base
 - 1.0.1 : rewrite CoffeScript
 - 1.1.0 : add a dynamic demo for grid system
 - 1.3.0 : prepare for testing
+- 1.4.0 : Add imagemin to handle optimization
 - 2.0.0 : make it a generator with dependencies and optionnal components
 - 2.1.0 : custom Modernizr build
 
