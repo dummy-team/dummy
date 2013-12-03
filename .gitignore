@@ -3,4 +3,6 @@ js/_bower_components
 .sass-cache
 js/components/*.js
 
+Gemfile.lock
+
 !.gitkeep
