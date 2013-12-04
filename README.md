@@ -54,6 +54,7 @@ A light Sass &amp; coffee front-end base
 
 # Release notes
 
+- 0.8.1 : fixed a regression from 0.8.0
 - 0.8.0 :
   - Changed server task to serve (best practice)
   - Switched default port to 0 to enable simple multiple server running simultaneously
