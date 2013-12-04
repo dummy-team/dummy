@@ -1,6 +1,7 @@
 node_modules
 js/_bower_components
 .sass-cache
+.DS_Store
 js/components/*.js
 Gemfile.lock
 

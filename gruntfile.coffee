@@ -74,6 +74,7 @@ module.exports = (grunt) ->
         files:[
           '*.html'
           '**/*.html'
+          'notify:html'
         ]
       sass:
         files:'css/src/*.scss'
@@ -81,26 +82,52 @@ module.exports = (grunt) ->
           'sass:build',
           'autoprefixer:build'
           'docco:sassFiles'
+          'notify:sass'
         ]
       coffee:
         files: 'js/src/*.coffee'
         tasks: [
           'coffee:build'
           'docco:coffeeFiles'
+          'notify:coffee'
         ]
 
-    grunt.registerTask 'default', [
-      'sass:build'
-      'autoprefixer:build'
-      'coffee:build'
-    ]
+    notify:
+      html:
+        options:
+          title: 'Live reload',
+          message: 'html updated',
+      sass:
+        options:
+          title: 'Live reload',
+          message: 'Sass compiled & documentation generated',
+      coffee:
+        options:
+          title: 'Live reload',
+          message: 'CoffeeScript compiled & documentation generated',
+      server:
+        options:
+          message: 'Server is ready!'
+      build:
+        options:
+          message: 'Build Successfull!'
+
+    grunt.registerTask 'default', 'serve'}
 
     grunt.registerTask 'serve', [
       'sass:build'
       'autoprefixer:build'
       'coffee:build'
       'connect'
+      'notify:server'
       'open'
       'watch'
+    ]
+
+    grunt.registerTask 'build', [
+      'sass:build'
+      'autoprefixer:build'
+      'coffee:build'
+      'notify:build'
     ]
 

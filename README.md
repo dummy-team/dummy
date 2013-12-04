@@ -29,6 +29,7 @@ A light Sass &amp; coffee front-end base
 - Autoprefixer for css
 - Live reloading
 - A task to generate annotated sources fo Sass & CoffeScript files
+- (Notifications)[http://https://github.com/dylang/grunt-notify#grunt-notify-] for errors, watch, and build.
 
 
 # To discuss
@@ -58,6 +59,7 @@ A light Sass &amp; coffee front-end base
 
 # Release notes
 
+- **0.8.2** : Added notifications to tasks
 - **0.8.1** : fixed a regression from 0.8.0
 - **0.8.0** :
   - Changed server task to serve (best practice)

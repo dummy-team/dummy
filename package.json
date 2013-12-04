@@ -1,7 +1,7 @@
 {
   "name": "dummy",
   "description": "A light Sass & coffee base front-end",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "author": {
     "name": "Inouit",
     "url": "www.inouit.fr"
@@ -14,14 +14,14 @@
     "JViste <jviste@inouit.com>"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/in8/dummy.git"
+    "type": "git",
+    "url": "https://github.com/in8/dummy.git"
   },
-  "bugs" : {
-    "url" : "https://github.com/in8/dummy/issues"
+  "bugs": {
+    "url": "https://github.com/in8/dummy/issues"
   },
-  "devDependencies" : {
-    "grunt" : "*",
+  "devDependencies": {
+    "grunt": "*",
     "grunt-docco-multi": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-sass": "*",
@@ -29,6 +29,7 @@
     "grunt-contrib-connect": "*",
     "grunt-open": "*",
     "grunt-contrib-watch": "*",
-    "matchdep": "*"
+    "matchdep": "*",
+    "grunt-notify": "~0.2.16"
   }
 }
