@@ -49,6 +49,7 @@ A light Sass &amp; coffee front-end base
 - symling required components from js/\_bower\_components to js/components : add to generator ?
 - lint files / check for code syntax conventions
 - ignore doccumentation ?
+- Thé ou **Café** ? ( Choose at generation)
 
 ## Tasks
 
@@ -85,7 +86,7 @@ A light Sass &amp; coffee front-end base
 - **2.1.0** : custom Modernizr build
 
 
-- Write Inouit's coding guidelines.
+- Write Inouit's coding guidelines
 - Keep improving the grid system
 - Full compatibility (livereloading) with *skinFlex* for *Typo3*
 - Add grunt-notify https://github.com/dylang/grunt-notify
@@ -95,10 +96,8 @@ A light Sass &amp; coffee front-end base
 
 #Kown issues
 
-- *docco* tasks don't chain.
 
-
-# tree
+# Tree
 
 _generated files*_
 
@@ -149,8 +148,8 @@ _generated files*_
 
 # Dependencies
 
-You'll need **(nodejs)[http://nodejs.org/]**, **(grunt)[http://gruntjs.com/]** & **(bower)[http://bower.io/]** to use all the dummy features.
+You'll need **[nodejs](http://nodejs.org)**, **[grunt](http://gruntjs.com)** & **[bower](http://bower.io)** to use all the dummy features.
 
-The build and serve tasks use the plugin **grunt-contrib-sass**, it requires you to have **(Ruby)[https://www.ruby-lang.org/]**
+The build and serve tasks use the plugin **grunt-contrib-sass**, it requires you to have **[Ruby](https://www.ruby-lang.org/)**
 
-In the near future it'll become a **(yeoman)[http://yeoman.io]**'s generator. go check it out, it's awesome !
+In the near future it'll become a **[yeoman](http://yeoman.io)**'s generator. go check it out, it's awesome !
