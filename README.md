@@ -59,6 +59,7 @@ A light Sass &amp; coffee front-end base
 
 # Release notes
 
+- **0.8.3** : Removed generated documentation from repository
 - **0.8.2** : Added notifications to tasks
 - **0.8.1** : fixed a regression from 0.8.0
 - **0.8.0** :
@@ -101,8 +102,6 @@ A light Sass &amp; coffee front-end base
 
 # Tree
 
-_generated files*_
-
     css
      └─ src
          └─ columns.scss
@@ -115,18 +114,10 @@ _generated files*_
          └─ powermail.scss
          └─ reset.scss
          └─ styles.scss
-     └─ ie.css*
-     └─ ie.map.css*
-     └─ main.css*
-     └─ main.map.css*
      └─ rte.css
     docs
      └─ assets
          └─ custom.css
-     └─ coffee
-         └─ annotated-source
-     └─ sass
-         └─ annotated-source
     js
      └─ components
      └─ htc
@@ -134,8 +125,6 @@ _generated files*_
      └─ src
          └─ base.coffee
          └─ main.coffee
-     └─ base.js*
-     └─ main.js*
     index.html
     bower.json
     gruntfile.coffee
