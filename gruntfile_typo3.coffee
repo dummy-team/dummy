@@ -98,16 +98,8 @@ module.exports = (grunt) ->
       'coffee:build'
     ]
 
-    grunt.registerTask 'serve', [
-      'sass:build'
-      'autoprefixer:build'
-      'coffee:build'
-      'connect'
-      'open'
-      'watch'
-    ]
 
-    grunt.registerTask 'typo', [
+    grunt.registerTask 'serve', [
       'sass:build'
       'autoprefixer:build'
       'coffee:build'

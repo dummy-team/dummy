@@ -29,7 +29,7 @@ A light Sass &amp; coffee front-end base
 - Autoprefixer for css
 - Live reloading
 - A task to generate annotated sources fo Sass & CoffeScript files
-- (Notifications)[http://https://github.com/dylang/grunt-notify#grunt-notify-] for errors, watch, and build.
+- (Notifications)[https://github.com/dylang/grunt-notify#grunt-notify-] for errors, watch, and build.
 
 
 # To discuss
@@ -91,10 +91,9 @@ A light Sass &amp; coffee front-end base
 
 - Write Inouit's coding guidelines
 - Keep improving the grid system
-- Full compatibility (livereloading) with *skinFlex* for *Typo3*
-- Add grunt-notify https://github.com/dylang/grunt-notify
 - 3.0.0 : Browserify / CommonJS
 - Add tasks to export sources, and push to prod
+- Full compatibility (livereloading) with *skinFlex* for *Typo3* (dummy or typo3 issue ?)
 
 
 #Kown issues

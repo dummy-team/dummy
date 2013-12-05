@@ -112,7 +112,7 @@ module.exports = (grunt) ->
         options:
           message: 'Build Successfull!'
 
-    grunt.registerTask 'default', 'serve'}
+    grunt.registerTask 'default', 'serve'
 
     grunt.registerTask 'serve', [
       'sass:build'
