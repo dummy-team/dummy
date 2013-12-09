@@ -6,30 +6,16 @@ A light Sass &amp; coffee front-end base
 
 # Usage
 
-- Clone
-- remove .git folder
-- add **node_modules**, **.sass-cache** & **\_bower\_components** folders to project .gitignore
-- run **npm install && bower install**
-- run **bundle install**
-- move needed minified components from **\_bower\_components** to **components**
-  - jQuery, Modernizr & scrollTo are needed
-- run **grunt serve**
-- work
-
+Go check the Yeoman's [generator](https://github.com/in8/generator-dummy) !
 
 # Features
 
-- A full css light grid system (/docs/sass/annotated-source/columns.html)
+- A full css light grid system
 - A simple font sizing : 1.6em = 16px;
 - An unit based margin & padding system
 - A collection of variables to manage default sizing, fonts and colors
 - A background-size fallback for Internet Explorer
 - Some jQuery plugins helpers ready to use
-- A watch task to compile CoffeeScripts & Sass
-- Autoprefixer for css
-- Live reloading
-- A task to generate annotated sources fo Sass & CoffeScript files
-- (Notifications)[https://github.com/dylang/grunt-notify#grunt-notify-] for errors, watch, and build.
 
 
 # To discuss
@@ -45,20 +31,10 @@ A light Sass &amp; coffee front-end base
 
 - Use of templates ?
 
-## Structure
-
-- symling required components from js/\_bower\_components to js/components : add to generator ?
-- lint files / check for code syntax conventions
-- ignore doccumentation ?
-- Thé ou **Café** ? ( Choose at generation)
-
-## Tasks
-
-- Add a task checking git freshness before running any task. (grunt-git ?)
-
 
 # Release notes
 
+- **0.9.0** : *Dummy* is dead, long live *generator-dummy*
 - **0.8.3** : Removed generated documentation from repository
 - **0.8.2** : Added notifications to tasks
 - **0.8.1** : fixed a regression from 0.8.0
@@ -83,17 +59,11 @@ A light Sass &amp; coffee front-end base
 - before **1.0.0** : solve discussions questions and implement them
 - **1.0.1** : rewrite CoffeScript
 - **1.1.0** : add a dynamic demo for grid system
-- **1.3.0** : prepare for testing
-- **1.4.0** : Add imagemin to handle optimization
-- **2.0.0** : make it a generator with dependencies and optionnal components
-- **2.1.0** : custom Modernizr build
+- **1.2.0** : Add imagemin to handle optimization
 
 
 - Write Inouit's coding guidelines
 - Keep improving the grid system
-- 3.0.0 : Browserify / CommonJS
-- Add tasks to export sources, and push to prod
-- Full compatibility (livereloading) with *skinFlex* for *Typo3* (dummy or typo3 issue ?)
 
 
 #Kown issues
@@ -114,9 +84,6 @@ A light Sass &amp; coffee front-end base
          └─ reset.scss
          └─ styles.scss
      └─ rte.css
-    docs
-     └─ assets
-         └─ custom.css
     js
      └─ components
      └─ htc
@@ -126,20 +93,8 @@ A light Sass &amp; coffee front-end base
          └─ main.coffee
     index.html
     bower.json
-    gruntfile.coffee
-    gruntfile_typo3.coffee
-    package.json
     LICENCE
     README.md
     .bowerrc
     .editorconfig
     .gitignore
-
-
-# Dependencies
-
-You'll need **[nodejs](http://nodejs.org)**, **[grunt](http://gruntjs.com)** & **[bower](http://bower.io)** to use all the dummy features.
-
-The build and serve tasks use the plugin **grunt-contrib-sass**, it requires you to have **[Ruby](https://www.ruby-lang.org/)**
-
-In the near future it'll become a **[yeoman](http://yeoman.io)**'s generator. go check it out, it's awesome !
