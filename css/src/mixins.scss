@@ -1,6 +1,11 @@
 // Set the default page width
-@mixin page { margin: 0 auto; width: $baseWidth;
+@mixin page { margin: 0 auto; width: 990px;
     @media screen and (min-width: 0px) { width: $maxWidth; max-width: 100%; }
+}
+
+@mixin slice {
+   margin: 0 auto;  width: 100%;
+   @media screen and (min-width: $sliceWidth) { width: $sliceWidth; }
 }
 
 // Preset navigation layout
@@ -19,4 +24,12 @@
 @mixin backgound-size( $size... ) {
     background-size: $size;
     -ms-behavior: url(/backgroundsize.min.htc);
+}
+
+// inline block (overrided in IE)
+@mixin inline-block { display: inline-block; }
+
+// font-familyy
+@mixin ff ( $fontFamily: $font, $fontWeight: $regular ) {
+    font-family: $fontFamily; font-weight: $fontWeight;
 }

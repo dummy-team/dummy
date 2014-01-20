@@ -1,6 +1,6 @@
 // Default display mode and margins
 .column { display: inline-block; margin: 0 0 0 $gutter; vertical-align: top;
-    &:first-child { margin: 0; }
+    & + .column { margin: 0; }
 }
 
 // Preset columns sizes

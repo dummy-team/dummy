@@ -1,5 +1,5 @@
-// Fallback for no mediaquery support (gutter will no longer be the default one)
-$baseWidth  : 990px;
+// Max width of the slice ( the max background size exceeding the content size )
+$sliceWidth  : 1400px;
 
 // Max size of the page
 $max        : 1200;
@@ -23,4 +23,11 @@ $outlineBlue    : #aad4ff;
 $errorRed       : #e04831;
 
 // # Fonts
-$font   : Arial, sans-serif;
+$roboto : Arial, sans-serif;
+$font : $roboto;
+
+// # Fonts weight
+$light : 300;
+$regular : 400;
+$medium : 500;
+$bold : 700;
