@@ -13,9 +13,7 @@ docs/*
 !docs/assets
 !docs/assets/*
 
-js/base.js
 js/base.js.map
-js/main.js
 js/main.js.map
 
 
