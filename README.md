@@ -35,6 +35,9 @@ Go check the Yeoman's [generator](https://github.com/in8/generator-dummy) !
 
 # Release notes
 
+- **0.10.1** :
+    - Added grunt configuration to enable stand alone use
+    - Removed compiled javascript files from gitignore to keep compatibility with generator-dummies
 - **0.10.0** :
     - A slice & content max width management improved ( ie8 fallback)
     - A fallback added for inline-block on Internet Explorer < 8
