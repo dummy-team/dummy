@@ -20,19 +20,6 @@ Go check the Yeoman's [generator](https://github.com/in8/generator-dummy) !
 - Some jQuery plugins helpers ready to use
 
 
-# To discuss
-
-## CSS
-
-- mediaqueries in a separate file / inline in the main sheet
-- usage of size unit ($u) : function(value) / value*$u
-- gutter multiple of $u
-
-## HTML
-
-- Use of templates over a demo ?
-
-
 # Release notes
 
 - **0.10.1** :
