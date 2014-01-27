@@ -6,7 +6,7 @@ A light Sass &amp; coffee front-end base
 
 # Usage
 
-Go check the Yeoman's [generator](https://github.com/in8/generator-dummy) !
+Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
 
 # Features
 
@@ -22,6 +22,7 @@ Go check the Yeoman's [generator](https://github.com/in8/generator-dummy) !
 
 # Release notes
 
+- **0.11.0** : Transfered repository ownership to Inouit organisation
 - **0.10.1** :
     - Added grunt configuration to enable stand alone use
     - Removed compiled javascript files from gitignore to keep compatibility with generator-dummies
