@@ -22,6 +22,7 @@ Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
 
 # Release notes
 
+- **0.11.1** : Added step classes to fixToTop jquery plugin
 - **0.11.0** : Transfered repository ownership to Inouit organisation
 - **0.10.1** :
     - Added grunt configuration to enable stand alone use

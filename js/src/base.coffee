@@ -59,15 +59,9 @@ $ ->
 
   # ## fixToTop
   # Fix any element to the top when scroll pass it
-  $.fn.fixToTop = (gap) ->
-    fix = ->
-      unless $that.hasClass("fixed")
-        offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"))
-        $that.addClass "fixed"
-        $that.next().css "marginTop", offSet + "px"
-    free = ->
-      $that.removeClass "fixed"
-      $that.next().css "marginTop", originOffSet + "px"
+  # & add optionnal class for each step defined
+  $.fn.fixToTop = (gap, steps) ->
+    # Initialize
     $that = $(this)
     origin = (if gap then $that[0].offsetTop + gap else $that[0].offsetTop)
     originOffSet = parseFloat($that.next().css("marginTop"))
@@ -78,8 +72,35 @@ $ ->
       else
         free()
 
-    return $(this)
+    fix = ->
+      unless $that.hasClass("fixed")
+        offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"))
+        $that.addClass "fixed"
+        # Set margin to balance the fixed position
+        $that.next().css "marginTop", offSet + "px"
 
+    free = ->
+      $that.removeClass "fixed"
+      $that.next().css "marginTop", originOffSet + "px"
+
+    # If steps option found, listen to scroll to set classes for each step
+    # ```JavaScript
+    # var steps = {
+    #   "className": offsetValue
+    # }
+    #  ```
+    if steps
+      stepsClasses = ""
+      for step of steps
+        stepsClasses += ' '+step
+      $(window).scroll ->
+        for step of steps
+          if $that.css("visibility") isnt "hidden" and $(window).scrollTop() > steps[step]
+            $that
+              .removeClass(stepsClasses)
+              .addClass(step)
+
+    return $(this)
 
   # ##Pulldown
   # Show/Hide content of pulldown element on click on the first child (button) of each elements

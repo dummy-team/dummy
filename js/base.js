@@ -55,20 +55,8 @@
       });
       return $(this);
     };
-    $.fn.fixToTop = function(gap) {
-      var $that, fix, free, offSet, origin, originOffSet;
-      fix = function() {
-        var offSet;
-        if (!$that.hasClass("fixed")) {
-          offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"));
-          $that.addClass("fixed");
-          return $that.next().css("marginTop", offSet + "px");
-        }
-      };
-      free = function() {
-        $that.removeClass("fixed");
-        return $that.next().css("marginTop", originOffSet + "px");
-      };
+    $.fn.fixToTop = function(gap, steps) {
+      var $that, fix, free, offSet, origin, originOffSet, step, stepsClasses;
       $that = $(this);
       origin = (gap ? $that[0].offsetTop + gap : $that[0].offsetTop);
       originOffSet = parseFloat($that.next().css("marginTop"));
@@ -80,6 +68,35 @@
           return free();
         }
       });
+      fix = function() {
+        if (!$that.hasClass("fixed")) {
+          offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"));
+          $that.addClass("fixed");
+          return $that.next().css("marginTop", offSet + "px");
+        }
+      };
+      free = function() {
+        $that.removeClass("fixed");
+        return $that.next().css("marginTop", originOffSet + "px");
+      };
+      if (steps) {
+        stepsClasses = "";
+        for (step in steps) {
+          stepsClasses += ' ' + step;
+        }
+        $(window).scroll(function() {
+          var _results;
+          _results = [];
+          for (step in steps) {
+            if ($that.css("visibility") !== "hidden" && $(window).scrollTop() > steps[step]) {
+              _results.push($that.removeClass(stepsClasses).addClass(step));
+            } else {
+              _results.push(void 0);
+            }
+          }
+          return _results;
+        });
+      }
       return $(this);
     };
     $.fn.pulldown = function() {
@@ -187,6 +204,4 @@
 
 }).call(this);
 
-/*
-//@ sourceMappingURL=base.js.map
-*/
+//# sourceMappingURL=../js/base.js.map

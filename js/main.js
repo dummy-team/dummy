@@ -28,6 +28,4 @@
 
 }).call(this);
 
-/*
-//@ sourceMappingURL=main.js.map
-*/
+//# sourceMappingURL=../js/main.js.map
