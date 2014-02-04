@@ -8,10 +8,14 @@
    @media screen and (min-width: $sliceWidth) { width: $sliceWidth; }
 }
 
+@mixin column { @include inline-block; margin: 0; vertical-align: top;
+    & + &{ margin: 0 0 0 $gutter; }
+}
+
 // Preset navigation layout
 @mixin nav {
     display: block; margin: 0; padding: 0;
-    li { display: inline-block; margin: 5px; padding: 0; }
+    li { @include inline-block; margin: 5px; padding: 0; }
     li:hover {
         // Show second navigation level on hover
         .second { display: block;}
@@ -20,14 +24,14 @@
     .second { position: absolute; display: none;}
 }
 
+// inline block (overrided in IE)
+@mixin inline-block { display: inline-block; }
+
 // Emulate background sizing for Internet Explorer 8
 @mixin backgound-size( $size... ) {
     background-size: $size;
     -ms-behavior: url(/backgroundsize.min.htc);
 }
-
-// inline block (overrided in IE)
-@mixin inline-block { display: inline-block; }
 
 // font-familyy
 @mixin ff ( $fontFamily: $font, $fontWeight: $regular ) {

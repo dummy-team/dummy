@@ -9,6 +9,26 @@
 // override inline-block mixins
 @mixin inline-block { display: inline; zoom: 1; }
 
+@mixin column { @include inline-block; margin: 0; vertical-align: top;
+    & + &{ margin: 0 0 0 $gutter; }
+}
+
+// Preset navigation layout
+@mixin nav {
+    display: block; margin: 0; padding: 0;
+    li { @include inline-block; margin: 5px; padding: 0; }
+    li:hover {
+        // Show second navigation level on hover
+        .second { display: block;}
+    }
+    // Hide second navigation level
+    .second { position: absolute; display: none;}
+}
+
+// inline block (overrided in IE)
+@mixin inline-block { display: inline-block; }
+
+
 @import 'columns';
 @import 'main';
 @import 'powermail';

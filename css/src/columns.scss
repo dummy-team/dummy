@@ -1,7 +1,4 @@
-// Default display mode and margins
-.column { display: inline-block; margin: 0 0 0 $gutter; vertical-align: top;
-    & + .column { margin: 0; }
-}
+.column { @include column; }
 
 // Preset columns sizes
 $col80 : column-width(.80, .25);
@@ -20,23 +17,23 @@ $col20 : column-width(.20, 4);
 /*
 HTML columns :
     <div>
-       <div class="column column-50">
+       <div class="column-50">
            <h1>50</h1>
        </div><!--
-    --><div class="column column-25">
+    --><div class="column-25">
            <h1>25</h1>
        </div><!--
-    --><div class="column column-25">
+    --><div class="column-25">
            <h1>25</h1>
        </div>
     </div>
 */
-.column-80 { width: $col80; }
-.column-75 { width: $col75; }
-.column-70 { width: $col70; }
-.column-60 { width: $col60; }
-.column-50 { width: $col50; }
-.column-40 { width: $col40; }
-.column-30 { width: $col30; }
-.column-25 { width: $col25; }
-.column-20 { width: $col20; }
+.column-80 { @include column; width: $col80; }
+.column-75 { @include column; width: $col75; }
+.column-70 { @include column; width: $col70; }
+.column-60 { @include column; width: $col60; }
+.column-50 { @include column; width: $col50; }
+.column-40 { @include column; width: $col40; }
+.column-30 { @include column; width: $col30; }
+.column-25 { @include column; width: $col25; }
+.column-20 { @include column; width: $col20; }

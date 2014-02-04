@@ -22,6 +22,10 @@ Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
 
 # Release notes
 
+- **1.0.0**  :
+    - Reworked column system, column mixin added
+    - Added support of inline-block for ie7
+    - Added print.scss to handle print layout
 - **0.11.1** : Added step classes to fixToTop jquery plugin
 - **0.11.0** : Transfered repository ownership to Inouit organisation
 - **0.10.1** :
@@ -49,19 +53,6 @@ Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
 - **0.2.0**  :    Reworked grid system : You can now use *class="column column-value"* in any wrapper to get your columns right
 - **0.1.0**  :    First Sass & Coffe version of the Dummy
 
-
-# Road map
-
-- before **1.0.0** : solve discussions questions and implement them
-- **1.0.1** : rewrite CoffeScript
-- **1.1.0** : add a dynamic demo for grid system
-- **1.2.0** : Add imagemin to handle optimization
-
-
-- Write Inouit's coding guidelines
-- Keep improving the grid system
-
-
 #Kown issues
 
 
@@ -72,10 +63,10 @@ Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
          └─ columns.scss
          └─ config.scss
          └─ functions.scss
-         └─ mixins.scss
          └─ ie.scss
          └─ main.scss
          └─ mediaqueries.scss
+         └─ mixins.scss
          └─ powermail.scss
          └─ reset.scss
          └─ styles.scss
@@ -87,6 +78,8 @@ Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
      └─ src
          └─ base.coffee
          └─ main.coffee
+     └─ base.js
+     └─ main.js
     index.html
     bower.json
     LICENCE
