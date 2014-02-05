@@ -28,7 +28,7 @@
 @mixin inline-block { display: inline-block; }
 
 // Emulate background sizing for Internet Explorer 8
-@mixin backgound-size( $size... ) {
+@mixin background-size( $size... ) {
     background-size: $size;
     -ms-behavior: url(/backgroundsize.min.htc);
 }
