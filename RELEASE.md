@@ -1,7 +1,20 @@
 # Release notes
 
-## Stable 1
+##v2
+- **2.0.0** :
+    - Replaced docco with groc
+    - Warning! The groc plugin isn't compatible yet, the pull request nevir/groc#157 is pending. See #9 for further details You can edit the grunt-groc sources meanwhile.
+    - Reworked Sass structure
+    - A full rewrite of the grunt tasks and bower files location
+      - Added cssmin
+      - Added uglify tasks
+      - Moved all grunt related files into the grunt folder
+      - moved bower configuration with grunt
+      - Improvements in the port managment
 
+    The structure and most of the tasks come from @Gregcop1
+
+## v1
 - **1.1.0**  :
     - Cleanned html files
     - A more consistent content and base style in demo and landing page

@@ -9,23 +9,23 @@
           }
         });
       }
+
       /*
       
-      # Add backToTop anchor when half a screen  is scrolled
+       * Add backToTop anchor when half a screen  is scrolled
       $('body').append('<a id="backToTop" href="#">Back to top</a>')
       $('#backToTop').backToTop($(window).height()/2)
       
-      # Handle pulldown
+       * Handle pulldown
       $('.pulldown').pulldown()
       
-      # Refresh scroll offset of backToTop button appearance
+       * Refresh scroll offset of backToTop button appearance
       $(window).bind 'resize', ->
         $('#backToTop').backToTop($(window).height()/2)
-      */
-
+       */
     });
   });
 
 }).call(this);
 
-//# sourceMappingURL=../js/main.js.map
+//# sourceMappingURL=main.js.map

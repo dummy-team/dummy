@@ -1,3 +1,5 @@
+# # base: A collection of helpers
+# It's an old file which should be rewritten and splitted into several files
 $ ->
   # ## getHash
   $.getHash = (url) ->
@@ -7,33 +9,47 @@ $ ->
 
 
   # ## placeholder
-  # Must only be called for browser not supporting placeholder attribute
+  # Must only be called only for browser not supporting placeholder attribute
+
+  ### ```javascript
+  unless Modernizr.input.placeholder
+    $("input").each ->
+      $(this).placeholder() unless $(this).attr("placeholder") is ""
+  ``` ###
   $.fn.placeholder = ->
 
+    # ### Initialize
     # Store placeholder value and fill the input
+    $(this).data("placeholder", $(this).attr("placeholder"))
+    $(this).val(jQuery(this).attr("placeholder"))
 
+    # ### emptyMe()
     # Empty the previous value on focus
-
-    # Reset the value if nothing is found in the input on blur
     emptyMe = ->
       $(this).data "placeholder", $(this).val()
       $(this).val ""
+
+    # ### fullMe()
+    # Reset the value if nothing is found in the input on blur
     fullMe = ->
-      $(this).val $(this).data("placeholder")  if $(this).val() is ""
-    $(this).data "placeholder", $(this).attr("placeholder")
-    $(this).val jQuery(this).attr("placeholder")
-    $(this).focus emptyMe
-    $(this).blur fullMe
+      $(this).val($(this).data("placeholder"))  if $(this).val() is ""
+
+    # ### Bind events
+    $(this).on "focus", emptyMe
+    $(this).on "blur", fullMe
     return $(this)
 
 
   # ## hoverSrc
   # Emulate a hover state for images
   $.fn.hoverSrc = (on_, off_) ->
+
+    # ### Initialize
     # Use hover / off suffixes or those given
+    suffixeOn = (if on_ then on_ else "-hover")
+    suffixeOff = (if off_ then off_ else "-off")
 
-    # Bind events
-
+    # ### hoverIn()
     # Add the on suffixe to the image name
     hoverIn = ->
       unless $(this).hasClass("active")
@@ -41,14 +57,16 @@ $ ->
         srcName = srcName.replace(suffixeOff, suffixeOn)
         $(this).attr src: srcName
 
+    # ### hoverOut()
     # Add the off suffixe to the image name
     hoverOut = ->
       unless $(this).hasClass("active")
         srcName = $(this).attr("src")
         srcName = srcName.replace(suffixeOn, suffixeOff)
         $(this).attr src: srcName
-    suffixeOn = (if on_ then on_ else "-hover")
-    suffixeOff = (if off_ then off_ else "-off")
+
+
+    # Bind events
     $(this).each ->
       $(this).bind "focus mouseenter", hoverIn
       $(this).bind "blur mouseleave", hoverOut
@@ -61,34 +79,19 @@ $ ->
   # Fix any element to the top when scroll pass it
   # & add optionnal class for each step defined
   $.fn.fixToTop = (gap, steps) ->
-    # Initialize
+    # ### Initialize
     $that = $(this)
     origin = (if gap then $that[0].offsetTop + gap else $that[0].offsetTop)
     originOffSet = parseFloat($that.next().css("marginTop"))
     offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"))
-    $(window).scroll ->
-      if $that.css("visibility") isnt "hidden" and $(window).scrollTop() > origin
-        fix()
-      else
-        free()
 
-    fix = ->
-      unless $that.hasClass("fixed")
-        offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"))
-        $that.addClass "fixed"
-        # Set margin to balance the fixed position
-        $that.next().css "marginTop", offSet + "px"
 
-    free = ->
-      $that.removeClass "fixed"
-      $that.next().css "marginTop", originOffSet + "px"
+    ### If steps option is found, listen to scroll to set classes for each step
+    ```JavaScript
+    steps:
+      "className": offsetValue
 
-    # If steps option found, listen to scroll to set classes for each step
-    # ```JavaScript
-    # var steps = {
-    #   "className": offsetValue
-    # }
-    #  ```
+    ``` ###
     if steps
       stepsClasses = ""
       for step of steps
@@ -100,14 +103,36 @@ $ ->
               .removeClass(stepsClasses)
               .addClass(step)
 
+    # ### Bind to scroll event
+    $(window).scroll ->
+      if $that.css("visibility") isnt "hidden" and $(window).scrollTop() > origin
+        fix()
+      else
+        free()
+
+    # ### fix()
+    # Add the class fixed to the element to handle the position from css
+    # and handle an optionnal offset
+    fix = ->
+      unless $that.hasClass("fixed")
+        offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"))
+        $that.addClass "fixed"
+        # Set margin to balance the fixed position
+        $that.next().css "marginTop", offSet + "px"
+
+    # ### free()
+    free = ->
+      $that.removeClass "fixed"
+      $that.next().css "marginTop", originOffSet + "px"
+
     return $(this)
 
-  # ##Pulldown
+  # ## Pulldown
   # Show/Hide content of pulldown element on click on the first child (button) of each elements
   # Use css to do the toggle.
   $.fn.pulldown = ->
 
-    # Initialize
+    # ### Initialize
     $list = $(this)
     $items = $list.children()
     $buttons = $items.find("> *:first-child")
@@ -122,8 +147,8 @@ $ ->
     $items.children().not($buttons).addClass "pulldownContent"
     $items.data "state", 0
 
-    # Bind click and focus event
-    $items.bind "click", (e) ->
+    # ### Bind click events
+    $items.on "click", (e) ->
       e.preventDefault()
       $item = $(this)
       if $item.data("state")
@@ -141,17 +166,18 @@ $ ->
   # ## backToTop
   # Display / hide a *back to top* button when scrolling under the gap
   $.fn.backToTop = (gap) ->
+
+    # ### Initialize
     $that = $(this)
     gap = (if gap then gap else 0)
-    $(this).unbind "click"
-    $(this).bind "click", (e) ->
+    $(this).off "click"
+    $(this).on "click", (e) ->
       e.preventDefault()
       $("html").scrollTo 0,
         duration: 800
 
-
-    $(this).unbind "backToTop.scroll"
-    $(this).bind "backToTop.scroll", ->
+    $(this).off "backToTop.scroll"
+    $(this).on "backToTop.scroll", ->
       if $(window).scrollTop() >= gap
         $that.fadeIn()
       else

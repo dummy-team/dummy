@@ -1,3 +1,6 @@
+// # columns: the grid system
+
+// Set the columns base property
 .column { @include column; }
 
 // Preset columns sizes
@@ -11,22 +14,25 @@ $col30 : column-width(.3333333333, 2);
 $col25 : column-width(.25, 3);
 $col20 : column-width(.20, 4);
 
-// ## Columns classes
-// Used width inline-block display mode, you'll need to use comments
-// to remove white-space size between columns
-/*
+/* ## Columns classes
+Used with inline-block display mode, you'll need to use comments
+to remove white-space size between columns
+
 HTML columns :
-    <div>
-       <div class="column-50">
-           <h1>50</h1>
-       </div><!--
-    --><div class="column-25">
-           <h1>25</h1>
-       </div><!--
-    --><div class="column-25">
-           <h1>25</h1>
-       </div>
-    </div>
+
+``` html
+<div>
+   <div class="column-50">
+       <h1>50</h1>
+   </div><!--
+--><div class="column-25">
+       <h1>25</h1>
+   </div><!--
+--><div class="column-25">
+       <h1>25</h1>
+   </div>
+</div>
+```
 */
 .column-80 { @include column; width: $col80; }
 .column-75 { @include column; width: $col75; }

@@ -1,6 +1,8 @@
+// # config: sizes, colors and fonts
+
 // Max width of the slice ( the max background size exceeding the content size )
 $sliceWidth  : 1400px;
-$baseWidth  : 990px;
+$baseWidth : 990px;
 
 // Max size of the page
 $max        : 1200;
@@ -10,7 +12,7 @@ $maxWidth   : $max * 1px;
 $u          : 10px;
 
 // Gutter width for the grid system
-$gutter     : 50 / $max * 100%;
+$gutter     : 30 / $max * 100%;
 
 // # Colors
 $white          : #FFFFFF;

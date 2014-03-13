@@ -7,8 +7,17 @@
         return window.location.hash;
       }
     };
+
+    /* ```javascript
+    unless Modernizr.input.placeholder
+      $("input").each ->
+        $(this).placeholder() unless $(this).attr("placeholder") is ""
+    ```
+     */
     $.fn.placeholder = function() {
       var emptyMe, fullMe;
+      $(this).data("placeholder", $(this).attr("placeholder"));
+      $(this).val(jQuery(this).attr("placeholder"));
       emptyMe = function() {
         $(this).data("placeholder", $(this).val());
         return $(this).val("");
@@ -18,14 +27,14 @@
           return $(this).val($(this).data("placeholder"));
         }
       };
-      $(this).data("placeholder", $(this).attr("placeholder"));
-      $(this).val(jQuery(this).attr("placeholder"));
-      $(this).focus(emptyMe);
-      $(this).blur(fullMe);
+      $(this).on("focus", emptyMe);
+      $(this).on("blur", fullMe);
       return $(this);
     };
     $.fn.hoverSrc = function(on_, off_) {
       var hoverIn, hoverOut, suffixeOff, suffixeOn;
+      suffixeOn = (on_ ? on_ : "-hover");
+      suffixeOff = (off_ ? off_ : "-off");
       hoverIn = function() {
         var srcName;
         if (!$(this).hasClass("active")) {
@@ -46,8 +55,6 @@
           });
         }
       };
-      suffixeOn = (on_ ? on_ : "-hover");
-      suffixeOff = (off_ ? off_ : "-off");
       $(this).each(function() {
         $(this).bind("focus mouseenter", hoverIn);
         $(this).bind("blur mouseleave", hoverOut);
@@ -61,24 +68,14 @@
       origin = (gap ? $that[0].offsetTop + gap : $that[0].offsetTop);
       originOffSet = parseFloat($that.next().css("marginTop"));
       offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"));
-      $(window).scroll(function() {
-        if ($that.css("visibility") !== "hidden" && $(window).scrollTop() > origin) {
-          return fix();
-        } else {
-          return free();
-        }
-      });
-      fix = function() {
-        if (!$that.hasClass("fixed")) {
-          offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"));
-          $that.addClass("fixed");
-          return $that.next().css("marginTop", offSet + "px");
-        }
-      };
-      free = function() {
-        $that.removeClass("fixed");
-        return $that.next().css("marginTop", originOffSet + "px");
-      };
+
+      /* If steps option is found, listen to scroll to set classes for each step
+      ```JavaScript
+      steps:
+        "className": offsetValue
+      
+      ```
+       */
       if (steps) {
         stepsClasses = "";
         for (step in steps) {
@@ -97,6 +94,24 @@
           return _results;
         });
       }
+      $(window).scroll(function() {
+        if ($that.css("visibility") !== "hidden" && $(window).scrollTop() > origin) {
+          return fix();
+        } else {
+          return free();
+        }
+      });
+      fix = function() {
+        if (!$that.hasClass("fixed")) {
+          offSet = parseFloat($that.height()) + parseFloat($that.next().css("marginTop"));
+          $that.addClass("fixed");
+          return $that.next().css("marginTop", offSet + "px");
+        }
+      };
+      free = function() {
+        $that.removeClass("fixed");
+        return $that.next().css("marginTop", originOffSet + "px");
+      };
       return $(this);
     };
     $.fn.pulldown = function() {
@@ -112,7 +127,7 @@
       });
       $items.children().not($buttons).addClass("pulldownContent");
       $items.data("state", 0);
-      $items.bind("click", function(e) {
+      $items.on("click", function(e) {
         var $item;
         e.preventDefault();
         $item = $(this);
@@ -130,15 +145,15 @@
       var $that;
       $that = $(this);
       gap = (gap ? gap : 0);
-      $(this).unbind("click");
-      $(this).bind("click", function(e) {
+      $(this).off("click");
+      $(this).on("click", function(e) {
         e.preventDefault();
         return $("html").scrollTo(0, {
           duration: 800
         });
       });
-      $(this).unbind("backToTop.scroll");
-      $(this).bind("backToTop.scroll", function() {
+      $(this).off("backToTop.scroll");
+      $(this).on("backToTop.scroll", function() {
         if ($(window).scrollTop() >= gap) {
           return $that.fadeIn();
         } else {
@@ -204,4 +219,4 @@
 
 }).call(this);
 
-//# sourceMappingURL=../js/base.js.map
+//# sourceMappingURL=base.js.map

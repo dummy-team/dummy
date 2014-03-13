@@ -1,5 +1,8 @@
+// # mixins: mixins & polyfill
+
 // Set the default page width
-@mixin page { margin: 0 auto; width: $baseWidth;
+@mixin page {
+    margin: 0 auto; width: $baseWidth;
     @media screen and (min-width: 0px) { width: $maxWidth; max-width: 100%; }
     @media screen and (max-width: $maxWidth+(2*20px)) { width: auto; margin-left: 20px; margin-right: 20px;}
 }

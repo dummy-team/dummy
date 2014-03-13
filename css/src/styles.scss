@@ -1,10 +1,9 @@
-// import all scss files needed
+// # style: import all scss files needed
 @import 'config';
-@import 'reset';
 @import 'functions';
 @import 'mixins';
 @import 'columns';
-@import 'main';
-@import 'powermail';
+@import 'layout';
+@import 'modules';
 @import 'mediaqueries';
 @import 'print';
