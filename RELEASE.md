@@ -1,12 +1,18 @@
 # Release notes
 
-## 1.0
+## Stable 1
+
+- **1.1.0**  :
+    - Cleanned html files
+    - A more consistent content and base style in demo and landing page
+    - Added a slice managing base code
+    - Updated bower dependencies versions
+    - bug fixes
 
 - **1.0.0**  :
     - Reworked column system, column mixin added
     - Added support of inline-block for ie7
     - Added print.scss to handle print layout
-
 
 ## Beta
 
