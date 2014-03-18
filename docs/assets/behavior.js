@@ -88,6 +88,101 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         }
       ]
     }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".md", ".markdown", ".mkd", ".mkdn", ".mdown"],
+          "commentsOnly": true,
+          "name": "Markdown"
+        },
+        "sourcePath": "/Users/plou/www/scratch/dummy/RELEASE.md",
+        "projectPath": "RELEASE.md",
+        "targetPath": "RELEASE",
+        "pageTitle": "RELEASE",
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "Release notes",
+            "slug": "release-notes",
+            "isFileHeader": true
+          },
+          "depth": 1,
+          "children": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "v2",
+                "slug": "v2"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "v1",
+                "slug": "v1"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Beta",
+                "slug": "beta"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "Alpha",
+                "slug": "alpha"
+              },
+              "depth": 2
+            }
+          ]
+        },
+        "title": "Release notes"
+      },
+      "depth": 1,
+      "outline": [
+        {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "v2",
+            "slug": "v2"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "v1",
+            "slug": "v1"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Beta",
+            "slug": "beta"
+          },
+          "depth": 2
+        }, {
+          "type": "heading",
+          "data": {
+            "level": 2,
+            "title": "Alpha",
+            "slug": "alpha"
+          },
+          "depth": 2
+        }
+      ]
+    }, {
       "type": "folder",
       "data": {
         "path": "css",

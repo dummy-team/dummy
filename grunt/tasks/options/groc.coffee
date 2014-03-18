@@ -6,4 +6,4 @@ module.exports =
   all:
     options:
       # `demo' directory is there to fix a strange path behavior of groc
-      glob: ["README.md", "demo/" , "js/src/*.coffee", "css/src/*.scss"]
+      glob: ["README.md", "RELEASE.md", "demo/" , "js/src/*.coffee", "css/src/*.scss"]
