@@ -1,6 +1,10 @@
 # Release notes
 
 ##v2
+- **2.0.0-alpha.1**:
+    - Warning! The groc plugin isn't compatible yet, the pull request nevir/groc#157 is pending. See #9 for further details You can edit the grunt-groc sources meanwhile.
+    - Fix #10 : The column class isn't needed anymore
+    - Removed groc documentation generation on watch task, remember to run the build task before commit the doc
 - **2.0.0-alpha.0**:
     - Warning! The groc plugin isn't compatible yet, the pull request nevir/groc#157 is pending. See #9 for further details You can edit the grunt-groc sources meanwhile.
     - Replaced docco with groc

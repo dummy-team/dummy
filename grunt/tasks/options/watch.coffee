@@ -23,13 +23,3 @@ module.exports =
     tasks: [
       'coffee:build'
     ]
-  groc:
-    files: [
-      '../RELEASE.md'
-      '../README.md'
-      '<%= in8.jsSrc %>/*.coffee'
-      '<%= in8.cssSrc %>/*.scss'
-    ]
-    tasks: [
-      'groc'
-    ]

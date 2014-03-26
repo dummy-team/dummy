@@ -11,8 +11,8 @@
    @media screen and (min-width: $sliceWidth) { width: $sliceWidth; }
 }
 
-@mixin column { @include inline-block; margin: 0; vertical-align: top;
-    & + &{ margin: 0 0 0 $gutter; }
+@mixin column { @include inline-block; margin: 0 0 0 $gutter; vertical-align: top;
+    &:first-child{ margin: 0; }
 }
 
 // Preset navigation layout
