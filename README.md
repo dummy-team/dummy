@@ -39,4 +39,5 @@ Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
 - Serve your files & open the browser for you
 - Live reload your modifications
 - Generate annotated sources using [groc](https://github.com/nevir/groc)
+  - You'll need the pygments package installed – otherwise you'll get a ! Failed to highlight error.
 - Uglify your sources
