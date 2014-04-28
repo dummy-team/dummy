@@ -4,15 +4,15 @@
     "grunt-contrib-coffee": "*",
     "grunt-contrib-sass": "*",
     "grunt-autoprefixer": "*",
-    "grunt-notify": "~0.2.16",
+    "grunt-notify": "*",
     "grunt-contrib-watch": "*",
     "load-grunt-tasks": "*",
-    "grunt-contrib-cssmin": "~0.9.0",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-newer": "~0.6.1",
-    "grunt-concurrent": "~0.5.0",
-    "glob": "~3.2.9",
-    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-newer": "*",
+    "grunt-concurrent": "*",
+    "glob": "*",
+    "grunt-contrib-connect": "*",
     "grunt-groc": "git://github.com/Plou/grunt-groc.git"
   }
 }
