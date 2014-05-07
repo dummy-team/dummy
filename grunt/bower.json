@@ -1,7 +1,7 @@
 {
   "name": "dummy",
   "description": "A light Sass & coffee base front-end",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-beta.3",
   "author": {
     "name": "Inouit",
     "url": "www.inouit.fr"

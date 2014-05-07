@@ -1,6 +1,13 @@
 # Release notes
 
 ##v2
+- **2.0.0-beta.3**:
+    - Various fixes
+- **2.0.0-beta.2**:
+    - The npm dependencies are now setted to get the latest version available
+    - Various fixes
+- **2.0.0-beta.1**:
+    - Updated grunt-groc dependencie to use the Plou/grunt-groc and Plou/groc modules
 - **2.0.0-alpha.1**:
     - Warning! The groc plugin isn't compatible yet, the pull request nevir/groc#157 is pending. See #9 for further details You can edit the grunt-groc sources meanwhile.
     - Fix #10 : The column class isn't needed anymore

@@ -4,6 +4,7 @@
 .column { @include column; }
 
 // Preset columns sizes
+// Play with it at your own risk
 $col80 : column-width(.80, .25);
 $col75 : column-width(.75, .3333333333);
 $col70 : column-width(.6666666666, .5);
