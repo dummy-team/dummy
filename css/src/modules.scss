@@ -3,13 +3,5 @@
 // Use class `page` to set the max-width of the website
 .page { @include page; }
 
-// ## Alignment
-.align-left { text-align: left; }
-.align-center { text-align: center; }
-.align-right { text-align: right; }
-.align-justify { text-align: justify; }
-
 // ## Navigation
-.nav {
-    @include nav;
-}
+.nav { @include nav; }

@@ -7,22 +7,29 @@ html { font-size: 62.5%; line-height: 1.3em; }
 body{ margin: 0; padding: 0; font-family: $font; font-size: 1em; color: $black;  font-weight: 300;}
 
 // ## Links
+button,
 a { text-decoration: none; color: $red;
   img{ border: 0; }
   &:hover { text-decoration: underline; }
 }
 
+// Reset buttons
+button { display: inline; margin:0; border: none; padding:0; cursor: pointer; background-color: transparent; outline: none;}
+
 // ## Default margins
-h1, .h1-like  { margin: 2.5*$u 0; }
-h2, .h2-like  { margin: 2.5*$u 0; }
-h3, .h3-like  { margin: 2.5*$u 0; }
-h4, .h4-like  { margin: 2*$u 0; }
-h5, .h5-like  { margin: 2*$u 0; }
-.introduction { margin: 3*$u 0; }
-p, p.bodytext, h6, .h6-like{ margin: 2.5*$u 0; }
+//  ### margin for default slice
+.sliceWithMargin {  margin: $gutter 0; }
+
+h1 { margin: 25px 0; }
+h2 { margin: 25px 0; }
+h3 { margin: 25px 0; }
+h4 { margin: 20px 0; }
+h5 { margin: 20px 0; }
+.introduction { @extend .sliceWithMargin; }
+p, p.bodytext, h6, .h6-like{ margin: 15px 0; }
 td p, td p.bodytext{ margin: 0; }
-ul{ margin: 3*$u 0;
-  li{ margin: $u/2 0; }
+ul{ @extend .sliceWithMargin;
+  li{ margin: 5px 0; }
 }
 
 // ## Default Font size
@@ -37,15 +44,24 @@ h4, .h4-like, .introduction { font-size: 1.7em; }
 h5, .h5-like { font-size: 1.6em; }
 h6, .h6-like { font-size: 1.4em; }
 
+.h1-like { @extend h1; }
+.h2-like { @extend h2; }
+.h3-like { @extend h3; }
+.h4-like { @extend h4; }
+.h5-like { @extend h5; }
+.h6-like { @extend h6; }
+
 // ## Separator
-hr { margin: 4*$u auto; border: none; height: 1px; background-color: $grey; }
+hr { @extend .sliceWithMargin; border: none; height: 1px; background-color: $grey; }
 hr.clear { clear: both;  height: 0px; }
 
-// ## General
+// ## Text
 body { color: $grey; }
+// ### Alignment
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-justify { text-align: justify; }
 
-
-// ## Header
-
-
-// ## Footer
+// # float reset
+.clear { clear: both; }

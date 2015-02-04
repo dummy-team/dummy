@@ -1,7 +1,7 @@
 {
   "name": "dummy",
   "description": "A light Sass & coffee base front-end",
-  "version": "2.0.0-beta.3",
+  "version": "3.0.0",
   "author": {
     "name": "Inouit",
     "url": "www.inouit.fr"
@@ -14,16 +14,16 @@
     "JViste <jviste@inouit.com>"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Inouit/dummy.git"
+    "type": "git",
+    "url": "https://github.com/Inouit/dummy.git"
   },
-  "bugs" : {
-    "url" : "https://github.com/Inouit/dummy/issues"
+  "bugs": {
+    "url": "https://github.com/Inouit/dummy/issues"
   },
   "dependencies": {
-    "modernizr": "latest",
     "jquery": "<2.0.0",
-    "jquery.scrollTo": "latest",
-    "jscrollpane": "latest"
+    "modernizr": "~2.8.3",
+    "jquery.scrollTo": "~1.4.14",
+    "TinyScrollbar": "~2.2.5"
   }
 }

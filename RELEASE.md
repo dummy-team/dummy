@@ -1,5 +1,11 @@
 # Release notes
 
+##v3
+- **3.0.0**:
+  - A brand new column system !
+  - BrowserSync now replace livereload
+  - Improved build and watch tasks
+
 ##v2
 - **2.0.0-beta.3**:
     - Various fixes

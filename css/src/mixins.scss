@@ -2,17 +2,9 @@
 
 // Set the default page width
 @mixin page {
-    margin: 0 auto; width: $baseWidth;
+    margin: auto; padding: 0 $pagePadding*1px; width: $baseWidth;
     @media screen and (min-width: 0px) { width: $maxWidth; max-width: 100%; }
-    @media screen and (max-width: $maxWidth+(2*20px)) { width: auto; margin-left: 20px; margin-right: 20px;}
-}
-@mixin slice {
-   margin: 0 auto;  width: 100%;
-   @media screen and (min-width: $sliceWidth) { width: $sliceWidth; }
-}
-
-@mixin column { @include inline-block; margin: 0 0 0 $gutter; vertical-align: top;
-    &:first-child{ margin: 0; }
+    @media screen and (max-width: $maxWidth+($pagePadding*2px)) { width: auto; margin-left: $pagePadding*1px; margin-right: $pagePadding*1px;}
 }
 
 // Preset navigation layout
@@ -33,9 +25,30 @@
 // Emulate background sizing for Internet Explorer 8
 @mixin background-size( $size... ) {
     background-size: $size;
+    -ms-behavior: url(/backgroundsize.min.htc); // The url is relative to the document, not to the css file!
 }
 
-// font-familyy
-@mixin ff ( $fontFamily: $font, $fontWeight: $regular ) {
-    font-family: $fontFamily; font-weight: $fontWeight;
+@mixin border-radius ($args: $defaultRadius) {
+    border-radius         : $args;
+    -webkit-border-radius : $args;
+    -moz-border-radius    : $args;
+}
+
+@mixin text-shadow ($args: $defaultTextShadow) {
+    text-shadow         : $args;
+    -moz-text-shadow    : $args;
+    -webkit-text-shadow : $args;
+}
+
+
+@mixin box-shadow ($args) {
+    box-shadow         : $args;
+    -moz-box-shadow    : $args;
+    -webkit-box-shadow : $args;
+}
+
+@mixin vertical-align-middle {
+    position: absolute; top: 0; bottom: 0; margin-top: auto; margin-bottom: auto;
+
+    &.fixMyHeight { top: auto !important; bottom: auto !important; height: auto !important; }
 }

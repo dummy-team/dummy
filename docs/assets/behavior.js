@@ -218,8 +218,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "type": "heading",
                   "data": {
                     "level": 1,
-                    "title": "columns: the grid system",
-                    "slug": "columns-the-grid-system",
+                    "title": "columns",
+                    "slug": "columns",
                     "isFileHeader": true
                   },
                   "depth": 1,
@@ -228,14 +228,22 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                       "type": "heading",
                       "data": {
                         "level": 2,
-                        "title": "Columns classes",
-                        "slug": "columns-classes"
+                        "title": "container",
+                        "slug": "container"
+                      },
+                      "depth": 2
+                    }, {
+                      "type": "heading",
+                      "data": {
+                        "level": 2,
+                        "title": "column",
+                        "slug": "column"
                       },
                       "depth": 2
                     }
                   ]
                 },
-                "title": "columns: the grid system"
+                "title": "columns"
               },
               "depth": 3,
               "outline": [
@@ -243,8 +251,16 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "type": "heading",
                   "data": {
                     "level": 2,
-                    "title": "Columns classes",
-                    "slug": "columns-classes"
+                    "title": "container",
+                    "slug": "container"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "column",
+                    "slug": "column"
                   },
                   "depth": 2
                 }
@@ -435,26 +451,21 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                       "type": "heading",
                       "data": {
                         "level": 2,
-                        "title": "General",
-                        "slug": "general"
+                        "title": "Text",
+                        "slug": "text"
                       },
-                      "depth": 2
-                    }, {
-                      "type": "heading",
-                      "data": {
-                        "level": 2,
-                        "title": "Header",
-                        "slug": "header"
-                      },
-                      "depth": 2
-                    }, {
-                      "type": "heading",
-                      "data": {
-                        "level": 2,
-                        "title": "Footer",
-                        "slug": "footer"
-                      },
-                      "depth": 2
+                      "depth": 2,
+                      "children": [
+                        {
+                          "type": "heading",
+                          "data": {
+                            "level": 3,
+                            "title": "Alignment",
+                            "slug": "alignment"
+                          },
+                          "depth": 3
+                        }
+                      ]
                     }
                   ]
                 },
@@ -506,26 +517,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "type": "heading",
                   "data": {
                     "level": 2,
-                    "title": "General",
-                    "slug": "general"
+                    "title": "Text",
+                    "slug": "text"
                   },
-                  "depth": 2
+                  "depth": 2,
+                  "children": [
+                    {
+                      "type": "heading",
+                      "data": {
+                        "level": 3,
+                        "title": "Alignment",
+                        "slug": "alignment"
+                      },
+                      "depth": 3
+                    }
+                  ]
                 }, {
                   "type": "heading",
                   "data": {
-                    "level": 2,
-                    "title": "Header",
-                    "slug": "header"
+                    "level": 1,
+                    "title": "float reset",
+                    "slug": "float-reset"
                   },
-                  "depth": 2
-                }, {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Footer",
-                    "slug": "footer"
-                  },
-                  "depth": 2
+                  "depth": 1
                 }
               ]
             }, {
@@ -618,14 +632,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                       "type": "heading",
                       "data": {
                         "level": 2,
-                        "title": "Alignment",
-                        "slug": "alignment"
-                      },
-                      "depth": 2
-                    }, {
-                      "type": "heading",
-                      "data": {
-                        "level": 2,
                         "title": "Navigation",
                         "slug": "navigation"
                       },
@@ -638,14 +644,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "depth": 3,
               "outline": [
                 {
-                  "type": "heading",
-                  "data": {
-                    "level": 2,
-                    "title": "Alignment",
-                    "slug": "alignment"
-                  },
-                  "depth": 2
-                }, {
                   "type": "heading",
                   "data": {
                     "level": 2,

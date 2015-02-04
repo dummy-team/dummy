@@ -6,6 +6,7 @@ A light Sass &amp; coffee front-end base
 # Usage
 
 ## CSS / SASS
+- `config`: Most of the website constantes, font, colors, gutter...
 - `layout`: The commun websites styles ( header/footer ) & template specific.
 - `modules`: The components which can be used in any context
 - `columns`: The grid system configuration
@@ -16,15 +17,11 @@ A light Sass &amp; coffee front-end base
 - `components`: all external and generic scripts
 - `htc`: Internet Explorer polyfill
 
-
-Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
-
 # Features
 
 ## A Sass & coffee base
-- A full css light grid system
+- A full css light column system
 - A simple font sizing : 1.6em = 16px;
-- An unit based margin & padding system
 - A collection of variables to manage default sizing, fonts and colors
 - A background-size fallback for Internet Explorer (It need an absolute url configuration in `mixins.css#L33`)
 - A display-inline fallback for Internet Explorer
@@ -33,11 +30,11 @@ Go check the Yeoman's [generator](https://github.com/Inouit/generator-dummy) !
 
 ## Grunt to make your life easier
 
-- Compile your Scss files
+- Compile your `scss` files
 - Prefixe your CSS
 - Compile your CoffeScript files
 - Serve your files & open the browser for you
-- Live reload your modifications
+- Sync and reload your modifications accross browsers
 - Generate annotated sources using [groc](https://github.com/nevir/groc)
-  - You'll need the pygments package installed – otherwise you'll get a ! Failed to highlight error.
+  - You'll need the pygments package installed – otherwise you'll get a `! Failed to highlight` error.
 - Uglify your sources

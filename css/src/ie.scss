@@ -8,6 +8,10 @@
 // override inline-block mixins
 @mixin inline-block { display: inline; zoom: 1; }
 
+@mixin column { @include inline-block; margin: 0; vertical-align: top;
+    & + &{ margin: 0 0 0 $gutter; }
+}
+
 // Preset navigation layout
 @mixin nav {
     display: block; margin: 0; padding: 0;
@@ -20,11 +24,9 @@
     .second { position: absolute; display: none;}
 }
 
-// Emulate background sizing for Internet Explorer 8
-@mixin background-size( $size... ) {
-    background-size: $size;
-    -ms-behavior: url(/backgroundsize.min.htc); // The url is relative to the document, not to the css file!
-}
+// inline block (overrided in IE)
+@mixin inline-block { display: inline; zoom: 1}
+
 
 @import 'columns';
 @import 'layout';
