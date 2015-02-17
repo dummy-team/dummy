@@ -69,6 +69,6 @@ module.exports = (grunt) ->
   # Fire file-change events manually for greater control
   grunt.registerTask "bs-reload", ->
     # ¡ Paths are relatives to server baseDir !
-    browserSync.reload(["css/main.css","css/ie.css"])
+    browserSync.reload(["css/main.css"])
 
   registerTasks(grunt, './tasks/')

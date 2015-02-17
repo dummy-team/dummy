@@ -1,6 +1,9 @@
 # Release notes
 
 ##v3
+- **3.0.1**:
+  - Improved build and watch tasks
+
 - **3.0.0**:
   - A brand new column system !
   - BrowserSync now replace livereload

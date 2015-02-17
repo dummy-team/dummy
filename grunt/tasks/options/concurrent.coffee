@@ -1,2 +1,2 @@
 module.exports =
-  builds: ['coffee', 'sass']
+  builds: ['coffee:build', 'sass:build']
