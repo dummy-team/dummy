@@ -47,7 +47,7 @@ In order to keep team work efficient, and to smoothen going back on older code h
 
 ```scss
 
-  .selector { [position] [block] [inline] [decorations]
+  .selector { [position] [block] [inline] [text-properties] [decorations]
     &.classModifier {}
     @media {}
 
