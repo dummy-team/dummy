@@ -1,6 +1,5 @@
-module.exports = (grunt)->
-  grunt.registerTask 'default', [
-    'bs-start'
-    'watch'
-  ]
+module.exports = [
+  'bs-start'
+  'watch'
+]
 

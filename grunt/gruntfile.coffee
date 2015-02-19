@@ -18,7 +18,7 @@ registerTasks = (grunt, path)->
   object = []
   glob.sync('*.coffee', {cwd: path}).forEach((option)->
     key = option.replace(/\.coffee$/,'')
-    grunt.registerTask 'key', require(path + option)(grunt)
+    grunt.registerTask key, require(path + option)
   )
 
   return object

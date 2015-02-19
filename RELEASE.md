@@ -1,6 +1,10 @@
 # Release notes
 
 ##v3
+- **3.0.2**:
+  - Grunt registerTasks
+  - CSS declaration in duplicate for h*-like
+
 - **3.0.1**:
   - Improved build and watch tasks
 

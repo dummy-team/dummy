@@ -1,8 +1,7 @@
-module.exports = (grunt)->
-  grunt.registerTask 'build', [
-    'concurrent:builds'
-    'autoprefixer'
-    'uglify'
-    'groc'
-    'cssmin'
-  ]
+module.exports = [
+  'concurrent:builds'
+  'autoprefixer'
+  'uglify'
+  'groc'
+  'cssmin'
+]
