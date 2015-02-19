@@ -25,24 +25,24 @@ h2 { margin: 25px 0; }
 h3 { margin: 25px 0; }
 h4 { margin: 20px 0; }
 h5 { margin: 20px 0; }
-.introduction { @extend .sliceWithMargin; }
-p, p.bodytext, h6, .h6-like{ margin: 15px 0; }
+h6, p, p.bodytext { margin: 15px 0; }
 td p, td p.bodytext{ margin: 0; }
 ul{ @extend .sliceWithMargin;
   li{ margin: 5px 0; }
 }
+.introduction { @extend .sliceWithMargin; }
 
 // ## Default Font size
 p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textarea { font-size: 1.4em; line-height: 1.7em; }
-li li, li p, td p, th p, li h1, li .h1-like, li h2, li .h2-like, li h3, li .h3-like, li h4, li .h4-like, li h5, li .h5-like, li h6, li .h6-like, button { font-size: 100%; }
+blockquote p, td p, th p, li li, li p, li h1, li .h1-like, li h2, li .h2-like, li h3, li .h3-like, li h4, li .h4-like, li h5, li .h5-like, li h6, li .h6-like, button { font-size: 100%; }
 input, select, textarea { font-family: $font; }
-h1, .h1-like , h2, .h2-like , h3, .h3-like , h4, .h4-like, h5, .h5-like { line-height: 1em; }
-h1, .h1-like { font-size: 3.5em; }
-h2, .h2-like, .important { font-size: 2.4em; }
-h3, .h3-like { font-size: 1.9em; }
-h4, .h4-like, .introduction { font-size: 1.7em; }
-h5, .h5-like { font-size: 1.6em; }
-h6, .h6-like { font-size: 1.4em; }
+h1 { font-size: 3.5em; }
+h2, .important { font-size: 2.4em; }
+h3 { font-size: 1.9em; }
+h4, .introduction { font-size: 1.7em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1.4em; }
+h1, h2, h3, h4, h5, h6 { line-height: 1em; }
 
 .h1-like { @extend h1; }
 .h2-like { @extend h2; }
