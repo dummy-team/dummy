@@ -1,7 +1,8 @@
 module.exports = [
+  'clean'
   'concurrent:builds'
   'autoprefixer'
-  'uglify'
-  'groc'
+  # 'groc'
   'cssmin'
+  'uglify'
 ]

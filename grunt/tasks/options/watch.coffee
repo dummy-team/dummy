@@ -1,7 +1,8 @@
 module.exports =
   options:
-    livereload: false
+    livereload: '<%= in8.liveport %>'
     spawn: false
+
   sass:
     files:'<%= in8.cssSrc %>/*.scss'
     tasks: [
@@ -9,6 +10,7 @@ module.exports =
       'autoprefixer'
       'bs-reload'
     ]
+
   coffee:
     files: '<%= in8.jsSrc %>/*.coffee'
     tasks: [

@@ -8,8 +8,9 @@ module.exports =
       update: true
     files:
       '<%= in8.cssDest %>/main.css': '<%= in8.cssSrc %>/styles.scss'
+      '<%= in8.cssDest %>/ie.css': '<%= in8.cssSrc %>/ie.scss'
 
-  ie:
+  build:
     options:
       style: "compact"
       precision: 20

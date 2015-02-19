@@ -1,4 +1,7 @@
 module.exports =
   build:
-    browsers: ["last 3 version", "ie 8", "ie 7"]
-    src: '<%= in8.cssDest %>/main.css'
+    options:
+      browsers: ["last 3 version", "ie 8", "ie 7"]
+    files:
+      '<%= in8.cssDest %>/main.css': '<%= in8.cssDest %>/main.css'
+      '<%= in8.cssDest %>/ie.css': '<%= in8.cssDest %>/ie.css'

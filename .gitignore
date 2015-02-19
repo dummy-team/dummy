@@ -1,20 +1,23 @@
-node_modules
-js/_bower_components
 .sass-cache
-.DS_Store
-js/components/*.js
+node_modules
+npm-debug.log
 Gemfile.lock
 
 css/*.css
 css/*.css.map
+css/*.min.js
 !rte.css
 
 docs/*
 !docs/assets
-!docs/assets/*
+docs/assets/*
 
-js/base.js.map
-js/main.js.map
-
+js/*.js
+js/*.js.map
+js/*.min.js
+js/_bower_components/*
+!js/components
+js/components/*
 
 !.gitkeep
+.DS_Store

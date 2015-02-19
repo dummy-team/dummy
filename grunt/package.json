@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "grunt": "*",
+    "grunt-contrib-clean": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-sass": "*",
     "grunt-autoprefixer": "*",
