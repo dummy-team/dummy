@@ -4,7 +4,7 @@ module.exports =
     spawn: false
 
   sass:
-    files:'<%= in8.cssSrc %>/*.scss'
+    files:'<%= in8.cssSrc %>/**/*.scss'
     tasks: [
       'sass:dev',
       'autoprefixer'

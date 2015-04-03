@@ -1,6 +1,17 @@
 # Release notes
 
-##v3
+##v4
+- **4.0.0**
+  Complete rewrite of Dummy
+  - Dropped old browser support (2 version back)
+  - Follow the new [guidelines]()
+  - `modules.scss` is now split under `components`
+  - Scss files comment follow Sassdoc syntax
+  - Coffeescript files comment follow ... syntax
+  - Compiled files are no longer versioned
+  - Cleaned Sass mixins 
+
+##v3 `deprecated`
 - **3.0.2**:
   - Grunt registerTasks
   - CSS declaration in duplicate for h*-like

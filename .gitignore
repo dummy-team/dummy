@@ -6,7 +6,6 @@ Gemfile.lock
 css/*.css
 css/*.css.map
 css/*.min.js
-!rte.css
 
 docs/*
 !docs/assets
@@ -15,9 +14,10 @@ docs/assets/*
 js/*.js
 js/*.js.map
 js/*.min.js
-js/_bower_components/*
-!js/components
-js/components/*
+js/components/.js
+
 
 !.gitkeep
+.db_thumb
 .DS_Store
+._*

@@ -35,13 +35,14 @@ A light Sass &amp; coffee front-end base
 - Compile your CoffeScript files
 - Serve your files & open the browser for you
 - Sync and reload your modifications accross browsers
-- Generate annotated sources using [groc](https://github.com/nevir/groc)
-  - You'll need the pygments package installed – otherwise you'll get a `! Failed to highlight` error.
+- SassDoc and coffedoc friendly
 - Uglify your sources
 
 # Coding guide
 
 In order to keep team work efficient, and to smoothen going back on older code here's our coding guide. Some good practices are includes too.
+
+http://codepen.io/Gregcop1/blog/sass-guideline
 
 ## SCSS
 

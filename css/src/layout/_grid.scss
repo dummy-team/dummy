@@ -1,3 +1,6 @@
+//  ### margin for default slice
+.sliceWithMargin {  margin: $gutter 0; }
+
 // #columns
 // ## container
 $borderColor: $grey;
@@ -13,7 +16,8 @@ $columnGutter: $gutter;
 
 // ## column
 .column {
-  @include inline-block; vertical-align: top; background-repeat: no-repeat;
+  @include inline-block;
+  vertical-align: top; background-repeat: no-repeat;
   & > .columnContent{ padding-left: 0; padding-right: 0; background-repeat: no-repeat; }
   &:first-child > .columnContent { padding-left: 0 !important; }
   &:last-child > .columnContent { padding-right: 0 !important }
@@ -35,6 +39,11 @@ $columnGutter: $gutter;
     > :last-child { margin-bottom: inherit; }
   }
   .separationBorder > &.columnWithPadding > .columnContent { padding-left: $columnGutter; padding-right: $columnGutter; }
+
+  @media screen and (max-width: 764px) {
+    // Reset layout to one column
+    display: block; width: auto!important; margin: 0!important;
+  }
 }
 .column-90 { width: 90%; }
 .column-80 { width: 80%; }

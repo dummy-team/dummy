@@ -1,0 +1,23 @@
+
+.introduction { @extend .sliceWithMargin; }
+
+// ## Text
+body { color: $grey; }
+
+// ### Alignment
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-justify { text-align: justify; }
+
+
+// Use class `page` to set the max-width of the website
+.page { @include page; }
+
+// ## Navigation
+.nav { @include nav; }
+
+@media screen and (min-width: 0px) {
+  //Apply max-width on image for browser capable of handling it
+  .csc-textpic-imagewrap, img { max-width: 100%; height: auto;}
+}

@@ -1,3 +1,0 @@
-{
-  "glob": ["README.md", "demo/*.html" , "js/src/*.coffee", "css/src/*.scss"]
-}

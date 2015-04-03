@@ -9,6 +9,7 @@ $ ->
 
 
   # ## placeholder
+  # [depecrated]
   # Must only be called only for browser not supporting placeholder attribute
 
   ### ```javascript
@@ -17,9 +18,9 @@ $ ->
       $(this).placeholder() unless $(this).attr("placeholder") is ""
   ``` ###
   $.fn.placeholder = ->
-
     # ### Initialize
-    # Store placeholder value and fill the input
+
+    #  Store placeholder value and fill the input
     $(this).data("placeholder", $(this).attr("placeholder"))
     $(this).val(jQuery(this).attr("placeholder"))
 

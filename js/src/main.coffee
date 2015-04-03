@@ -6,9 +6,10 @@ $ ->
     $(".no-touch img.hover").hoverSrc()
 
     # Enable placeholder management for outdated browsers
-    unless Modernizr.input.placeholder
-      $("input").each ->
-        $(this).placeholder()  unless $(this).attr("placeholder") is ""
+    # Deprecated
+    # unless Modernizr.input.placeholder
+    #   $("input").each ->
+    #     $(this).placeholder()  unless $(this).attr("placeholder") is ""
 
 
     ###
