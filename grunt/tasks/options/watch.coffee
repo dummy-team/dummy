@@ -6,8 +6,9 @@ module.exports =
   sass:
     files:'<%= in8.cssSrc %>/**/*.scss'
     tasks: [
-      'sass:dev',
+      'sass:dev'
       'autoprefixer'
+      'clean:css'
       'bs-reload'
     ]
 

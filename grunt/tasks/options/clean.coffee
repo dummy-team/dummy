@@ -1,8 +1,11 @@
 module.exports =
   options:
     force: true
-  build:
+  js:
     src: [
-      '<%= in8.docDest %>/*',
       '<%= in8.jsDest %>/*.min.js'
+    ]
+  css:
+    src: [
+      '<%= in8.cssDest %>/*.tmp.css'
     ]

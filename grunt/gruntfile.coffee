@@ -39,7 +39,6 @@ module.exports = (grunt) ->
       cssSrc  : '../css/src'
       cssDest : '../css'
       htmlSrc : '../'
-      docDest : '../docs'
       liveport: grunt.option('liveport') || 35729
 
 

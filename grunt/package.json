@@ -3,7 +3,7 @@
     "grunt": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-coffee": "*",
-    "grunt-contrib-sass": "*",
+    "grunt-sass": "*",
     "grunt-autoprefixer": "*",
     "grunt-notify": "*",
     "grunt-contrib-watch": "*",
