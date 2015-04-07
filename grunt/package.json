@@ -13,7 +13,6 @@
     "grunt-newer": "*",
     "grunt-concurrent": "*",
     "glob": "*",
-    "grunt-groc": "git://github.com/Plou/grunt-groc.git",
     "browser-sync": "*"
   }
 }
