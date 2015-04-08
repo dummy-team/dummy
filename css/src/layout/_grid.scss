@@ -1,36 +1,33 @@
 //  ### margin for default slice
-.sliceWithMargin {  margin: $gutter 0; }
+.slice-with-margin, 
+%slice-with-margin {  margin: $gutter 0; }
 
 // #columns
 // ## container
-$borderColor: $grey;
-$columnGutter: $gutter;
-.columns { background-repeat: no-repeat;
-  &.topBorder { border-top: 1px solid $borderColor; }
-  &.bottomBorder { border-bottom: 1px solid $borderColor; }
-  &.leftBorder { border-left: 1px solid $borderColor; }
-  &.rightBorder { border-right: 1px solid $borderColor; }
-  &.sliceWithMargin { margin: 30px 0; }
-  &.extended { margin-left: -30px; margin-right: -30px; padding-left: 30px; padding-right: 30px; }
+$border-color: $grey;
+$column-gutter: $gutter;
+.columns { 
+  background-repeat: no-repeat;
+  
+  &.top-border { border-top: 1px solid $border-color; }
+  &.bottom-border { border-bottom: 1px solid $border-color; }
+  &.left-border { border-left: 1px solid $border-color; }
+  &.right-border { border-right: 1px solid $border-color; }
+  &.slice-with-margin { margin: 30px 0; }
+  &.extended { margin-right: -30px; margin-left: -30px; padding-right: 30px; padding-left: 30px; }
 }
 
 // ## column
 .column {
-  @include inline-block;
-  vertical-align: top; background-repeat: no-repeat;
-  & > .columnContent{ padding-left: 0; padding-right: 0; background-repeat: no-repeat; }
-  &:first-child > .columnContent { padding-left: 0 !important; }
-  &:last-child > .columnContent { padding-right: 0 !important }
-  // If you want to make first element without top margin and last element without bottom margin, uncomment those lines
-  .csc-header:first-child > *,
-  .csc-default:first-child > *,
-  > :first-child { margin-top: 0; }
-  .csc-default:last-child > *,
-  > :last-child { margin-bottom: 0; }
+  @include inline-block; 
 
-  .separationBorder > &+& > .columnContent { border-left: 1px solid $borderColor; }
-  &.columnWithPadding {
-    & > .columnContent { padding-left: ($columnGutter/2); padding-right: ($columnGutter/2); }
+  background-repeat: no-repeat; 
+  vertical-align: top;
+
+  &:first-child > .column-content { padding-left: 0 !important; }
+  &:last-child > .column-content { padding-right: 0 !important; }
+  &.column-with-padding {
+    > .column-content { padding-right: ($column-gutter/2); padding-left: ($column-gutter/2); }
     // If you want to make first element without top margin and last element without bottom margin, uncomment those lines
     .csc-header:first-child > *,
     .csc-default:first-child > *,
@@ -38,13 +35,23 @@ $columnGutter: $gutter;
     .csc-default:last-child > *,
     > :last-child { margin-bottom: inherit; }
   }
-  .separationBorder > &.columnWithPadding > .columnContent { padding-left: $columnGutter; padding-right: $columnGutter; }
+  
+  > .column-content { padding-right: 0; padding-left: 0; background-repeat: no-repeat; }
+  // If you want to make first element without top margin and last element without bottom margin, uncomment those lines
+  .csc-header:first-child > *,
+  .csc-default:first-child > *,
+  > :first-child { margin-top: 0; }
+  .csc-default:last-child > *,
+  > :last-child { margin-bottom: 0; }
+  .separation-border > &+& > .column-content { border-left: 1px solid $border-color; }
+  .separation-border > &.column-with-padding > .column-content { padding-right: $column-gutter; padding-left: $column-gutter; }
 
   @media screen and (max-width: 764px) {
     // Reset layout to one column
-    display: block; width: auto!important; margin: 0!important;
+    display: block; margin: 0 !important; width: auto !important;
   }
 }
+
 .column-90 { width: 90%; }
 .column-80 { width: 80%; }
 .column-75 { width: 75%; }

@@ -1,18 +1,19 @@
 {
   "devDependencies": {
+    "browser-sync": "*",
+    "glob": "*",
     "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-concurrent": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-coffee": "*",
-    "grunt-sass": "*",
-    "grunt-autoprefixer": "*",
-    "grunt-notify": "*",
-    "grunt-contrib-watch": "*",
-    "load-grunt-tasks": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
     "grunt-newer": "*",
-    "grunt-concurrent": "*",
-    "glob": "*",
-    "browser-sync": "*"
+    "grunt-notify": "*",
+    "grunt-sass": "*",
+    "grunt-scss-lint": "^0.3.6",
+    "load-grunt-tasks": "*"
   }
 }

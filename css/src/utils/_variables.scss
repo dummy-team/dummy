@@ -1,28 +1,28 @@
 // # config: sizes, colors and fonts
 
 // Max width of the slice ( the max background size exceeding the content size )
-$sliceWidth  : 1400px;
+$slice-width  : 1400px;
 // Used on browser not supporting mediaqueries
-$baseWidth : 990px;
+$base-width : 990px;
 
 // Max size of the page
 $max        : 1200;
-$maxWidth   : $max * 1px;
-$pagePadding: 30;
+$max-width   : $max * 1px;
+$page-padding: 30;
 
 // Gutter width for the grid system
 $gutter     : 30px;
 
 // # Colors
-$white          : #FFFFFF;
+$white          : #fff;
 $grey           : #444;
 $black          : #333;
 
-$red            : #BC2422;
-$orange         : #D58F26;
+$red            : #bc2422;
+$orange         : #d58f26;
 
-$outlineBlue    : #aad4ff;
-$errorRed       : #e04831;
+$outline-blue    : #aad4ff;
+$error-red       : #e04831;
 
 // ## Colors variables
 $link-color     : $red;

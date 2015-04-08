@@ -1,15 +1,15 @@
 // # style: import all scss files needed
 
-@import 'utils/_variables.scss';
-@import 'utils/_functions.scss';
-@import 'utils/_helpers.scss';
-@import 'utils/_mixins.scss';
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/helpers';
+@import 'utils/mixins';
 
-@import 'layout/_reset.scss';
-@import 'layout/_grid.scss';
-@import 'layout/_body.scss';
-@import 'layout/_forms.scss';
-@import 'layout/_header.scss';
-@import 'layout/_footer.scss';
+@import 'layout/reset';
+@import 'layout/grid';
+@import 'layout/body';
+@import 'layout/forms';
+@import 'layout/header';
+@import 'layout/footer';
 
-/* @import 'components/_.scss'; */
+// @import 'components/'; 

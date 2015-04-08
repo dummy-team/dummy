@@ -1,0 +1,189 @@
+# Default application configuration that all configurations inherit from.
+# Documentation: https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+linters:
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
+
+  BorderZero:
+    enabled: true
+    convention: none # or `zero`
+
+  ColorKeyword:
+    enabled: true
+
+  ColorVariable:
+    enabled: true
+
+  Comment:
+    enabled: true
+
+  DebugStatement:
+    enabled: true
+
+  DeclarationOrder:
+    enabled: true
+
+  DuplicateProperty:
+    enabled: true
+
+  ElsePlacement:
+    enabled: true
+    style: new_line # or 'same_line'
+
+  EmptyLineBetweenBlocks:
+    enabled: false # To discuss
+    ignore_single_line_blocks: true
+
+  EmptyRule:
+    enabled: true
+
+  FinalNewline:
+    enabled: true
+    present: true
+
+  HexLength:
+    enabled: true
+    style: short # or 'long'
+
+  HexNotation:
+    enabled: true
+    style: lowercase # or 'uppercase'
+
+  HexValidation:
+    enabled: true
+
+  IdSelector:
+    enabled: true
+
+  ImportantRule:
+    enabled: false # To discuss
+
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
+
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 2
+
+  LeadingZero:
+    enabled: true
+    style: exclude_zero # or 'include_zero'
+
+  MergeableSelector: # May change
+    enabled: true
+    force_nesting: true
+
+  NameFormat: # To discuss
+    enabled: true
+    allow_leading_underscore: true
+    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+
+  NestingDepth: # May be set to 4
+    enabled: true
+    max_depth: 3
+
+  PlaceholderInExtend:
+    enabled: true
+
+  PropertyCount: # To discuss
+    enabled: false
+    include_nested: false
+    max_properties: 10
+
+  PropertySortOrder: # To discuss
+    enabled: true
+    ignore_unspecified: false
+    separate_groups: true
+    order: [ 'display', 'position', 'top', 'right', 'bottom', 'left', 'float', 'clear', 'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left', 'border', 'border-width', 'border-style', 'border-color', 'border-radius', 'border-top', 'border-top-width', 'border-top-style', 'border-top-color', 'border-right', 'border-right-width', 'border-right-style', 'border-right-color', 'border-bottom', 'border-bottom-width', 'border-bottom-style', 'border-bottom-color', 'border-left', 'border-left-width', 'border-left-style', 'border-left-color', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius', 'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left', 'width', 'max-width', 'height', 'max-height', 'background', 'background-color', 'background-image', 'background-repeat', 'background-attachment', 'background-position', 'background-size', 'list-style', 'list-style-type', 'list-style-position', 'list-style-image', 'opacity', 'outline', 'cursor', 'animation', 'transition', 'z-index', 
+    'font', 'font-family', 'font-size', 'line-height', 'font-weight', 'font-style', 'text-align', 'vertical-align', 'text-decoration', 'text-transform', 'color' ]
+  
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
+
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: false
+    allow_element_with_class: false
+    allow_element_with_id: false
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 3
+
+  SelectorFormat: # To discuss
+    enabled: true
+    convention: hyphenated_lowercase # or 'BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+  Shorthand: # To discuss ( check : `margin: 1px 0 1px`)
+    enabled: true
+
+  SingleLinePerProperty:
+    enabled: false
+    allow_single_line_rule_sets: true
+
+  SingleLinePerSelector:
+    enabled: false
+
+  SpaceAfterComma:
+    enabled: true
+
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+
+  SpaceAfterPropertyName:
+    enabled: true
+
+  SpaceBeforeBrace:
+    enabled: true
+    style: space # or 'new_line'
+    allow_single_line_padding: true
+
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
+
+  StringQuotes:
+    enabled: true
+    style: single_quotes # or double_quotes
+
+  TrailingSemicolon:
+    enabled: true
+
+  TrailingZero:
+    enabled: true
+
+  UnnecessaryMantissa:
+    enabled: true
+
+  UnnecessaryParentReference:
+    enabled: true
+
+  UrlFormat:
+    enabled: true
+
+  UrlQuotes:
+    enabled: true
+
+  VariableForProperty: # To dicuss
+    enabled: false
+    properties: []
+
+  VendorPrefix:
+    enabled: true
+    identifier_list: base
+    additional_identifiers: []
+    excluded_identifiers: []
+
+  ZeroUnit:
+    enabled: true
+
+  Compass::*:
+    enabled: false
