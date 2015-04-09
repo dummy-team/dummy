@@ -4,12 +4,12 @@
 - **4.0.0**
   Complete rewrite of Dummy
   - Dropped old browser support (2 version back)
-  - Follow the new [guidelines]()
+  - Follow the new [guidelines](https://github.com/Inouit/dummy/blob/master/README.md)
   - `modules.scss` is now split under `components`
-  - Scss files comment follow Sassdoc syntax
-  - Coffeescript files comment follow ... syntax
+  - Scss comments follow Sassdoc syntax
+  - Coffeescript files comment follow [...] syntax
   - Compiled files are no longer versioned
-  - Cleaned Sass mixins 
+  - Cleaned Sass mixins
 
 ##v3 `deprecated`
 - **3.0.2**:

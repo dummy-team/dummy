@@ -1,14 +1,14 @@
 //  ### margin for default slice
-.slice-with-margin, 
+.slice-with-margin,
 %slice-with-margin {  margin: $gutter 0; }
 
 // #columns
 // ## container
 $border-color: $grey;
 $column-gutter: $gutter;
-.columns { 
+.columns {
   background-repeat: no-repeat;
-  
+
   &.top-border { border-top: 1px solid $border-color; }
   &.bottom-border { border-bottom: 1px solid $border-color; }
   &.left-border { border-left: 1px solid $border-color; }
@@ -19,9 +19,7 @@ $column-gutter: $gutter;
 
 // ## column
 .column {
-  @include inline-block; 
-
-  background-repeat: no-repeat; 
+  display: inline-block; background-repeat: no-repeat; 
   vertical-align: top;
 
   &:first-child > .column-content { padding-left: 0 !important; }
@@ -35,7 +33,7 @@ $column-gutter: $gutter;
     .csc-default:last-child > *,
     > :last-child { margin-bottom: inherit; }
   }
-  
+
   > .column-content { padding-right: 0; padding-left: 0; background-repeat: no-repeat; }
   // If you want to make first element without top margin and last element without bottom margin, uncomment those lines
   .csc-header:first-child > *,

@@ -2,8 +2,6 @@
 
 // Max width of the slice ( the max background size exceeding the content size )
 $slice-width  : 1400px;
-// Used on browser not supporting mediaqueries
-$base-width : 990px;
 
 // Max size of the page
 $max        : 1200;
@@ -21,8 +19,8 @@ $black          : #333;
 $red            : #bc2422;
 $orange         : #d58f26;
 
-$outline-blue    : #aad4ff;
-$error-red       : #e04831;
+$outline        : $orange;
+$error          : $red;
 
 // ## Colors variables
 $link-color     : $red;

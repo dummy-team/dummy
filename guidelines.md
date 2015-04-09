@@ -20,7 +20,7 @@ css/
   |– layout/
   |   |– _reset.scss       # Reset/normalize
   |   |– _grid.scss        # Grid system
-  |   |– _body.scss        # Body
+  |   |– _gloabl.scss      # Global
   |   |– _header.scss      # Header
   |   |– _footer.scss      # Footer
   |   |– _sidebar.scss     # Sidebar

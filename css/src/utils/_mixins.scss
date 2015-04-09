@@ -2,32 +2,22 @@
 
 // Set the default page width
 @mixin page {
-  margin: auto; padding: 0 $page-padding*1px; width: $base-width;
+  margin: auto; padding: 0 $page-padding*1px; width: $max-width; max-width: 100%;
 
-  @media screen and (min-width: 0px) { width: $max-width; max-width: 100%; }
   @media screen and (max-width: $max-width+($page-padding*2px)) { margin-right: ($page-padding*1px); margin-left: ($page-padding*1px); width: auto; }
 }
 
 // Preset navigation layout
 @mixin nav {
   display: block; margin: 0; padding: 0;
-  
-  li { @include inline-block; margin: 5px; padding: 0; }
+
+  li { display: inline-block; margin: 5px; padding: 0; }
   li:hover {
     // Show second navigation level on hover
     .second { display: block;}
   }
   // Hide second navigation level
   .second { display: none; position: absolute; }
-}
-
-// inline block (overrided in IE)
-@mixin inline-block { display: inline-block; }
-
-// Emulate background sizing for Internet Explorer 8
-@mixin background-size($size...) {
-  background-size: $size;
-  -ms-behavior: url('/backgroundsize.min.htc'); // The url is relative to the document, not to the css file!
 }
 
 @mixin vertical-align-middle {
