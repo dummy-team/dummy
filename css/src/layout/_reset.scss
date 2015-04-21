@@ -1,17 +1,17 @@
 // ## Reset
 // Reset font-size for easier use : 1.6em = 16px
 html { font-size: 62.5%; line-height: 1.3em; }
-body { 
-  margin: 0; padding: 0; 
-  font-family: $font; font-size: 1em; font-weight: 300; color: $black; }
+body {
+  margin: 0; padding: 0;
+  font-family: $font; font-size: 1em; font-weight: $fw-regular; color: $black; }
 
 // ## Links
 button,
-a { 
+a {
   text-decoration: none; color: $link-color;
-  
+
   &:hover { text-decoration: underline; }
-  
+
   img { border: none; }
 }
 
@@ -22,18 +22,18 @@ button { display: inline; margin: 0; border: none; padding: 0; background-color:
 h1, .h1-like {margin: 25px 0;
   font-size: 3.5em; }
 h2, .h2-like { margin: 25px 0; } h3,
-.h3-like { 
+.h3-like {
   margin: 25px 0;
   font-size: 1.9em; }
 h4, .h4-like { margin: 20px 0; } h5,
-.h5-like { 
+.h5-like {
   margin: 20px 0;
   font-size: 1.6em; }
 h6, .h6-like, p, .bodytext { margin: 15px 0; }
 td p, td .bodytext { margin: 0; }
-ul { 
+ul {
   @extend %slice-with-margin;
-  
+
   li { margin: 5px 0; }
 }
 p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textarea { font-size: 1.4em; line-height: 1.7em; }
@@ -42,7 +42,7 @@ input, select, textarea { font-family: $font; }
 h2, .important { font-size: 2.4em; } h4,
 .introduction { font-size: 1.7em; }
 h6 { font-size: 1.4em; }
-h1, h2, h3, h4, h5, h6 { line-height: 1em; }
+h1, h2, h3, h4, h5, h6 { line-height: 1em; font-weight: $fw-bold; }
 
 // ## Separator
 hr { @extend %slice-with-margin; border: none; height: 1px; background-color: $grey; }

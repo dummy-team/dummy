@@ -60,13 +60,13 @@ css/
 
 ## Responsive Breakpoints
 
-  | name      | default |
-  | --------- | :-----: |
-  | $thin     | 320     |
-  | $small    | 480     |
-  | $medium   | 780     |
-  | $large    | 1024    |
-  | $huge     | 1200    |
+| name      | default |
+| --------- | ------: |
+| $v-thin   | 320     |
+| $v-small  | 480     |
+| $v-medium | 780     |
+| $v-large  | 1024    |
+| $v-huge   | 1200    |
 
 ## Use
 - Simple quotes

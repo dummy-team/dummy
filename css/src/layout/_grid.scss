@@ -19,7 +19,7 @@ $column-gutter: $gutter;
 
 // ## column
 .column {
-  display: inline-block; background-repeat: no-repeat; 
+  display: inline-block; background-repeat: no-repeat;
   vertical-align: top;
 
   &:first-child > .column-content { padding-left: 0 !important; }
@@ -44,7 +44,7 @@ $column-gutter: $gutter;
   .separation-border > &+& > .column-content { border-left: 1px solid $border-color; }
   .separation-border > &.column-with-padding > .column-content { padding-right: $column-gutter; padding-left: $column-gutter; }
 
-  @media screen and (max-width: 764px) {
+  @media screen and (max-width: $vw-medium) {
     // Reset layout to one column
     display: block; margin: 0 !important; width: auto !important;
   }

@@ -26,11 +26,18 @@ $error          : $red;
 $link-color     : $red;
 
 // # Fonts
-$roboto : Arial, sans-serif;
-$font : $roboto;
+$arial : Arial, sans-serif;
+$font : $arial;
 
 // # Fonts weight
-$light : 300;
-$regular : 400;
-$medium : 500;
-$bold : 700;
+// $fw-light : 300;
+$fw-regular : 400;
+// $fw-semibold : 500;
+$fw-bold : 700;
+
+// # Viewports
+$vw-thin:   320px;
+$vw-small:  480px;
+$vw-medium: 780px;
+$vw-large:  1024px;
+$vw-huge:   1200px;
