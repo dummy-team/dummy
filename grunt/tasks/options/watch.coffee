@@ -16,5 +16,6 @@ module.exports =
   coffee:
     files: '<%= in8.jsSrc %>/*.coffee'
     tasks: [
+      'coffeelint'
       'coffee:dev'
     ]
