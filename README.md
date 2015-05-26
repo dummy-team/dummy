@@ -4,6 +4,8 @@ A light Sass &amp; Coffee front-end base
 
 The purpose of this "framework" is to provide a consistent file structure with a normalized code and a collection of helpers and resets
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Inouit/dummy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
 # Features
 
 ## A Sass & coffee base
