@@ -7,7 +7,7 @@
   - Follow the new [guidelines](https://github.com/Inouit/dummy/blob/master/README.md)
   - `modules.scss` is now split under `components`
   - Scss comments follow Sassdoc syntax
-  - Coffeescript files comment follow [...] syntax
+  - Coffeescript files comment follow Codo syntax
   - Compiled files are no longer versioned
   - Cleaned Sass mixins
 
