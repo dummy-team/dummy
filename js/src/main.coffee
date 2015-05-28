@@ -1,16 +1,12 @@
-# # main: website wide scripts
+# Website wide scripts
+# @author Inouit
+#
+
 $ ->
   $(window).ready ->
 
     # Handle src update on hover event
     $('.no-touch img.hover').hoverSrc()
-
-    # Enable placeholder management for outdated browsers
-    # Deprecated
-    # unless Modernizr.input.placeholder
-    #   $("input").each ->
-    #     $(this).placeholder()  unless $(this).attr("placeholder") is ""
-
 
     ###
 
