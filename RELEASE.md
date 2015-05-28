@@ -1,6 +1,12 @@
 # Release notes
 
 ##v4
+- **4.1.0**
+  Documentation, form styles and minor rewrite
+  - Commented Scss
+  - Added form styling
+  - Previous mixins are now placeholders
+
 - **4.0.0**
   Complete rewrite of Dummy
   - Dropped old browser support (2 version back)

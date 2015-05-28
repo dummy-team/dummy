@@ -1,9 +1,16 @@
-//  ### margin for default slice
+////
+/// Grid system
+///
+/// @author Inouit
+/// @deprecated
+////
+
+/// margin for default slice
 .slice-with-margin,
 %slice-with-margin {  margin: $gutter 0; }
 
-// #columns
-// ## container
+/// columns
+/// container
 $border-color: $grey;
 $column-gutter: $gutter;
 .columns {
@@ -17,7 +24,7 @@ $column-gutter: $gutter;
   &.extended { margin-right: -30px; margin-left: -30px; padding-right: 30px; padding-left: 30px; }
 }
 
-// ## column
+/// column
 .column {
   display: inline-block; background-repeat: no-repeat;
   vertical-align: top;

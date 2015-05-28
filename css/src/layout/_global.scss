@@ -1,7 +1,16 @@
-// ## Text
+////
+/// Site wide styles
+/// Here are global styles
+/// Mainly used for headings, textes
+///
+/// @group Configuration
+/// @author Inouit
+////
+
+/// Text default font and color
 body { font-weight: $fw-regular; color: $black; }
 
-// Text's margin & size
+/// Margin & size
 
 // Headings
 h1, h2, h3, h4, h5, h6 { line-height: 1em; font-weight: $fw-bold; }
@@ -26,7 +35,7 @@ h4, .h4-like { @extend %h1; }
 h5, .h5-like { @extend %h1; }
 h6, .h6-like { @extend %h1; }
 
-// Contents
+/// Contents
 td p, td .bodytext { margin: 0; }
 ul {
   @extend %slice-with-margin;
@@ -38,18 +47,18 @@ p, li, td, th, textarea, caption, pre, blockquote, label, input, select, textare
 .important { font-size: 2.4em; }
 .introduction { font-size: 1.7em; }
 
-// Alignment
+/// Alignment
 .align-left { text-align: left; }
 .align-center { text-align: center; }
 .align-right { text-align: right; }
 .align-justify { text-align: justify; }
 
-// Use class `page` to set the max-width of the website
-.page { @include page; }
+/// Use class `page` to set the max-width of the website
+.page { @extend %page; }
 
-// ## Navigation
-.nav { @include nav; }
+/// Navigation default
+.nav { @extend %horizontal-list; }
 
-// Apply max-width on image
-.csc-textpic-imagewrap, //Typo3CMS specific
+/// Apply max-width on images to ease repsonsive
+.csc-textpic-imagewrap, // Typo3CMS specific
 img { max-width: 100%; height: auto;}

@@ -1,0 +1,13 @@
+////
+/// Print rules
+/// Print friendly rules
+///
+/// @group Media queries
+/// @author Inouit
+////
+
+@media print {
+  /// Hide non relevant components 
+  [id="header"],
+  [id="footer"] { display: none; }
+}

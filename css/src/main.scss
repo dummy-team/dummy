@@ -1,5 +1,11 @@
-// # style: import all scss files needed
+////
+/// Import all files
+/// Order do matter
+///
+/// @author Inouit
+////
 
+/// Functions, placeholders & configuration
 @import 'utils/variables';
 @import 'utils/functions';
 @import 'utils/helpers';
@@ -12,4 +18,8 @@
 @import 'layout/header';
 @import 'layout/footer';
 
+/// Components list
 // @import 'components/';
+
+/// Media based styles
+@import 'layout/print';

@@ -1,10 +1,18 @@
-// ## Reset
-// Reset font-size for easier use : 1.6em = 16px
+////
+/// Reset styles
+/// Ease cross browser styling
+///
+/// @group Configuration
+/// @author Inouit
+////
+
+/// Reset font-size for easier use : 1.6em = 16px
 html { font-size: 62.5%; line-height: 1.3em; }
 body {
   margin: 0; padding: 0;
   font-family: $font; font-size: 1em; }
-// ## Links
+
+// Links
 button,
 a {
   text-decoration: none; color: $link-color;
@@ -14,17 +22,28 @@ a {
   img { border: none; }
 }
 
-// Reset buttons
-button { display: inline; margin: 0; border: none; padding: 0; background-color: transparent; outline: none; cursor: pointer; }
+/// Reset buttons
+/// Display it as a link
+button {
+  display: inline; margin: 0; border: none; padding: 0; background-color: transparent; outline: none; cursor: pointer;
+  color: $link-color;
 
-// Reset nested font-size
+  &:hover { text-decoration: underline; }
+}
+
+/// Reset nested font-size
 blockquote p,td p,th p,li li,li p,li h1,li .h1-like,li h2,li .h2-like,li h3,li .h3-like,li h4,li .h4-like,li h5,li .h5-like,li h6,li .h6-like,button { font-size: 100%; }
 
-// Force consistent fonts
-
+/// Force consistent fonts
 input, select, textarea { font-family: $font; }
 
 
-// ## Separator
+/// Separator
 hr { @extend %slice-with-margin; border: none; height: 1px; background-color: $grey; }
-.clear { clear: both;  height: 0; }
+
+/// Clear fix
+.clear-fix::after {
+  display: table; clear: both;
+
+  content: '';
+}

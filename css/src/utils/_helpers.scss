@@ -1,0 +1,27 @@
+////
+/// Helpers
+///
+/// @group Helpers
+/// @author Inouit
+////
+
+/// Set the default page width and handle padding and sizes for smaller screens
+%page {
+  margin: auto; padding: 0 $page-padding*1px; width: $max-width; max-width: 100%;
+
+  @media screen and (max-width: $max-width+($page-padding*2px)) { margin-right: ($page-padding*1px); margin-left: ($page-padding*1px); width: auto; }
+}
+
+/// Transform a list into a vertical spaced list
+%horizontal-list {
+  display: block; margin: 0; padding: 0;
+
+  > * { display: inline-block; margin: 5px; padding: 0; }
+}
+
+/// Used with a javascript jQuery helper
+%vertical-align-middle {
+  position: absolute; top: 0; bottom: 0; margin-top: auto; margin-bottom: auto;
+
+  &.fix-my-height { top: auto !important; bottom: auto !important; height: auto !important; }
+}

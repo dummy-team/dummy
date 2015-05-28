@@ -1,0 +1,29 @@
+////
+/// Form elements basic styling
+///
+/// @author Inouit
+////
+
+$type-list: tel email url search date time datetime month week number;
+
+/// Reset
+fieldset { margin: 0; border: none; padding: 0; }
+select { width: auto; cursor: pointer; }
+
+input, select, textarea, label { vertical-align: middle; }
+
+%input { border: 1px solid $black; border-radius: 3px; background-color: $white;
+  &:focus { outline: none; }
+}
+
+select,
+textarea { @extend %input; }
+
+@each $type in $type-list {
+  [type="#{$type}"] { @extend %input; }
+}
+
+
+[type="submit"] { @extend %button; }
+
+.form-error { outline-color: $error-color; }
