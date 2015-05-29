@@ -1,3 +1,5 @@
+require './components/base.coffee'
+
 # Website wide scripts
 # @author Inouit
 #

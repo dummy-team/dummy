@@ -1,6 +1,7 @@
 module.exports =
   dev:
     options:
+      sourceMap: true
       style: "compact"
       precision: 20
       lineNumbers: true

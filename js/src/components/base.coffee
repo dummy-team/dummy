@@ -22,14 +22,11 @@ $ ->
   # @return the jQuery object to allow chaining
   #
   $.fn.hoverSrc = (_on, _off, activeClass) ->
-
     # Set attributes
     $this = $(this)
     _on ?= '-hover'
     _off ?= '-off'
     activeClass ?= 'active'
-    # Preload images the active image
-    (new Image()).src = $this.attr('src').replace(_off, _on)
 
     # Add the active suffixe to the image src
     hoverIn = ->
@@ -45,8 +42,11 @@ $ ->
         srcName = srcName.replace(_on, _off)
         $this.attr src: srcName
 
-    # Bind events
     $this.each ->
+      # Preload images the active image
+      (new Image()).src = $this.attr('src').replace(_off, _on)
+
+      # Bind events
       $this.bind 'focus mouseenter', hoverIn
       $this.bind 'blur mouseleave', hoverOut
 

@@ -47,27 +47,4 @@ module.exports = (grunt) ->
   grunt.initConfig(config)
 
   # register tasks
-
-  grunt.registerTask "bs-start", ->
-    done = this.async()
-    browserSync
-      files: [
-        '<%= in8.jsDest %>/*.js'
-        '<%= in8.jsDest %>/**/*.js'
-        '<%= in8.imgSrc %>/**'
-        '<%= in8.htmlSrc %>/*.html'
-        '<%= in8.htmlSrc %>/**/*.html'
-      ]
-      open: false
-      watchTask: true
-      server:
-        baseDir: "../"
-    , (err, bs) ->
-      done()
-
-  # Fire file-change events manually for greater control
-  grunt.registerTask "bs-reload", ->
-    # ¡ Paths are relatives to server baseDir !
-    browserSync.reload(["css/main.css"])
-
   registerTasks(grunt, './tasks/')

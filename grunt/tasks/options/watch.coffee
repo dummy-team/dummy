@@ -8,14 +8,14 @@ module.exports =
     tasks: [
       'sass:dev'
       'autoprefixer'
-      'bs-reload'
+      # 'rename'
       'clean:css'
       'scsslint'
     ]
 
   coffee:
-    files: '<%= in8.jsSrc %>/*.coffee'
+    files: '<%= in8.jsSrc %>/**/*.coffee'
     tasks: [
+      'coffeeify:dev'
       'coffeelint'
-      'coffee:dev'
     ]

@@ -1,6 +1,11 @@
 # Release notes
 
 ##v4
+- **4.1.2**
+- Cleanned BrowserSync tasks
+- Fixed Sourcemapping for Sass & CoffeeScript
+- Browserify CoffeeScript sources
+
 - **4.1.0**
   Documentation, form styles and minor rewrite
   - Commented Scss

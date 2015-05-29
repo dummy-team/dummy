@@ -1,5 +1,4 @@
 module.exports = [
-  'bs-start'
+  'browserSync:dev'
   'watch'
 ]
-

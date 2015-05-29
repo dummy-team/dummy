@@ -3,4 +3,4 @@ module.exports =
     configFile: 'coffeelint.json'
   app:
     files:
-      src: [ '<%= in8.jsSrc %>/**.coffee' ]
+      src: [ '<%= in8.jsSrc %>/**/*.coffee' ]
