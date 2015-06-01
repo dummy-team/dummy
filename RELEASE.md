@@ -1,9 +1,12 @@
 # Release notes
 
 ##v4
+- **4.2**
+- Splits jquery helpers into components
+
 - **4.1.2**
-- Cleanned BrowserSync tasks
-- Fixed Sourcemapping for Sass & CoffeeScript
+- Cleaned BrowserSync tasks
+- Fixed Source mapping for Sass & CoffeeScript
 - Browserify CoffeeScript sources
 
 - **4.1.0**
