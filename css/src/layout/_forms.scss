@@ -4,10 +4,6 @@
 /// @author Inouit
 ////
 
-%input { border: 1px solid $black; border-radius: 3px; background-color: $white;
-  &:focus { outline: none; }
-}
-
 $type-list: tel email url search date time datetime month week number;
 @each $type in $type-list {
   [type="#{$type}"] { @extend %input; }

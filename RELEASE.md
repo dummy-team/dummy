@@ -1,13 +1,21 @@
 # Release notes
 
 ##v4
+
+- **4.2.1**
+  - Fixed headings extends
+  - Added `$text-color` scss variable
+  - Moved `%input` placeholder to helpers
+  - Moved `body` `font-family` definition to globals
+  - Placed `box-sizing` in `PropertySortOrder` of sccs-lint
+
 - **4.2**
-- Splits jquery helpers into components
+  - Splits jquery helpers into components
 
 - **4.1.2**
-- Cleaned BrowserSync tasks
-- Fixed Source mapping for Sass & CoffeeScript
-- Browserify CoffeeScript sources
+  - Cleaned BrowserSync tasks
+  - Fixed Source mapping for Sass & CoffeeScript
+  - Browserify CoffeeScript sources
 
 - **4.1.0**
   Documentation, form styles and minor rewrite

@@ -8,7 +8,7 @@
 ////
 
 /// Text default font and color
-body { font-weight: $fw-regular; color: $black; }
+body { font-family: $font; font-weight: $fw-regular; color: $black; }
 
 /// Margin & size
 
@@ -30,10 +30,10 @@ h1, h2, h3, h4, h5, h6 { line-height: 1em; font-weight: $fw-bold; }
 
 h1, .h1-like { @extend %h1; }
 h2, .h2-like { @extend %h2; }
-h3, .h3-like { @extend %h1; }
-h4, .h4-like { @extend %h1; }
-h5, .h5-like { @extend %h1; }
-h6, .h6-like { @extend %h1; }
+h3, .h3-like { @extend %h3; }
+h4, .h4-like { @extend %h4; }
+h5, .h5-like { @extend %h5; }
+h6, .h6-like { @extend %h6; }
 
 /// Contents
 td p, td .bodytext { margin: 0; }
