@@ -27,7 +27,7 @@
     "level": "error"
   },
   "empty_constructor_needs_parens": {
-    "level": "ignore"
+    "level": "error"
   },
   "ensure_comprehensions": {
     "level": "warn"
@@ -70,7 +70,7 @@
   },
   "no_implicit_parens": {
     "strict": true,
-    "level": "ignore"
+    "level": "warn"
   },
   "no_interpolation_in_single_quotes": {
     "level": "ignore"
@@ -109,7 +109,7 @@
     "doubleNotLevel": "ignore"
   },
   "space_operators": {
-    "level": "warn"
+    "level": "error"
   },
   "spacing_after_comma": {
     "level": "error"

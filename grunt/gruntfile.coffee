@@ -23,8 +23,6 @@ registerTasks = (grunt, path)->
 
   return object
 
-
-browserSync = require("browser-sync")
 module.exports = (grunt) ->
   # load all grunt tasks
   require("load-grunt-tasks")(grunt)

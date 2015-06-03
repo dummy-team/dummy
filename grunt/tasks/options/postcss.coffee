@@ -2,6 +2,8 @@ module.exports =
   build:
     options:
       map: true
-      browsers: ["last 3 versions"]
+      processors: [
+        require('autoprefixer-core')({browsers: 'last 3 version'}),
+      ]
     files:
       '<%= in8.cssDest %>/main.css': '<%= in8.cssDest %>/main.tmp.css'

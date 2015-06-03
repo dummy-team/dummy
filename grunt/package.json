@@ -2,10 +2,11 @@
   "devDependencies": {
     "browser-sync": "*",
     "coffeelint": "*",
+    "autoprefixer-core": "*",
     "glob": "*",
     "grunt": "*",
-    "grunt-autoprefixer": "*",
-    "grunt-browser-sync": "^2.1.3",
+    "grunt-postcss": "*",
+    "grunt-browser-sync": "*",
     "grunt-coffeeify": "*",
     "grunt-coffeelint": "*",
     "grunt-concurrent": "*",

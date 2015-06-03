@@ -9,6 +9,6 @@ module.exports =
     bsFiles:
       src : [
         '../*.html'
-        '../css/main.css'
-        '../js/main.js'
+        '../css/*.css'
+        '../js/*.js'
       ]

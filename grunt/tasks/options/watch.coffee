@@ -7,7 +7,7 @@ module.exports =
     files:'<%= in8.cssSrc %>/**/*.scss'
     tasks: [
       'sass:dev'
-      'autoprefixer'
+      'postcss'
       # 'rename'
       'clean:css'
       'scsslint'

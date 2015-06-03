@@ -18,21 +18,21 @@ $.fn.hoverSrc = (_on, _off, activeClass) ->
     unless $this.hasClass(activeClass)
       srcName = $this.attr('src')
       srcName = srcName.replace(_off, _on)
-      $this.attr src: srcName
+      $this.attr(src, srcName)
 
   # Add the inactive suffixe to the image src
   hoverOut = ->
     unless $this.hasClass(activeClass)
       srcName = $this.attr('src')
       srcName = srcName.replace(_on, _off)
-      $this.attr src: srcName
+      $this.attr(src, srcName)
 
-  $this.each ->
+  $this.each( ->
     # Preload images the active image
     (new Image()).src = $this.attr('src').replace(_off, _on)
 
     # Bind events
-    $this.bind 'focus mouseenter', hoverIn
-    $this.bind 'blur mouseleave', hoverOut
-
+    $this.bind('focus mouseenter', hoverIn)
+    $this.bind('blur mouseleave', hoverOut)
+  )
   return $this

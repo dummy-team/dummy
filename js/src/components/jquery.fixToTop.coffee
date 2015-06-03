@@ -23,32 +23,32 @@ $.fn.fixToTop = (gap, steps) ->
     stepsClasses = ''
     for step of steps
       stepsClasses += ' ' + step
-    $(window).scroll ->
+    $(window).scroll( ->
       for step of steps
         if $this.css('visibility') isnt 'hidden' and $(window).scrollTop() > steps[step]
           $this
             .removeClass(stepsClasses)
             .addClass(step)
-            
+    )
   # Bind to scroll event
-  $(window).scroll ->
+  $(window).scroll( ->
     if $this.css('visibility') isnt 'hidden' and $(window).scrollTop() > origin
       fix()
     else
       free()
-
+  )
   # Add the class fixed to the element to handle the position from css
   # and handle an optionnal offset
   fix = ->
     unless $this.hasClass('fixed')
       offSet = parseFloat($this.height()) + parseFloat($this.next().css('marginTop'))
-      $this.addClass 'fixed'
+      $this.addClass('fixed')
       # Set margin to balance the fixed position
-      $this.next().css 'marginTop', offSet + 'px'
+      $this.next().css('marginTop', offSet + 'px')
 
   # Remove the fixed class and reset offsets
   free = ->
-    $this.removeClass 'fixed'
-    $this.next().css 'marginTop', originOffSet + 'px'
+    $this.removeClass('fixed')
+    $this.next().css('marginTop', originOffSet + 'px')
 
   return $this

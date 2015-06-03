@@ -1,6 +1,6 @@
 module.exports = [
   'concurrent:builds'
-  'autoprefixer'
+  'postcss'
   'cssmin'
   'clean'
   'uglify'

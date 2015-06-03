@@ -2,6 +2,13 @@
 
 ##v4
 
+- **4.3**
+  - Upgraded grunt-browser-sync
+  - Fixed favicon
+  - Replaced autoprefixer task with postcss
+  - Placed `min-width` & `min-height` in `PropertySortOrder` of sccs-lint
+  - Renamed `_helpers.scss` `_placeholders.scss`
+  - Updated coffeelint configuration and sources accordingly
 - **4.2.1**
   - Fixed headings extends
   - Added `$text-color` scss variable
