@@ -5,9 +5,9 @@
 # jQuery helpers
 #
 require('./components/jquery.hoverSrc.coffee')
-# require './components/jquery.pulldown.coffee'
-# require './components/jquery.fixToTop.coffee'
-# require './components/jquery.smoothAnchors.coffee'
+# require('./components/jquery.pulldown.coffee')
+# require('./components/jquery.fixToTop.coffee')
+# require('./components/jquery.smoothAnchors.coffee')
 
 # Website wide scripts
 # @author Inouit

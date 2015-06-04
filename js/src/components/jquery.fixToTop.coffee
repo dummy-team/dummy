@@ -8,7 +8,7 @@
 $.fn.fixToTop = (gap, steps) ->
 
   $this = $(this)
-  origin = (if gap then $this[0].offsetTop + gap else $this[0].offsetTop)
+  gap ?= 0
   originOffSet = parseFloat($this.next().css('marginTop'))
   offSet = parseFloat($this.height()) + parseFloat($this.next().css('marginTop'))
 
@@ -32,6 +32,8 @@ $.fn.fixToTop = (gap, steps) ->
     )
   # Bind to scroll event
   $(window).scroll( ->
+    free()
+    origin = $this.offset().top + gap
     if $this.css('visibility') isnt 'hidden' and $(window).scrollTop() > origin
       fix()
     else

@@ -1,4 +1,4 @@
-# Add an automatic smooth Scroll to any child link matching ** a[href*='#c'] **
+# Add an automatic smooth Scroll to any child link matching ** a[href*='#'] **
 # Require [scrollTo plugin](https://github.com/flesler/jquery.scrollTo)
 #
 # @param offsetTop [Integer]
@@ -6,18 +6,16 @@
 #
 # @return the jQuery object to allow chaining
 #
+#
 $.fn.smoothAnchors = (offsetTop, screenOffset) ->
 
   $this = $(this)
-  $anchors = $this.find('a[href*=\'#c\']')
+  $anchors = $this.find('a[href*=\'#\']')
   anchorsOffsets = []
-  offsetTop ?= 50
-  screenOffset = (if screenOffset then screenOffset else $(window).height() / 6)
+  offsetTop ?= 0
+  screenOffset ?= $(window).height() / 6
 
-  $anchors.each( ->
-    anchorsOffsets.push($(('#' + getHash($(this).attr('href')))).offset().top)
-  )
-  anchorsOffsetsLength = anchorsOffsets.length
+
   $anchors.unbind('click')
   $anchors.click( (e) ->
     e.preventDefault()
@@ -27,31 +25,34 @@ $.fn.smoothAnchors = (offsetTop, screenOffset) ->
       duration: 800
     )
   )
-
-  timeWindow = 500
-  lastExecution = new Date((new Date()).getTime())
-
   $(window).scroll( (e) ->
-    if (lastExecution.getTime() + timeWindow) <= (new Date()).getTime()
-      scrollTop = $(window).scrollTop() + offsetTop + screenOffset
-      $anchors.removeClass('active')
-      i = 0
+    scrollTop = $(window).scrollTop() + offsetTop + screenOffset
+    $anchors.removeClass('section-active')
 
-      while i < anchorsOffsetsLength
-        j = i + 1
-        if scrollTop >= anchorsOffsets[i] and not anchorsOffsets[j]
-          $anchors.not($anchors[i]).removeClass('active')
-          $($anchors[i]).addClass('active')
-          lastExecution = new Date((new Date()).getTime())
-          return
-        else if scrollTop >= anchorsOffsets[i] and scrollTop < anchorsOffsets[j]
-          $anchors.not($anchors[i]).removeClass('active')
-          $($anchors[i]).addClass('active')
-          lastExecution = new Date((new Date()).getTime())
-          return
-        i++
+    anchorsOffsets = []
+    $anchors.each( ->
+      anchorsOffsets.push($(('#' + getHash($(this).attr('href')))).offset().top)
+    )
+    anchorsOffsetsLength = anchorsOffsets.length
+
+    if scrollTop < anchorsOffsets[0]
+      $anchors.not($anchors[0]).removeClass('section-active')
+      $($anchors[0]).addClass('section-active')
+      return
+
+    i = 0
+    while i < anchorsOffsetsLength
+      j = i + 1
+      if scrollTop >= anchorsOffsets[i] and not anchorsOffsets[j]
+        $anchors.not($anchors[i]).removeClass('section-active')
+        $($anchors[i]).addClass('section-active')
+        return
+      else if scrollTop >= anchorsOffsets[i] and scrollTop < anchorsOffsets[j]
+        $anchors.not($anchors[i]).removeClass('section-active')
+        $($anchors[i]).addClass('section-active')
+        return
+      i++
   )
-
   return $this
 
 # Extract a hash from a string
