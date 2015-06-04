@@ -15,13 +15,13 @@ $.fn.smoothAnchors = (offsetTop, screenOffset) ->
   screenOffset = (if screenOffset then screenOffset else $(window).height() / 6)
 
   $anchors.each( ->
-    anchorsOffsets.push($(('#' + getHash($this.attr('href')))).offset().top)
+    anchorsOffsets.push($(('#' + getHash($(this).attr('href')))).offset().top)
   )
   anchorsOffsetsLength = anchorsOffsets.length
   $anchors.unbind('click')
   $anchors.click( (e) ->
     e.preventDefault()
-    $('html').scrollTo($(('#' + getHash($this.attr('href')))),
+    $('html').scrollTo($(('#' + getHash($(this).attr('href')))),
       offset:
         top: -offsetTop
       duration: 800
@@ -51,8 +51,9 @@ $.fn.smoothAnchors = (offsetTop, screenOffset) ->
           return
         i++
   )
-  # Extract a hash from a string
-  getHash = (url) ->
-    return url?.substring(url.indexOf('#') + 1)
 
   return $this
+
+# Extract a hash from a string
+getHash = (url) ->
+  return url?.substring(url.indexOf('#') + 1)
