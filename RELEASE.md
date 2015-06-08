@@ -2,6 +2,9 @@
 
 ##v4
 
+- **4.5**
+  - Replaced coffeeify with browserify
+
 - **4.4**
   - A better smoothAnchor plugin
   - A better fixToTop plugin
