@@ -2,6 +2,9 @@
 
 ##v4
 
+- **4.5.2**
+  - Use $text-color instead of $black in globals
+
 - **4.5.1**
   - Remove old livereload
 
