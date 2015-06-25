@@ -2,6 +2,10 @@
 
 ##v4
 
+- **4.5.6**
+  - Add usage help
+  - Add contributing guide
+
 - **4.5.5**
   - Remove useless livereload option from watch task
 

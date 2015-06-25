@@ -1,84 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Dummy - a light Sass & Coffee front-end base </title>
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>
+    <title>Dummy - a light Sass & Coffee front-end base </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content=" width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content=" width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
-        <!-- <script src="/js/_bower_components/modernizr/modernizr.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
+    <!-- <script src="/js/_bower_components/modernizr/modernizr.js"></script> -->
 
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <link rel="apple-touch-icon" href="/img/favicon.png">
-    </head>
-    <body>
-        <div id="header" class="header">
-            <div class="page">
-             <!--Header-->
-             <div id="logo"><a href="/"><h1>Dummy</h1></a></div>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+  </head>
+  <body>
+    <!--Header-->
+    <div id="header" class="header">
+        <div class="page">
+         <div id="logo"><a href="/"><h1>Dummy</h1></a></div>
 <!--
-             topNav
-             <ul id="topNav" class="nav">
-                <li><a href="/docs/">Documentation</a></li>
-            </ul>
+         topNav
+         <ul id="topNav" class="nav">
+            <li><a href="/docs/">Documentation</a></li>
+        </ul>
 
-             mainNav
-             <ul id="mainNav" class="nav">
-                <li><a href="/demo/">Demo</a></li>
-                </ul>
-            </div> -->
+         mainNav
+         <ul id="mainNav" class="nav">
+            <li><a href="/demo/">Demo</a></li>
+            </ul>
+        </div> -->
+    </div>
+
+    <!--Content-->
+    <div id="mainContent" class="page">
+      <p class="introduction">A light Sass &amp; coffee front-end base</p>
+      <p>The purpose of this "framework" is to provide a consistent file structure with a normalized code and a collection of helpers and resets</p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>A light column system (Deprecated, it will be rewritten into a more modern grid system)</li>
+        <li>A simple font sizing : 1.6em = 16px;</li>
+        <li>A collection of variables to manage default sizing, fonts and colors</li>
+        <li>A slice & content max width management</li>
+        <li>Some jQuery plugins helpers ready to use</li>
+      </ul>
+
+      <h2>Grunt to make your life easier</h2>
+      <ul>
+        <li>Compiles your `scss` files</li>
+        <li>Prefixes your css</li>
+        <li>Compiles your CoffeeScript files</li>
+        <li>Serves your files</li>
+        <li>Lint your files:
+          <ul>
+            <li><a href="https://github.com/Inouit/dummy/blob/master/grunt/.scss-lint.yml">Scss</a></li>
+            <li><a href="https://github.com/Inouit/dummy/blob/master/grunt/coffeelint.json">CoffeeScript</a></li>
+          </ul>
+        </li>
+        <li>Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)</li>
+        <li><a href="http://sassdoc.com/annotations/">SassDoc</a> friendly </li>
+        <li><a href="https://github.com/coffeedoc/codo">Codo</a> friendly </li>
+      </ul>
+
+      <h2>Usage</h2>
+      <p>First, ensure that you have the latest <a href="http://nodejs.org/">Node.js</a> and <a href="http://npmjs.org/">npm</a> installed. <a href="https://github.com/brigade/scss-lint#requirements">scss-lint</a> requires a gem from ruby.</p>
+      <p>Test that Grunt&#39;s CLI is installed by running <code>grunt --version</code>.  If the command isn&#39;t found, run <code>npm install -g grunt-cli</code>.  For more information about installing Grunt, see the <a href="http://gruntjs.com/getting-started">getting started guide</a>.</p>
+
+      <h3>Plug and play</h3>
+
+      <h4>Plug</h4>
+      <ol>
+        <li>Download <a href="https://github.com/Inouit/dummy/releases">latest release</a></li>
+        <li>Go to the <code>grunt</code> subfolder</li>
+        <li>Run <code>npm install</code> to install all dependencies
+          installed</li>
+        <li>To build <code>css</code> and<code>js</code> run <code>grunt build</code></li>
+      </ol>
+
+      <h4>Play</h4>
+      <ol>
+        <li>Edit <a href="https://github.com/Inouit/dummy/blob/master/grunt/tasks/options/browserSync.coffee"><code>browserSync.coffee</code></a> task to your need.</li>
+        <li>To start working and serving files run <code>grunt</code> inside <code>grunt</code> folder</li>
+        <li>Browser-sync will prompt the server url (<code>localhost:3000</code>)</li>
+        <li>You can now edit <code>*.scss</code> &amp; <code>*.coffee</code> files, <code>*.css</code>and <code>*.js</code> will be overwritten</li>
+      </ol>
+
+      <h3>Customize tasks</h3>
+      <p>The grunt tasks and file structure should work in most use cases. You may still need to do some changes, from file location to new grunt tasks.  </p>
+
+      <h4>Source folders</h4>
+      <p>You can change source and destination folders in the config object of the <a href="https://github.com/Inouit/dummy/blob/master/grunt/gruntfile.coffee#L30"><code>gruntfile.coffee</code></a></p>
+
+      <h4>Add grunt tasks</h4>
+      <p>We use a module based structure for our grunt tasks, so it should be easy to edit any existing task. All task configurations stored in the <a href="https://github.com/Inouit/dummy/tree/master/grunt/tasks/options">options folder</a>. are loaded in the grunt file. Grunt task alias are in the <a href="https://github.com/Inouit/dummy/tree/master/grunt/tasks">tasks folder</a>.</p>
+      <p>  To get farther into the mind behind this, checkout <a href="https://medium.com/dev-notes/diviser-pour-mieux-grunter-a745f41e1a32">Diviser pour mieux grunter (fr)</a>.</p>
+
+      <h2>Keep in touch</h2>
+      <p>If find any caveats using it or have suggestions to improve the tool we gladly accept <a href="https://github.com/Inouit/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request">Pull Requests</a> and <a href="https://github.com/Inouit/dummy/issues">issues</a>.</p>
+   </div>
+
+    <!--Footer-->
+    <div id="footer" class="footer">
+        <div class="page">
+            <!--bottomNav-->
+            <ul id="bottomNav" class="nav">
+                <li><a href="http://www.inouit.com" target="_blank">Inouit</a></li>
+                <li><a href="https://github.com/Inouit/dummy" target="_blank">Github</a></li>
+                <li><a href="https://github.com/Inouit/dummy/issues" target="_blank">Issues</a></li>
+                <li><a href="https://gitter.im/Inouit/dummy" target="_blank">Gitter Room</a></li>
+            </ul>
         </div>
+    </div>
 
-       <!--Content-->
-        <div id="mainContent" class="page">
-            <p class="introduction">A light Sass &amp; coffee front-end base</p>
-            <p>The purpose of this "framework" is to provide a consistent file structure with a normalized code and a collection of helpers and resets</p>
-
-            <h2>Features</h2>
-            <ul>
-                <li>A light column system (Deprecated, it will be rewritten into a more modern grid system)</li>
-                <li>A simple font sizing : 1.6em = 16px;</li>
-                <li>A collection of variables to manage default sizing, fonts and colors</li>
-                <li>A slice & content max width management</li>
-                <li>Some jQuery plugins helpers ready to use</li>
-            </ul>
-
-            <h2>Grunt to make your life easier</h2>
-            <ul>
-                <li>Compiles your `scss` files</li>
-                <li>Prefixes your css</li>
-                <li>Compiles your CoffeeScript files</li>
-                <li>Serves your files</li>
-                <li>
-                  Lint your files:
-                  <ul>
-                    <li><a href="https://github.com/Inouit/dummy/blob/master/grunt/scss-lint.yml">Scss</a></li>
-                    <li><a href="https://github.com/Inouit/dummy/blob/master/grunt/coffee-lint.yml">CoffeeScript</a></li>
-                  </ul>
-                </li>
-                <li>Synchronizes and reloads your modifications across browsers</li>
-                <li><a href="http://sassdoc.com/annotations/">SassDoc</a> friendly </li>
-                <li><a href="https://github.com/coffeedoc/codo">Codo</a> friendly </li>
-            </ul>
-       </div>
-
-        <!--Footer-->
-        <div id="footer" class="footer">
-            <div class="page">
-                <!--bottomNav-->
-                <ul id="bottomNav" class="nav">
-                    <li><a href="http://www.inouit.com" target="_blank">Inouit</a></li>
-                    <li><a href="https://github.com/Inouit/dummy" target="_blank">Github</a></li>
-                    <li><a href="https://github.com/Inouit/dummy/issues" target="_blank">Issues</a></li>
-                    <li><a href="https://gitter.im/Inouit/dummy" target="_blank">Gitter Room</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="/js/main.js"></script>
-    </body>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
