@@ -24,6 +24,6 @@ The purpose of this "framework" is to provide a consistent file structure with a
 - Lint your files:
   - [Scss](https://github.com/Inouit/dummy/blob/master/grunt/scss-lint.yml)
   - [CoffeeScript](https://github.com/Inouit/dummy/blob/master/grunt/coffee-lint.yml)
-- Synchronizes and reloads your modifications across browsers
+- Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)
 - [SassDoc](http://sassdoc.com/annotations/) friendly
 - ([Codo](https://github.com/coffeedoc/codo)) friendly

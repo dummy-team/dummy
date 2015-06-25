@@ -2,6 +2,9 @@
 
 ##v4
 
+- **4.5.4**
+  - Add images to browser sync
+
 - **4.5.3**
   - Fix .editorconfig syntax
 

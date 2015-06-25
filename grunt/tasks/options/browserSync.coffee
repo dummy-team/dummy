@@ -11,4 +11,5 @@ module.exports =
         '../*.html'
         '../css/*.css'
         '../js/*.js'
+        '../img/**'
       ]
