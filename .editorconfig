@@ -1,3 +1,4 @@
+# editorconfig.org
 root = true
 
 [*]
@@ -8,11 +9,11 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
 
-[**.{js,coffee,css,scss}]
+[*.{js,coffee,css,scss}]
 max_line_length = 120
 
-[**.md]
+[*.md]
 trim_trailing_whitespace = false
 
-[**.php]
+[*.php]
 indent_size = 4

@@ -2,6 +2,9 @@
 
 ##v4
 
+- **4.5.3**
+  - Fix .editorconfig syntax
+
 - **4.5.2**
   - Use $text-color instead of $black in globals
 
