@@ -1,6 +1,6 @@
 module.exports =
   options:
-    livereload: '<%= in8.liveport %>'
+    livereload: false
     spawn: false
 
   sass:

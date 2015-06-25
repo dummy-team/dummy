@@ -37,7 +37,6 @@ module.exports = (grunt) ->
       cssSrc  : '../css/src'
       cssDest : '../css'
       htmlSrc : '../'
-      liveport: grunt.option('liveport') || 35729
 
 
   # load tasks options

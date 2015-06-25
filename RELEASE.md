@@ -2,6 +2,9 @@
 
 ##v4
 
+- **4.5.1**
+  - Remove old livereload
+
 - **4.5**
   - Replaced coffeeify with browserify
 
