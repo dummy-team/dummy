@@ -2,6 +2,9 @@
 
 ##v4
 
+- **4.5.5**
+  - Remove useless livereload option from watch task
+
 - **4.5.4**
   - Add images to browser sync
 

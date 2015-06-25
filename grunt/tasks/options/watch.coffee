@@ -1,6 +1,5 @@
 module.exports =
   options:
-    livereload: false
     spawn: false
 
   sass:
