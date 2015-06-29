@@ -1,0 +1,11 @@
+////
+/// Used with a javascript jQuery helper
+///
+/// @group Tools
+/// @author Inouit
+////
+%vertical-align-middle {
+  position: absolute; top: 0; bottom: 0; margin-top: auto; margin-bottom: auto;
+
+  &.fix-my-height { top: auto !important; bottom: auto !important; height: auto !important; }
+}

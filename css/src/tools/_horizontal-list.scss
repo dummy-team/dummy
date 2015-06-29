@@ -1,0 +1,11 @@
+////
+/// Transform a list into a vertical spaced list
+///
+/// @group Tools
+/// @author Inouit
+////
+%horizontal-list {
+  display: block; margin: 0; padding: 0;
+
+  > * { display: inline-block; margin: 5px; padding: 0; }
+}

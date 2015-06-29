@@ -1,0 +1,9 @@
+////
+/// Use to normalize inputs
+///
+/// @group Tools
+/// @author Inouit
+////
+%input { border: 1px solid $black; border-radius: 3px; background-color: $white;
+  &:focus { outline: none; }
+}
