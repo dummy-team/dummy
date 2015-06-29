@@ -1,0 +1,18 @@
+/// Max width of the slice ( the max background size exceeding the content size )
+$slice-width  : 1400px;
+
+/// Max size of the page
+$max        : 1200;
+$max-width   : $max * 1px;
+$page-padding: 30;
+
+/// Gutter width for the grid system
+$gutter     : 30px;
+
+/// Viewports sizes
+/// They're used in media queries
+$vw-thin:   320px;
+$vw-small:  480px;
+$vw-medium: 780px;
+$vw-large:  1024px;
+$vw-huge:   1200px;

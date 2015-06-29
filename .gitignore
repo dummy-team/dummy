@@ -6,6 +6,7 @@ Gemfile.lock
 css/*.css
 css/*.css.map
 css/*.min.js
+css/old/
 
 docs/*
 !docs/assets

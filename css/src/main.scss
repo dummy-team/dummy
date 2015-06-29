@@ -5,21 +5,7 @@
 /// @author Inouit
 ////
 
-/// Functions, placeholders & configuration
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/placeholders';
-@import 'utils/mixins';
-
-@import 'layout/reset';
-@import 'layout/grid';
-@import 'layout/global';
-@import 'layout/forms';
-@import 'layout/header';
-@import 'layout/footer';
-
-/// Components list
-// @import 'components/';
-
-/// Media based styles
-@import 'layout/print';
+/// Settings
+@import 'settings/colors';
+@import 'settings/dimensions';
+@import 'settings/fonts';
