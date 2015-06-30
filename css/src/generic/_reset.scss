@@ -1,0 +1,25 @@
+////
+/// Reset styles
+/// Ease cross browser styling
+///
+/// @group Generic
+/// @author Inouit
+////
+
+/// Reset font-size for easier use : 1.6em = 16px
+html { font-size: 62.5%; line-height: 1.3em; }
+body {
+  margin: 0; padding: 0;
+  font-size: 1em; }
+
+// Links & buttons
+a img { border: none; }
+button {
+  display: inline; margin: 0; border: none; padding: 0; background-color: transparent; outline: none; cursor: pointer;
+  color: $link-color;
+
+  &:hover { text-decoration: underline; }
+}
+
+/// Reset nested font-size
+blockquote p,td p,th p,li li,li p,li h1,li h2,li h3,li h4,li h5,li h6,button { font-size: 100%; }
