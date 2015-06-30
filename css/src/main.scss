@@ -11,8 +11,11 @@
 @import 'settings/fonts';
 
 // Tools (helper, mixins and function)
-@import 'tools/page';
+@import 'tools/headings';
 @import 'tools/horizontal-list';
+@import 'tools/input';
+@import 'tools/page';
+@import 'tools/vertical-align-middle';
 
 // Generic
 @import 'generic/reset';
