@@ -35,7 +35,7 @@
   You can find our coding policy for each language in [Inouit/styleguide][styleguide]
 
 ## Git Commit Guidelines
-  Please follow or [commit conventions][commit]
+  Please follow our [commit conventions][commit]
 
 
 [github]: https://github.com/Inouit/Dummy
