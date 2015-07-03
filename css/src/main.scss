@@ -22,10 +22,18 @@
 
 // Base
 @import 'base/blocks';
+@import 'base/forms';
 @import 'base/headings';
 @import 'base/layout';
-@import 'base/forms';
+@import 'base/links';
 
 // Objects
+@import 'objects/alignements';
+@import 'objects/forms';
+@import 'objects/highlights';
+@import 'objects/navigation';
+@import 'objects/page';
+
 // Components
+
 // Trumps

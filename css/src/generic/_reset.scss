@@ -16,13 +16,11 @@ body {
 blockquote p,td p,th p,li li,li p,li h1,li h2,li h3,li h4,li h5,li h6,button { font-size: 100%; }
 
 // Links & buttons
-button {
-  display: inline; margin: 0; border: none; padding: 0; background-color: transparent; outline: none; cursor: pointer;
-  color: $link-color;
-
-  &:hover { text-decoration: underline; }
-}
+button { display: inline; margin: 0; border: none; padding: 0; outline: none; cursor: pointer; }
+a img { border: none; }
 
 // Images
 img { max-width: 100%; height: auto;}
-a img { border: none; }
+
+// Separator
+hr { border: none; height: 1px; background-color: grey; }

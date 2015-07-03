@@ -1,0 +1,18 @@
+////
+/// Links & buttons
+///
+/// @group Base
+/// @author Inouit
+////
+///
+
+button,
+a {
+  text-decoration: none; color: $link-color;
+
+  &:hover { text-decoration: underline; }
+}
+button {
+  background-color: transparent;
+  color: $link-color;
+}
