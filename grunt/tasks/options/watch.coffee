@@ -7,7 +7,6 @@ module.exports =
     tasks: [
       'sass:dev'
       'postcss'
-      # 'rename'
       'clean:css'
       'scsslint'
     ]
