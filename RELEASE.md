@@ -1,5 +1,12 @@
 # Release notes
 
+##v5
+
+- **5.0.0**
+  - ITCSS ready
+  - Add visual identity to the dummy (thanks to Stéphanie)
+  - Minor grunt task improvements
+
 ##v4
 
 - **4.5.6**
@@ -67,7 +74,7 @@
   - Compiled files are no longer versioned
   - Cleaned Sass mixins
 
-##v3 `deprecated`
+##v3
 - **3.0.2**:
   - Grunt registerTasks
   - CSS declaration in duplicate for h*-like

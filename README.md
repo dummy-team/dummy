@@ -1,18 +1,19 @@
-# ![Dummy](https://raw.githubusercontent.com/Inouit/dummy/909cd7e61b0d04417b129f3ce16748df4be8d226/img/dummy_blue.png)
+# ![Dummy](https://raw.githubusercontent.com/Inouit/dummy/gh-pages/img/dummy.png)
+
 A light Sass &amp; Coffee front-end base
 
-The purpose of this "framework" is to provide a consistent file structure with a normalized code and a collection of helpers and resets
+The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets. It wraps [ITCSS](http://itcss.io/) principles with a powerful automation system.
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Inouit/dummy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
 # Features
 
 ## A Sass & coffee base
-- A light column system (Deprecated, it will be rewritten into a more modern grid system)
+- It follows [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) concepts
 - A simple font sizing : 1.6em = 16px
 - A collection of variables to manage default sizing, fonts and colors
 - A slice & content max width management
-- Some jQuery plugins helpers ready to use
+- Some jQuery plugins helpers ready to import
 
 ## Grunt to make your life easier
 
@@ -41,8 +42,12 @@ The purpose of this "framework" is to provide a consistent file structure with a
  installed
 - To build `css` and`js` run `grunt build`
 
+```shell
+curl -L https://github.com/Inouit/dummy/archive/master.tar.gz | tar zx && cd ./dummy-master/grunt && npm install && grunt build && grunt
+```
+
 ### Play
-1. Edit [`browserSync.coffee`](https://github.com/Inouit/dummy/blob/master/grunt/tasks/options/browserSync.coffee) task to your need.
+1. Edit [`browserSync.coffee`](https://github.com/Inouit/dummy/blob/master/grunt/tasks/options/browserSync.coffee) task to your need (server or proxy and files path).
 - To start working and serving files run `grunt` inside `grunt` folder
 - Browser-sync will prompt the server url (`localhost:3000`)
 - You can now edit `*.scss` & `*.coffee` files, `*.css`and `*.js` will be overwritten
@@ -61,3 +66,6 @@ The grunt tasks and file structure should work in most use cases. You may still 
 # Keep in touch
 
 If find any caveats using it or have suggestions to improve the tool we gladly accept [Pull Requests](https://github.com/Inouit/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request) and [issues](https://github.com/Inouit/dummy/issues).
+
+# Thanks
+Thanks to Stéphanie who crafted such a nice logo !
