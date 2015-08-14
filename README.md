@@ -1,5 +1,4 @@
-# Dummy
-
+# ![Dummy](https://raw.githubusercontent.com/Inouit/dummy/909cd7e61b0d04417b129f3ce16748df4be8d226/img/dummy_blue.png)
 A light Sass &amp; Coffee front-end base
 
 The purpose of this "framework" is to provide a consistent file structure with a normalized code and a collection of helpers and resets
