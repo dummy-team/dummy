@@ -57,7 +57,7 @@ a {
   padding: 300px 0 5px 0 !important;
   color: #fff;
   text-align: center;
-  background: #68BBDB url('../../img/dummy_banner.png') center center no-repeat; }
+  background: #68BBDB url('../img/dummy_banner.png') center center no-repeat; }
 
 .align-center { text-align: center; }
 
