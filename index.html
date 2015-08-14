@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dummy by Inouit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Dummy</h1>
+      <h2 class="project-tagline">A light Sass &amp; coffee base front-end</h2>
+      <a href="https://github.com/Inouit/dummy" class="btn">View on GitHub</a>
+      <a href="https://github.com/Inouit/dummy/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Inouit/dummy/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="dummy" class="anchor" href="#dummy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dummy</h1>
+
+<p>A light Sass &amp; Coffee front-end base</p>
+
+<p>The purpose of this "framework" is to provide a consistent file structure with a normalized code and a collection of helpers and resets</p>
+
+<p><a href="https://gitter.im/Inouit/dummy?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=body_badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a></p>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<h2>
+<a id="a-sass--coffee-base" class="anchor" href="#a-sass--coffee-base" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Sass &amp; coffee base</h2>
+
+<ul>
+<li>A light column system (Deprecated, it will be rewritten into a more modern grid system)</li>
+<li>A simple font sizing : 1.6em = 16px</li>
+<li>A collection of variables to manage default sizing, fonts and colors</li>
+<li>A slice &amp; content max width management</li>
+<li>Some jQuery plugins helpers ready to use</li>
+</ul>
+
+<h2>
+<a id="grunt-to-make-your-life-easier" class="anchor" href="#grunt-to-make-your-life-easier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt to make your life easier</h2>
+
+<ul>
+<li>Compiles your <code>*.scss</code> files</li>
+<li>Prefixes your css</li>
+<li>Compiles your CoffeeScript files</li>
+<li>Serves your files</li>
+<li>Lint your files:
+
+<ul>
+<li><a href="https://github.com/Inouit/dummy/blob/master/grunt/.scss-lint.yml">Scss</a></li>
+<li><a href="https://github.com/Inouit/dummy/blob/master/grunt/coffeelint.json">CoffeeScript</a></li>
+</ul>
+</li>
+<li>Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)</li>
+<li>
+<a href="http://sassdoc.com/annotations/">SassDoc</a> friendly</li>
+<li>(<a href="https://github.com/coffeedoc/codo">Codo</a>) friendly</li>
+</ul>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>First, ensure that you have the latest <a href="http://nodejs.org/">Node.js</a> and <a href="http://npmjs.org/">npm</a> installed. <a href="https://github.com/brigade/scss-lint#requirements">scss-lint</a> requires a gem from ruby.</p>
+
+<p>Test that Grunt's CLI is installed by running <code>grunt --version</code>.  If the command isn't found, run <code>npm install -g grunt-cli</code>.  For more information about installing Grunt, see the <a href="http://gruntjs.com/getting-started">getting started guide</a>.</p>
+
+<h2>
+<a id="plug-and-play" class="anchor" href="#plug-and-play" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plug and play</h2>
+
+<h3>
+<a id="plug" class="anchor" href="#plug" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plug</h3>
+
+<ol>
+<li>Download <a href="https://github.com/Inouit/dummy/releases">latest release</a>
+</li>
+<li>Go to the <code>grunt</code> subfolder</li>
+<li>Run <code>npm install</code> to install all dependencies
+installed</li>
+<li>To build <code>css</code> and<code>js</code> run <code>grunt build</code>
+</li>
+</ol>
+
+<h3>
+<a id="play" class="anchor" href="#play" aria-hidden="true"><span class="octicon octicon-link"></span></a>Play</h3>
+
+<ol>
+<li>Edit <a href="https://github.com/Inouit/dummy/blob/master/grunt/tasks/options/browserSync.coffee"><code>browserSync.coffee</code></a> task to your need.</li>
+<li>To start working and serving files run <code>grunt</code> inside <code>grunt</code> folder</li>
+<li>Browser-sync will prompt the server url (<code>localhost:3000</code>)</li>
+<li>You can now edit <code>*.scss</code> &amp; <code>*.coffee</code> files, <code>*.css</code>and <code>*.js</code> will be overwritten</li>
+</ol>
+
+<h2>
+<a id="customize-tasks" class="anchor" href="#customize-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Customize tasks</h2>
+
+<p>The grunt tasks and file structure should work in most use cases. You may still need to do some changes, from file location to new grunt tasks.  </p>
+
+<h3>
+<a id="source-folders" class="anchor" href="#source-folders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source folders</h3>
+
+<p>You can change source and destination folders in the config object of the <a href="https://github.com/Inouit/dummy/blob/master/grunt/gruntfile.coffee#L30"><code>gruntfile.coffee</code></a></p>
+
+<h3>
+<a id="add-grunt-tasks" class="anchor" href="#add-grunt-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add grunt tasks</h3>
+
+<p>We use a module based structure for our grunt tasks, so it should be easy to edit any existing task. All task configurations stored in the <a href="https://github.com/Inouit/dummy/tree/master/grunt/tasks/options">options folder</a>. are loaded in the grunt file. Grunt task alias are in the <a href="https://github.com/Inouit/dummy/tree/master/grunt/tasks">tasks folder</a>.</p>
+
+<p>To get farther into the mind behind this, checkout <a href="https://medium.com/dev-notes/diviser-pour-mieux-grunter-a745f41e1a32">Diviser pour mieux grunter (fr)</a>.</p>
+
+<h1>
+<a id="keep-in-touch" class="anchor" href="#keep-in-touch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep in touch</h1>
+
+<p>If find any caveats using it or have suggestions to improve the tool we gladly accept <a href="https://github.com/Inouit/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request">Pull Requests</a> and <a href="https://github.com/Inouit/dummy/issues">issues</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Inouit/dummy">Dummy</a> is maintained by <a href="https://github.com/Inouit">Inouit</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
