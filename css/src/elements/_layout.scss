@@ -7,9 +7,3 @@
 
 /// Text default font and color
 body { font-family: $font; font-weight: $fw-regular; color: $text-color; }
-
-// Print version
-@media print {
-  [id="header"],
-  [id="footer"] { display: none; }
-}

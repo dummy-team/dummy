@@ -1,0 +1,6 @@
+// Print version
+@media print {
+  .no-print,
+  [id="header"],
+  [id="footer"] { display: none !important; }
+}
