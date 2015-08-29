@@ -1,8 +1,8 @@
-# <img src="dummy.png" alt="Dummy">
+# ![Dummy](https://raw.githubusercontent.com/Inouit/dummy/gh-pages/img/dummy.png)
 
 A light Sass &amp; Coffee front-end base
 
-The purpose of this "framework" is to provide a consistent file structure with a normalized code and a collection of helpers and resets
+The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets. It wraps [ITCSS](http://itcss.io/) principles with a powerful automation system.
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Inouit/dummy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
