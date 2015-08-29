@@ -1,3 +1,5 @@
+options = require('../../parameters')
+
 module.exports =
   options:
     banner: '/*! uglified <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %> */'
@@ -13,8 +15,8 @@ module.exports =
       exportAll: true
     files: [{
       expand: true,
-      cwd: '<%= in8.jsDest %>',
+      cwd: options.js.dest,
       src: '*.js',
-      dest: '<%= in8.jsDest %>',
+      dest: options.js.dest,
       ext: '.min.js'
     }]

@@ -3,19 +3,9 @@ node_modules
 npm-debug.log
 Gemfile.lock
 
-css/*.css
-css/*.css.map
-css/*.min.js
-css/old/
+css/*.css*
 
-docs/*
-!docs/assets
-docs/assets/*
-
-js/*.js
-js/*.js.map
-js/*.min.js
-js/components/.js
+js/*.js*
 
 
 !.gitkeep

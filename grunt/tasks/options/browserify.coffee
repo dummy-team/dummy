@@ -1,3 +1,5 @@
+options = require('../../parameters')
+
 module.exports =
   dev:
     options:
@@ -8,26 +10,9 @@ module.exports =
     files: [
       {
         expand: true
-        cwd: '<%= in8.jsSrc %>/'
+        cwd: options.js.source
         src: ['*.coffee']
-        dest: '<%= in8.jsDest %>/'
-        ext: '.js'
-      }
-    ]
-
-
-  build:
-    options:
-      transform: ["coffeeify"]
-      browserifyOptions: {
-        debug: false
-      }
-    files: [
-      {
-        expand: true
-        cwd: '<%= in8.jsSrc %>/'
-        src: ['*.coffee']
-        dest: '<%= in8.jsDest %>/'
+        dest: options.js.dest
         ext: '.js'
       }
     ]

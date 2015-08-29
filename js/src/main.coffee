@@ -12,7 +12,6 @@ require('./components/jquery.hoverSrc.coffee')
 # Website wide scripts
 # @author Inouit
 #
-
 $( ->
   $(window).ready( ->
 
