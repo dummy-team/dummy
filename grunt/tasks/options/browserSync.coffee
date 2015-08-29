@@ -1,15 +1,14 @@
+options = require('../../parameters')
+
 module.exports =
   dev:
     options:
-      open: false
+      open: options.sync.open
       watchTask: true
-      server: "../"
-      # proxy: "local.inouit.com"
+      watchOptions:
+        ignored: /^([.][^.\/\\])|([\/\\]+[.][^.])/
+      server: options.sync.server
+      proxy: options.sync.proxy
 
     bsFiles:
-      src : [
-        '../*.html'
-        '../css/*.css'
-        '../js/*.js'
-        '../img/**'
-      ]
+      src : options.sync.files

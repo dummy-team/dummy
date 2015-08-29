@@ -25,19 +25,10 @@ registerTasks = (grunt, path)->
 
 module.exports = (grunt) ->
   # load all grunt tasks
-  require("load-grunt-tasks")(grunt)
-
+  require('load-grunt-tasks')(grunt)
   config =
     pkg: grunt.file.readJSON('package.json')
     env: process.env
-    in8:
-      jsSrc   : '../js/src'
-      jsDest  : '../js'
-      imgSrc  : '../img'
-      cssSrc  : '../css/src'
-      cssDest : '../css'
-      htmlSrc : '../'
-
 
   # load tasks options
   grunt.util._.extend(config, loadConfig('./tasks/options/'))

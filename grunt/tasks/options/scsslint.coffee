@@ -1,7 +1,9 @@
-module.exports= 
-  options: 
-    config: './.scss-lint.yml'
+options = require('../../parameters')
+
+module.exports=
+  options:
+    config: './scss-lint.yml'
     colorizeOutput: true
   allFiles: [
-    '<%= in8.cssSrc %>/**/*.scss '
+    options.css.source+'**/*.scss '
   ]

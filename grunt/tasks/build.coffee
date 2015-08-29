@@ -1,5 +1,5 @@
 module.exports = [
-  'concurrent:builds'
+  'concurrent'
   'postcss'
   'cssmin'
   'clean'

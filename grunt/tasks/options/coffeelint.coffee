@@ -1,6 +1,8 @@
+options = require('../../parameters')
+
 module.exports =
   options:
     configFile: 'coffeelint.json'
   app:
     files:
-      src: [ '<%= in8.jsSrc %>/**/*.coffee' ]
+      src: [ options.js.source+'**/*.coffee' ]

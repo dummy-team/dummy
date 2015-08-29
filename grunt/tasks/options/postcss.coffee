@@ -1,9 +1,12 @@
+options = require('../../parameters')
+files = {}
+files[options.css.dest+'main.css'] = options.css.dest+'main.css.tmp'
+
 module.exports =
-  build:
+  dev:
     options:
       map: true
       processors: [
-        require('autoprefixer-core')({browsers: 'last 3 version'}),
+        require('autoprefixer-core')(options.autoprefixer),
       ]
-    files:
-      '<%= in8.cssDest %>/main.css': '<%= in8.cssDest %>/main.tmp.css'
+    files: files

@@ -1,19 +1,38 @@
+options = require('../../parameters')
+if options.lint.lock
+  tasks =
+    sass : [
+      'scsslint'
+      'sass:dev'
+      'postcss:dev'
+      'clean:css'
+    ]
+    coffee: [
+      'coffeelint'
+      'browserify:dev'
+    ]
+else
+  tasks =
+    sass : [
+      'sass:dev'
+      'postcss:dev'
+      'clean:css'
+      'scsslint'
+    ]
+    coffee: [
+      'browserify:dev'
+      'coffeelint'
+    ]
+
+
 module.exports =
   options:
     spawn: false
 
   sass:
-    files:'<%= in8.cssSrc %>/**/*.scss'
-    tasks: [
-      'sass:dev'
-      'postcss'
-      'clean:css'
-      'scsslint'
-    ]
+    files:options.css.dest+'**/*.scss'
+    tasks: tasks.sass
 
   coffee:
-    files: '<%= in8.jsSrc %>/**/*.coffee'
-    tasks: [
-      'browserify:dev'
-      'coffeelint'
-    ]
+    files: options.js.dest+'**/*.coffee'
+    tasks: tasks.coffee

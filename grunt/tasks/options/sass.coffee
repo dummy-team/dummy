@@ -1,16 +1,14 @@
-module.exports =
+options = require('../../parameters')
+files = {}
+files[options.css.dest+'main.css.tmp'] = options.css.source+'main.scss'
+
+sass =
   dev:
     options:
       sourceMap: true
-      style: "compact"
-      precision: 20
-      lineNumbers: true
-    files:
-      '<%= in8.cssDest %>/main.tmp.css': '<%= in8.cssSrc %>/main.scss'
+      outputStyle: options.css.style
+      precision: options.css.precision
+    files: files
 
-  build:
-    options:
-      style: "compact"
-      precision: 20
-    files:
-      '<%= in8.cssDest %>/main.tmp.css': '<%= in8.cssSrc %>/main.scss'
+
+module.exports = sass

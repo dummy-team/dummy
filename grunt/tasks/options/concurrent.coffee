@@ -1,5 +1,5 @@
 module.exports =
   builds: [
-    'browserify:build'
-    'sass:build'
+    'browserify'
+    'sass'
   ]
