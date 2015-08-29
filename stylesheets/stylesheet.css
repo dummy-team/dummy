@@ -76,7 +76,8 @@ a {
 .project-name {
   text-indent: 9999px;
   margin-top: 0;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0.1rem;
+  overflow: hidden; }
 
 @media screen and (min-width: 64em) {
   .project-name {
