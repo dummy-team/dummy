@@ -2,6 +2,9 @@
 
 ##v5
 
+- **5.1.1**
+  - Add support for local configuration override
+
 - **5.1.0**
   - Minor changes to ITCSS structure
   - Add visual identity to the dummy (thanks to Stéphanie)

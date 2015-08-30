@@ -1,4 +1,6 @@
-options = require('../../parameters')
+loadLocals = require('../../tools/loadLocals')
+options = loadLocals('parameters')
+
 if options.lint.lock
   tasks =
     sass : [

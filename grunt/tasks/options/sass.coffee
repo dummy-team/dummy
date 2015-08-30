@@ -1,4 +1,6 @@
-options = require('../../parameters')
+loadLocals = require('../../tools/loadLocals')
+options = loadLocals('parameters')
+
 files = {}
 files[options.css.dest+'main.css.tmp'] = options.css.source+'main.scss'
 

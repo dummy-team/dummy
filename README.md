@@ -50,13 +50,13 @@ curl -L https://github.com/Inouit/dummy/archive/master.tar.gz | tar zx && cd ./d
 1. Edit [`browserSync.coffee`](https://github.com/Inouit/dummy/blob/master/grunt/tasks/options/browserSync.coffee) task to your need (server or proxy and files path).
 - To start working and serving files run `grunt` inside `grunt` folder
 - Browser-sync will prompt the server url (`localhost:3000`)
-- You can now edit `*.scss` & `*.coffee` files, `*.css`and `*.js` will be overwritten
+- You can now edit `*.scss` & `*.coffee` files, `*.css` & `*.js` will be overwritten
 
 ## Customize tasks
 The grunt tasks and file structure should work in most use cases. You may still need to do some changes, from file location to new grunt tasks.  
 
 ### Source folders
-  You can change source and destination folders in the config object of the [`gruntfile.coffee`](https://github.com/Inouit/dummy/blob/master/grunt/gruntfile.coffee#L30)
+  To ease the integration process, the [parameters](https://github.com/Inouit/dummy/blob/master/grunt/parameters.coffee) allow to add files to the watched files, refine few options and change source and destination paths. Options found in the `parameters_local.coffee` will override defaults.
 
 ### Add grunt tasks
   We use a module based structure for our grunt tasks, so it should be easy to edit any existing task. All task configurations stored in the [options folder](https://github.com/Inouit/dummy/tree/master/grunt/tasks/options). are loaded in the grunt file. Grunt task alias are in the [tasks folder](https://github.com/Inouit/dummy/tree/master/grunt/tasks).

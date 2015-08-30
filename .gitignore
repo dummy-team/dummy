@@ -12,3 +12,5 @@ js/*.js*
 .db_thumb
 .DS_Store
 ._*
+
+*_local.*

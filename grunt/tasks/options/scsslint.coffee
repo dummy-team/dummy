@@ -1,4 +1,5 @@
-options = require('../../parameters')
+loadLocals = require('../../tools/loadLocals')
+options = loadLocals('parameters')
 
 module.exports=
   options:
