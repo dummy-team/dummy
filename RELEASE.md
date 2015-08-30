@@ -2,10 +2,14 @@
 
 ##v5
 
+- **5.1.0**
+  - Minor changes to ITCSS structure
+  - Add visual identity to the dummy (thanks to Stéphanie)
+  - Parameter configuration added to Grunt
+  - Grunt option management improvements
+
 - **5.0.0**
   - ITCSS ready
-  - Add visual identity to the dummy (thanks to Stéphanie)
-  - Parameter configuration added to  Grunt
   - Grunt task improvements
 
 ##v4
