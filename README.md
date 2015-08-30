@@ -59,13 +59,13 @@ The grunt tasks and file structure should work in most use cases. You may still 
   To ease the integration process, the [parameters](https://github.com/Inouit/dummy/blob/master/grunt/parameters.coffee) allow to add files to the watched files, refine few options and change source and destination paths. Options found in the `parameters_local.coffee` will override defaults.
 
 ### Add grunt tasks
-  We use a module based structure for our grunt tasks, so it should be easy to edit any existing task. All task configurations stored in the [options folder](https://github.com/Inouit/dummy/tree/master/grunt/tasks/options). are loaded in the grunt file. Grunt task alias are in the [tasks folder](https://github.com/Inouit/dummy/tree/master/grunt/tasks).
+  We use a module based structure for our grunt tasks, so it should be easy to edit any existing task. All task configurations stored in the [options folder](https://github.com/Inouit/dummy/tree/master/grunt/tasks/options) are loaded in the grunt file. Grunt task alias are in the [tasks folder](https://github.com/Inouit/dummy/tree/master/grunt/tasks).
 
   To get farther into the mind behind this, checkout [Diviser pour mieux grunter (fr)](https://medium.com/dev-notes/diviser-pour-mieux-grunter-a745f41e1a32).
 
 # Keep in touch
 
-If find any caveats using it or have suggestions to improve the tool we gladly accept [Pull Requests](https://github.com/Inouit/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request) and [issues](https://github.com/Inouit/dummy/issues).
+If you find any caveats using it or have suggestions to improve the tool we gladly accept [Pull Requests](https://github.com/Inouit/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request) and [issues](https://github.com/Inouit/dummy/issues).
 
 # Thanks
 Thanks to Stéphanie who crafted such a nice logo !
