@@ -2,6 +2,9 @@
 
 ##v5
 
+- **5.1.2**
+  - Documentation improvements
+
 - **5.1.1**
   - Add support for local configuration override
 
