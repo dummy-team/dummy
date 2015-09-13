@@ -9,6 +9,6 @@ module.exports =
     options:
       map: true
       processors: [
-        require('autoprefixer-core')(options.autoprefixer),
+        require('autoprefixer')(options.autoprefixer),
       ]
     files: files

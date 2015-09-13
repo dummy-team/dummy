@@ -2,6 +2,10 @@
 
 ##v5
 
+- **5.2**
+  - Postcss configuration update
+  - Npm package clean up
+
 - **5.1.2**
   - Documentation improvements
 
