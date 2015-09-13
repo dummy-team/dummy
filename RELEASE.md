@@ -2,7 +2,11 @@
 
 ##v5
 
-- **5.2**
+- **5.3.0**
+  - Naming change : `.page`becomes `.page-sized`
+  - Documentation improvements
+
+- **5.2.0**
   - Postcss configuration update
   - Npm package clean up
 

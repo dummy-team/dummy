@@ -2,7 +2,6 @@
 /// Import all files
 /// Order do matter
 ///
-/// @author Inouit
 ////
 
 /// Settings
@@ -14,7 +13,7 @@
 @import 'tools/headings';
 @import 'tools/horizontal-list';
 @import 'tools/input';
-@import 'tools/page';
+@import 'tools/page-sized';
 @import 'tools/vertical-align-middle';
 
 // Generic
@@ -24,7 +23,7 @@
 @import 'elements/blocks';
 @import 'elements/forms';
 @import 'elements/headings';
-@import 'elements/layout';
+@import 'elements/body';
 @import 'elements/links';
 
 // Objects
@@ -32,7 +31,7 @@
 @import 'objects/forms';
 @import 'objects/highlights';
 @import 'objects/horizontal-list';
-@import 'objects/page';
+@import 'objects/page-sized';
 
 // Components
 

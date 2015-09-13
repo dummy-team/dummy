@@ -1,3 +1,4 @@
+# Load _local file and override options
 module.exports = (path) ->
   path = "../"+path
   options = require(path)

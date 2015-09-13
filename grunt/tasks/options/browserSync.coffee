@@ -7,6 +7,7 @@ module.exports =
       open: options.sync.open
       watchTask: true
       watchOptions:
+        # Ignore dotfiles
         ignored: /^([.][^.\/\\])|([\/\\]+[.][^.])/
       server: options.sync.server
       proxy: options.sync.proxy
