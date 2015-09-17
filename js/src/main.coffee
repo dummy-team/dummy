@@ -10,7 +10,7 @@
 # require('./components/jquery.smoothAnchors.coffee')
 
 # Website wide scripts
-# @author Inouit
+# @author Dummy Team
 #
 $( ->
   $(window).ready( ->
