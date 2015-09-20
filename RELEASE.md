@@ -2,6 +2,9 @@
 
 ##v5
 
+- **5.3.1**
+  - Dummy-team is its new home
+
 - **5.3.0**
   - Naming change : `.page`becomes `.page-sized`
   - Documentation improvements
