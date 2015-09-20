@@ -3,22 +3,22 @@
   "description": "A light Sass & coffee base front-end",
   "version": "3.0.2",
   "author": {
-    "name": "Inouit",
-    "url": "www.inouit.fr"
+    "name": "Dummy-Team",
+    "url": "https://github.com/dummy-team"
   },
   "contributors": [
-    "Plou <cl.plou@gmail.com> (http://plou.github.io/)",
+    "Plou <cl.plou@gmail.com> (https://plou.github.io/)",
     "Gregcop1 <gregcop1@gmail.com> (https://github.com/Gregcop1)",
-    "Toofff <prouyann@gmail.com> (http://yanoucrea.fr)",
-    "Shatimes <contact@shatimes.fr> (http://www.shatimes.fr)",
-    "JViste <jviste@inouit.com>"
+    "Toofff <prouyann@gmail.com> (https://yanoucrea.fr)",
+    "Shatimes <contact@shatimes.fr> (https://www.shatimes.fr)",
+    "FeetloveR <feetlover666@gmail.com> (https://github.com/FeetloveR)"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Inouit/dummy.git"
+    "url": "https://github.com/dummy-team/dummy.git"
   },
   "bugs": {
-    "url": "https://github.com/Inouit/dummy/issues"
+    "url": "https://github.com/dummy-team/dummy/issues"
   },
   "dependencies": {
     "jquery": "<2.0.0",

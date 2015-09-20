@@ -86,7 +86,7 @@
 - **4.0.0**
   Complete rewrite of Dummy
   - Dropped old browser support (2 version back)
-  - Follow the new [guidelines](https://github.com/Inouit/dummy/blob/master/README.md)
+  - Follow the new [guidelines](https://github.com/inouit/dummy/blob/master/README.md)
   - `modules.scss` is now split under `components`
   - Scss comments follow Sassdoc syntax
   - Coffeescript files comment follow Codo syntax
@@ -147,7 +147,7 @@
 ## Beta
 
 - **0.11.1**: Added step classes to fixToTop jquery plugin
-- **0.11.0**: Transfered repository ownership to Inouit organisation
+- **0.11.0**: Transfered repository ownership to inouit organisation
 - **0.10.1**:
     - Added grunt configuration to enable stand alone use
     - Removed compiled javascript files from gitignore to keep compatibility with generator-dummies

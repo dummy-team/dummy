@@ -1,7 +1,7 @@
 # Coding guidelines
 
-## [Scss](https://github.com/Inouit/styleguide/tree/master/scss)
+## [Scss](https://github.com/dummy-team/styleguide/tree/master/scss)
 
-## [CoffeeScript](https://github.com/Inouit/styleguide/tree/master/coffeescript)
+## [CoffeeScript](https://github.com/dummy-team/styleguide/tree/master/coffeescript)
 
-## [ITCSS](https://github.com/Inouit/styleguide/tree/master/itcss)
+## [ITCSS](https://github.com/dummy-team/styleguide/tree/master/itcss)

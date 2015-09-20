@@ -32,13 +32,13 @@
       ```
 
 ## Coding Rules
-  You can find our coding policy for each language in [Inouit/styleguide][styleguide]
+  You can find our coding policy for each language in [dummy-team/styleguide][styleguide]
 
 ## Git Commit Guidelines
   Please follow our [commit conventions][commit]
 
 
-[github]: https://github.com/Inouit/Dummy
-[issues]: https://github.com/Inouit/Dummy/issues
-[styleguide]: https://github.com/Inouit/styleguide
-[commit]: https://github.com/Inouit/styleguide/blob/master/git/commit.md
+[github]: https://github.com/dummy-team/Dummy
+[issues]: https://github.com/dummy-team/Dummy/issues
+[styleguide]: https://github.com/dummy-team/styleguide
+[commit]: https://github.com/dummy-team/styleguide/blob/master/git/commit.md
