@@ -18,6 +18,7 @@
     "grunt-postcss": "*",
     "grunt-sass": "*",
     "grunt-scss-lint": "*",
-    "load-grunt-tasks": "*"
+    "load-grunt-tasks": "*",
+    "node-sass": "<3.4"
   }
 }
