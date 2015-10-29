@@ -22,7 +22,7 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 - Compiles your CoffeeScript files
 - Serves your files
 - Lint your files:
-  - [Scss](https://github.com/dummy-team/dummy/blob/master/grunt/.scss-lint.yml)
+  - [Scss](https://github.com/dummy-team/dummy/blob/master/grunt/scss-lint.yml)
   - [CoffeeScript](https://github.com/dummy-team/dummy/blob/master/grunt/coffeelint.json)
 - Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)
 - [SassDoc](http://sassdoc.com/annotations/) friendly

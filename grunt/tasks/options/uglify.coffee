@@ -18,7 +18,7 @@ module.exports =
     files: [{
       expand: true,
       cwd: options.js.dest,
-      src: '*.js',
-      dest: options.js.dest,
+      src: ['*.js','!*.min.js'],
+      dest: options.js.dest
       ext: '.min.js'
     }]

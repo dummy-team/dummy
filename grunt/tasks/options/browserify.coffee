@@ -4,7 +4,7 @@ options = loadLocals('parameters')
 module.exports =
   dev:
     options:
-      transform: ["coffeeify"]
+      transform: ['coffeeify', 'stringify']
       browserifyOptions: {
         debug: true
       }

@@ -2,6 +2,7 @@
   "devDependencies": {
     "autoprefixer": "*",
     "coffeeify": "*",
+    "stringify": "*",
     "coffeelint": "*",
     "glob": "*",
     "grunt": "*",

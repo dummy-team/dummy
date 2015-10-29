@@ -6,20 +6,31 @@
 ////
 
 /// Max width of the slice ( the max background size exceeding the content size )
-$slice-width  : 1400px;
+$slice-width: 1400px;
 
 /// Max size of the page
-$max        : 1200;
-$max-width   : $max * 1px;
+$max: 1200;
+$max-width: $max * 1px;
 $page-padding: 30;
 
 /// Gutter width for the grid system
-$gutter     : 30px;
+$gutter: 30px;
 
 /// Viewports sizes
 /// They're used in media queries
-$vw-thin:   320px;
-$vw-small:  480px;
+$vw-thin: 320px;
+$vw-small: 480px;
 $vw-medium: 780px;
-$vw-large:  1024px;
-$vw-huge:   1200px;
+$vw-large: 1024px;
+$vw-huge: 1200px;
+
+/// Media query conditions
+/// Usage
+/// @media screen and #{$media-small} {  }
+$media-small: '(min-width: #{$vw-small})';
+$media-medium: '(min-width: #{$vw-medium})';
+$media-large: '(min-width: #{$vw-large})';
+$media-huge: '(min-width: #{$vw-huge})';
+
+$media-thin: '(max-width: #{$vw-thin})';
+$media-squeezed: '(max-height: #{$vw-small})';

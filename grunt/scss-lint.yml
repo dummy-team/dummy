@@ -96,7 +96,7 @@ linters:
     include_nested: false
     max_properties: 10
 
-  PropertySortOrder: 
+  PropertySortOrder:
     enabled: true
     ignore_unspecified: false
     separate_groups: true
@@ -118,7 +118,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: '^[a-z0-9_\-]+$' # or 'BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
     enabled: true

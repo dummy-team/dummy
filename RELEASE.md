@@ -2,6 +2,13 @@
 
 ##v5
 
+- **5.4**
+  - Add media query conditions
+  - Improve font rendering
+  - Html files can now be required in javascript modules
+  - Allow underscore use in selectors
+  - Various fixes
+
 - **5.3.1**
   - Dummy-team is its new home
 
