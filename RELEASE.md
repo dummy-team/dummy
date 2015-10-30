@@ -2,6 +2,9 @@
 
 ##v5
 
+- **5.4.1**
+  - fix strong rendering
+  
 - **5.4**
   - Add media query conditions
   - Improve font rendering
