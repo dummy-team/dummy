@@ -4,6 +4,7 @@
 
 - **6.0.0**
   - `border-box` is now the `box-sizing` default
+  - Remove javascript components
 
 ##v5
 
