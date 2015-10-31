@@ -6,7 +6,5 @@
 ////
 
 %page-sized {
-  margin: auto; padding: 0 $page-padding * 1px; width: $max-width; max-width: 100%;
-
-  @media screen and (max-width: $max-width + ($page-padding * 2px)) { margin-right: ($page-padding * 1px); margin-left: ($page-padding * 1px); padding: 0; width: auto; }
+  margin: auto; padding: 0 $page-padding; width: $max-width; max-width: 100%;
 }

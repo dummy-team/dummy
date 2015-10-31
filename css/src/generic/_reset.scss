@@ -6,6 +6,8 @@
 ///
 ////
 
+* { box-sizing: border-box; }
+
 /// Reset font-size for easier use : 1.6em = 16px
 html { font-size: 62.5%; line-height: 1.3em; }
 body {
