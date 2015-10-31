@@ -4,6 +4,7 @@
 
 - **6.0.0**
   - `border-box` is now the `box-sizing` default
+  - Include normalize.css
   - Remove javascript components
 
 ##v5

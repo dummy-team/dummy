@@ -9,6 +9,10 @@
 @import 'settings/dimensions';
 @import 'settings/fonts';
 
+// Generic
+@import 'generic/normalize';
+@import 'generic/reset';
+
 // Tools (helper, mixins and function)
 @import 'tools/headings';
 @import 'tools/horizontal-list';
@@ -16,8 +20,6 @@
 @import 'tools/page-sized';
 @import 'tools/vertical-align-middle';
 
-// Generic
-@import 'generic/reset';
 
 // Base
 @import 'elements/blocks';
