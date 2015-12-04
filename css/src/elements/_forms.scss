@@ -5,7 +5,7 @@
 ///
 ////
 
-$type-list: tel email url search date time datetime month week number;
+$type-list: text tel email url search date time datetime month week number;
 @each $type in $type-list {
   [type="#{$type}"] { @extend %input; }
 }
