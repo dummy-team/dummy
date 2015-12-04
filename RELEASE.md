@@ -6,6 +6,7 @@
   - `border-box` is now the `box-sizing` default
   - Include normalize.css
   - Remove javascript components
+  - Add `link-block` object to normalize styles inside `<a>` used as a block wrapper
 
 ##v5
 
