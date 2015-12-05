@@ -23,7 +23,7 @@ else
     ]
     coffee: [
       'browserify:dev'
-      'coffeelint'
+      'jshint'
     ]
 
 

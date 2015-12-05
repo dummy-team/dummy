@@ -3,22 +3,21 @@
     "autoprefixer": "*",
     "babel-preset-es2015": "*",
     "babelify": "*",
-    "coffeelint": "*",
+    "stringify": "*",
     "glob": "*",
     "grunt": "*",
     "grunt-browser-sync": "*",
     "grunt-browserify": "",
-    "grunt-coffeelint": "*",
     "grunt-concurrent": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-notify": "*",
     "grunt-postcss": "*",
     "grunt-sass": "*",
     "grunt-scss-lint": "*",
-    "load-grunt-tasks": "*",
-    "stringify": "*"
+    "load-grunt-tasks": "*"
   }
 }

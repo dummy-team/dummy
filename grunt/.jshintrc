@@ -1,0 +1,20 @@
+{
+  "strict": true,
+  "curly": true,
+  "eqeqeq": true,
+  "latedef": true,
+  "nonbsp": true,
+  "nonew": true,
+  "undef": true,
+  "unused": true,
+  "singleGroups": true,
+  "asi": true,
+  "browser": true,
+  "browserify": true,
+  "devel": true,
+  "globals": {
+    "jquery": true,
+    "$": true,
+    "_": true
+  }
+}

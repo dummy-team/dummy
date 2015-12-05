@@ -1,6 +1,6 @@
 # ![Dummy](https://raw.githubusercontent.com/dummy-team/dummy/gh-pages/img/dummy.png)
 
-A light Sass &amp; Coffee front-end base
+A light Sass &amp; Javascript front-end base
 
 The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets. It wraps [ITCSS](http://itcss.io/) principles with a powerful automation system.
 
@@ -8,7 +8,7 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 
 # Features
 
-## A Sass & coffee base
+## A Sass & Javascript base
 - It follows [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) concepts
 - A simple font sizing : 1.6em = 16px
 - A collection of variables to manage default sizing, fonts and colors
@@ -19,11 +19,11 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 
 - Compiles your `*.scss` files
 - Prefixes your css
-- Compiles your CoffeeScript files
+- Bundles your Javascript files with [browserify](http://browserify.org/) and [Babeljs](http://babeljs.io)
 - Serves your files
 - Lint your files:
   - [Scss](https://github.com/dummy-team/dummy/blob/master/grunt/scss-lint.yml)
-  - [CoffeeScript](https://github.com/dummy-team/dummy/blob/master/grunt/coffeelint.json)
+  <!-- - [Javascript](https://github.com/dummy-team/dummy/blob/master/grunt/coffeelint.json) -->
 - Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)
 - [SassDoc](http://sassdoc.com/annotations/) friendly
 - ([Codo](https://github.com/coffeedoc/codo)) friendly
@@ -50,7 +50,7 @@ curl -L https://github.com/dummy-team/dummy/archive/master.tar.gz | tar zx && cd
 1. Edit [`browserSync.coffee`](https://github.com/dummy-team/dummy/blob/master/grunt/tasks/options/browserSync.coffee) task to your need (server or proxy and files path).
 - To start working and serving files run `grunt` inside `grunt` folder
 - Browser-sync will prompt the server url (`localhost:3000`)
-- You can now edit `*.scss` & `*.coffee` files, `*.css` & `*.js` will be overwritten
+- You can now edit `*.scss` & `*.js` files, `*.css` & `*.js` will be overwritten
 
 ## Customize tasks
 The grunt tasks and file structure should work in most use cases. You may still need to do some changes, from file location to new grunt tasks.  

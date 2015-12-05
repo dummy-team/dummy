@@ -3,7 +3,7 @@ options = loadLocals('parameters')
 
 module.exports =
   options:
-    configFile: 'coffeelint.json'
+    jshintrc: '.jshintrc'
   app:
     files:
-      src: [ options.js.source+'**/*.coffee' ]
+      src: [ options.js.source+'**/*.js' ]
