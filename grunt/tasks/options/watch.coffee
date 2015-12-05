@@ -36,5 +36,5 @@ module.exports =
     tasks: tasks.sass
 
   coffee:
-    files: options.js.dest+'**/*.coffee'
+    files: options.js.dest+'**/*.js'
     tasks: tasks.coffee
