@@ -3,7 +3,6 @@
     "autoprefixer": "*",
     "babel-preset-es2015": "*",
     "babelify": "*",
-    "stringify": "*",
     "glob": "*",
     "grunt": "*",
     "grunt-browser-sync": "*",
@@ -14,10 +13,12 @@
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
+    "grunt-jscs": "^2.4.0",
     "grunt-notify": "*",
     "grunt-postcss": "*",
     "grunt-sass": "*",
     "grunt-scss-lint": "*",
-    "load-grunt-tasks": "*"
+    "load-grunt-tasks": "*",
+    "stringify": "*"
   }
 }

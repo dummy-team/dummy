@@ -9,8 +9,9 @@ if options.lint.lock
       'postcss:dev'
       'clean:css'
     ]
-    coffee: [
-      'coffeelint'
+    es2015: [
+      'jshint'
+      'jscs'
       'browserify:dev'
     ]
 else
@@ -21,20 +22,19 @@ else
       'clean:css'
       'scsslint'
     ]
-    coffee: [
+    es2015: [
       'browserify:dev'
       'jshint'
+      'jscs'
     ]
 
 
 module.exports =
-  options:
-    spawn: false
 
   sass:
-    files:options.css.dest+'**/*.scss'
+    files:options.css.source+'**/*.scss'
     tasks: tasks.sass
 
-  coffee:
-    files: options.js.dest+'**/*.js'
-    tasks: tasks.coffee
+  es2015:
+    files: options.js.source+'**/*.js'
+    tasks: tasks.es2015

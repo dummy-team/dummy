@@ -3,7 +3,8 @@
 ##v6
 
 - **6.0.0**
-  - Move back to javascript with babelify 
+  - Move back to javascript with babelify
+  - Use jsHint and JSCS to check the source code
   - `border-box` is now the `box-sizing` default
   - Include normalize.css
   - Remove javascript components

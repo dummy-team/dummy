@@ -12,8 +12,6 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 - It follows [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) concepts
 - A simple font sizing : 1.6em = 16px
 - A collection of variables to manage default sizing, fonts and colors
-- A slice & content max width management
-- Some jQuery plugins helpers ready to import
 
 ## Grunt to make your life easier
 
@@ -23,10 +21,9 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 - Serves your files
 - Lint your files:
   - [Scss](https://github.com/dummy-team/dummy/blob/master/grunt/scss-lint.yml)
-  <!-- - [Javascript](https://github.com/dummy-team/dummy/blob/master/grunt/coffeelint.json) -->
+  - [jsHint](http://jshint.com/docs/)
+  - [JSCS](http://jscs.info/)
 - Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)
-- [SassDoc](http://sassdoc.com/annotations/) friendly
-- ([Codo](https://github.com/coffeedoc/codo)) friendly
 
 # Usage
   First, ensure that you have the latest [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed. [scss-lint](https://github.com/brigade/scss-lint#requirements) requires a gem from ruby.

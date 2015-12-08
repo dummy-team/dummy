@@ -1,12 +1,13 @@
-"use strict"
+'use strict'
+
 // Website wide scripts
-// @author Dummy Team
+// @Author Dummy Team
 
-$( function()  {
+$( () => {
 
-  $(window).ready( function() {
+  $(window).ready( () => {
 
-    console.log("Hi there !")
+    console.log('Hi there !')
 
   })
 })
