@@ -2,7 +2,7 @@
 
 A light Sass &amp; Javascript front-end base
 
-The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets. It wraps [ITCSS](http://itcss.io/) principles with a powerful automation system.
+The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets ([_Components served separately_](https://github.com/dummy-team/dummy-toolkit)). It wraps [ITCSS](http://itcss.io/) principles with a powerful automation system.
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dummy-team/dummy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
