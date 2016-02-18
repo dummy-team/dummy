@@ -5,20 +5,27 @@
 ///
 ////
 
-/// Base colors
+/// Grey scale
 $white: #fff;
-$grey: #777;
-$black: #222;
 
+$grey: #cecece;
+
+$black: #303044;
+
+// Transparent grey scale
+$black-50: rgba($black, .5);
+
+/// Utility colors
 $red: #d9534f;
 $green: #5cb85c;
 
+/// Branding colors
 $blue: #68bbdb;
 
-$brand-color: $blue;
+$color-main: $blue;
 
 /// Functionnal colors
-$text-color: $black;
-$link-color: $brand-color;
-$error-color: $red;
-$valid-color: $green;
+$color-text: $black;
+$color-link: $color-main;
+$color-error: $red;
+$color-valid: $green;

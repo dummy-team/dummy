@@ -7,7 +7,7 @@
 
 // Print version
 @media print {
-  .no-print,
+  .hidden-print,
   [id="header"],
   [id="footer"] { display: none !important; }
 }

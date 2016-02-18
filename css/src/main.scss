@@ -15,10 +15,9 @@
 
 // Tools (helper, mixins and function)
 @import 'tools/headings';
-@import 'tools/horizontal-list';
+@import 'tools/list-horizontal';
 @import 'tools/input';
 @import 'tools/page-sized';
-@import 'tools/vertical-align-middle';
 @import 'tools/link-block';
 
 
@@ -33,7 +32,7 @@
 @import 'objects/alignements';
 @import 'objects/forms';
 @import 'objects/highlights';
-@import 'objects/horizontal-list';
+@import 'objects/list-horizontal';
 @import 'objects/page-sized';
 @import 'objects/link-block';
 

@@ -7,11 +7,11 @@
 
 button,
 a {
-  text-decoration: none; color: $link-color;
+  text-decoration: none; color: $color-link;
 
   &:hover { text-decoration: underline; }
 }
 button {
   background-color: transparent;
-  color: $link-color;
+  color: $color-link;
 }
