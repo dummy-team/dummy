@@ -1,6 +1,7 @@
 # ![Dummy](https://raw.githubusercontent.com/dummy-team/dummy/gh-pages/img/dummy.png)
 
-A light Sass &amp; Javascript front-end base
+## Solid foundations for modern development
+_Sass, javascript & automation_
 
 The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets ([_Components served separately_](https://github.com/dummy-team/dummy-toolkit)). It wraps [ITCSS](http://itcss.io/) principles with a powerful automation system.
 
@@ -14,7 +15,7 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 - A collection of variables to manage default sizing, fonts and colors
 
 ## Grunt to make your life easier
-
+Check out our [memo](https://github.com/dummy-team/dummy/tree/gh-pages/img/memo/)!  
 - Compiles your `*.scss` files
 - Prefixes your css
 - Bundles your Javascript files with [browserify](http://browserify.org/) and [Babeljs](http://babeljs.io)
@@ -33,6 +34,14 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 
 ## Plug and play
 ### Plug
+#### Yo Dummies!
+Scaffold a dummy with the yeoman generator:
+1. Install [Yeoman](http://yeoman.io/) && [generator-dummies](https://github.com/dummy-team/generator-dummies)
+- Go to your project folder, then run: `yo dummies`
+- You can now import components from [dummy-toolkit](https://github.com/dummy-team/dummy-toolkit) with `yo dummies:toolkit`
+
+#### Manual installation
+Get it from github:
 1. Download [latest release](https://github.com/dummy-team/dummy/releases)
 - Go to the `grunt` subfolder
 - Run `npm install` to install all dependencies
