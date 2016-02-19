@@ -36,12 +36,14 @@ Check out our [memo](https://github.com/dummy-team/dummy/tree/gh-pages/img/memo/
 ### Plug
 #### Yo Dummies!
 Scaffold a dummy with the yeoman generator:
+
 1. Install [Yeoman](http://yeoman.io/) && [generator-dummies](https://github.com/dummy-team/generator-dummies)
 - Go to your project folder, then run: `yo dummies`
 - You can now import components from [dummy-toolkit](https://github.com/dummy-team/dummy-toolkit) with `yo dummies:toolkit`
 
 #### Manual installation
-Get it from github:
+Get it from github:  
+
 1. Download [latest release](https://github.com/dummy-team/dummy/releases)
 - Go to the `grunt` subfolder
 - Run `npm install` to install all dependencies
@@ -53,8 +55,9 @@ curl -L https://github.com/dummy-team/dummy/archive/master.tar.gz | tar zx && cd
 ```
 
 ### Play
-1. Edit [`browserSync.coffee`](https://github.com/dummy-team/dummy/blob/master/grunt/tasks/options/browserSync.coffee) task to your need (server or proxy and files path).
-- To start working and serving files run `grunt` inside `grunt` folder
+
+1. Edit [`parameters.coffee`](https://github.com/dummy-team/dummy/blob/master/grunt/parameters.coffee) task to your need (server or proxy and files path).
+- To start working and serving files run `grunt` inside the `grunt` folder
 - Browser-sync will prompt the server url (`localhost:3000`)
 - You can now edit `*.scss` & `*.js` files, `*.css` & `*.js` will be overwritten
 
