@@ -19,5 +19,3 @@ input, select, textarea, label { vertical-align: middle; }
 
 select,
 textarea { @extend %input; }
-
-[type="submit"] { @extend %button; }
