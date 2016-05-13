@@ -2,6 +2,9 @@
 
 ##v6
 
+- **6.0.3**
+  - fix a conflict with generator-dummies templating system
+
 - **6.0.0**
   - Move back to javascript with babelify
   - Use jsHint and JSCS to check the source code

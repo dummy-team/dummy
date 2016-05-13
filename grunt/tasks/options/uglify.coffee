@@ -4,8 +4,6 @@ options = loadLocals('parameters')
 
 module.exports =
   options:
-    banner: '/*! uglified <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %> */'
-    # https://github.com/mishoo/UglifyJS2#compressor-options
     compress:
       dead_code: true
       drop_debugger: true
