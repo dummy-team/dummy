@@ -2,6 +2,9 @@
 
 ##v6
 
+- **6.0.4**
+  - Fix grunt local configuration loading
+
 - **6.0.3**
   - fix a conflict with generator-dummies templating system
 

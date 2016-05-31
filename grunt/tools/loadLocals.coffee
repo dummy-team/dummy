@@ -2,7 +2,7 @@
 module.exports = (path) ->
   path = "../"+path
   options = require(path)
-  extend = require('util')._extend
+  extend = require('extend')
 
   options_local = true
   try
@@ -11,6 +11,6 @@ module.exports = (path) ->
     options_local = false
 
   if options_local
-    options = extend(options, require(path+'_local'))
+    options = extend(true, {}, options, require(path+'_local'))
 
   return options
