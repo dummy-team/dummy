@@ -7,15 +7,15 @@
 
 $type-list: text tel email url search date time datetime month week number;
 @each $type in $type-list {
-  [type="#{$type}"] { @extend %input; }
+  [type="#{$type}"] {
+    border: 1px solid $black; border-radius: 3px; background-color: $white;
+
+    &:focus { outline: none; }
+  }
 }
-
-/// Reset
-input, select, textarea { font-family: $font; }
-fieldset { margin: 0; border: none; padding: 0; }
-select { width: auto; cursor: pointer; }
-
-input, select, textarea, label { vertical-align: middle; }
-
 select,
-textarea { @extend %input; }
+textarea {
+  border: 1px solid $black; border-radius: 3px; background-color: $white;
+
+  &:focus { outline: none; }
+}

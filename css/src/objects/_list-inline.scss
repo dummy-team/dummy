@@ -1,11 +1,10 @@
 ////
-/// Transform a list into a vertical spaced list
+/// Navigation
 ///
-/// @group Tools
+/// @group Objects
 ///
 ////
-
-%list-horizontal {
+.list-inline {
   display: block; margin: 0; padding: 0;
 
   > * { display: inline-block; margin: 5px; padding: 0; }

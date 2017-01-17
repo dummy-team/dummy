@@ -14,27 +14,23 @@
 @import 'generic/reset';
 
 // Tools (helper, mixins and function)
-@import 'tools/headings';
-@import 'tools/list-horizontal';
-@import 'tools/input';
-@import 'tools/page-sized';
-@import 'tools/link-block';
+// @import 'tools/';
 
 
 // Base
-@import 'elements/blocks';
-@import 'elements/forms';
-@import 'elements/headings';
 @import 'elements/body';
+@import 'elements/blocks';
+@import 'elements/headings';
+@import 'elements/forms';
 @import 'elements/links';
 
 // Objects
-@import 'objects/alignements';
-@import 'objects/forms';
-@import 'objects/highlights';
-@import 'objects/list-horizontal';
-@import 'objects/page-sized';
+@import 'objects/container';
+@import 'objects/list-inline';
 @import 'objects/link-block';
+@import 'objects/forms';
+@import 'objects/alignements';
+@import 'objects/highlights';
 
 // Components
 

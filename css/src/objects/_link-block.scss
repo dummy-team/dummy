@@ -1,1 +1,5 @@
-.link-block { @extend %link-block; }
+.link-block {
+  display: block; color: inherit;
+
+  &:hover { text-decoration: none; }
+}
