@@ -1,5 +1,12 @@
 # Release notes
 
+##v7
+
+- **7.0.0**
+  - Clean obsolette grunt tasks
+  - Remove extends
+  - Small css improvements
+
 ##v6
 
 - **6.0.4**
