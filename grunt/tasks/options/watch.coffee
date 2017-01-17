@@ -11,7 +11,6 @@ if options.lint.lock
     ]
     es2015: [
       'jshint'
-      'jscs'
       'browserify:dev'
     ]
 else
@@ -25,7 +24,6 @@ else
     es2015: [
       'browserify:dev'
       'jshint'
-      'jscs'
     ]
 
 
