@@ -3,7 +3,7 @@
 ##v8
 
 - **8.0.0**
-  - Move to gulp
+  - Move to Gulp
 
 ##v7
 
