@@ -1,5 +1,10 @@
 # Release notes
 
+##v8
+
+- **8.0.0**
+  - Move to gulp
+
 ##v7
 
 - **7.0.0**
