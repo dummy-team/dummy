@@ -25,7 +25,9 @@ gulp.task('pug', function(){
         message: "<%= error.message %>",
         title: "Template compilation"
       })}))
-    .pipe(pug())
+    .pipe(pug({
+      basedir: '.'
+    }))
     .pipe(gulp.dest('.'))
     .pipe(browserSync.stream())
 })

@@ -4,9 +4,8 @@ npm-debug.log
 Gemfile.lock
 
 css/*.css*
-
 js/*.js*
-
+/*.html
 
 !.gitkeep
 .db_thumb
