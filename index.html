@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Dummy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
 
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
@@ -22,12 +22,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-
   </head>
   <body>
     <section class="page-header">
       <h1 class="project-name">Dummy</h1>
-      <h2 class="project-tagline">Solid foundations for modern development - Sass, javascript & automation</h2>
+      <h2 class="project-tagline">Solid foundations for modern development - Pug, Sass, javascript & automation</h2>
     </section>
 
     <section class="main-content">
@@ -37,114 +36,62 @@
         <a href="https://github.com/dummy-team/dummy/tarball/master" class="btn">Download .tar.gz</a>
       </div>
 
-<p class="introduction">The Dummy provides a consistent file structure with a normalized code and a collection of helpers and resets. OCSS & ITCSS ready</p>
+      <p class="introduction">The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets. It wraps ITCSS principles with a powerful automation system.</p>
 
-<p>ITCSS provides an interesting approach to the CSS ordering and structure in order to make the cascade works to our advantage. This system is designed to build a sane, scalable and managed code base. It helps reduce redundancies, ease team work while keeping the technical dept on sight.</p>
+      <p>ITCSS provides an interesting approach to the CSS ordering and structure in order to make the cascade works to our advantage. This system is designed to build a sane, scalable and managed code base. It helps reduce redundancies, ease team work while keeping the technical dept on sight.</p>
 
-<p>The Dummy wraps it with a robust and automated structure. It brings simple and sound concepts to build sane and scalable projects de Haute Couture.</p>
+      <p>The Dummy wraps it with a robust and automated structure. It brings simple and sound concepts to build scalable projects de Haute Couture.</p>
 
-<p>This union helps developers to build sane foundations, enforcing a consistent team work. Easy to learn and customise, Dummy fits everywhere and allow you to keep focused on what matters: Building high end user interfaces.
-</p>
+      <p>This union helps developers to build sane foundations, enforcing a consistent team work. Easy to learn and customise, Dummy fits everywhere and allow you to keep focused on what matters: Building high end user interfaces.
+      </p>
+<!--
+      <p>To help you keep ITCSS principles within the Dummy architecture a trifold flyer can be printed from theses sources : <a href="https://github.com/dummy-team/dummy/tree/gh-pages/img/memo/">ITCSS + Dummy memo</a>.</p> -->
 
-<p>To help you keep ITCSS principles within the Dummy architecture a trifold flyer can be printed from theses sources : <a href="https://github.com/dummy-team/dummy/tree/gh-pages/img/memo/">ITCSS + Dummy memo</a>.</p>
+      <h1><a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
 
-<h1>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+      <h2><a id="pug-as-templating-system" class="anchor" href="#pug-as-templating-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pug as templating system</h2>
 
-<h2>
-<a id="a-sass--coffee-base" class="anchor" href="#a-sass--coffee-base" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Sass &amp; coffee base</h2>
+      <ul>
+        <li>Use layouts and partials to power your static websites</li>
+      </ul>
 
-<ul>
-<li>It follows <a href="https://www.youtube.com/watch?v=1OKZOV-iLj4">ITCSS</a> concepts</li>
-<li>A simple font sizing : 1.6em = 16px</li>
-<li>A collection of variables to manage default sizing, fonts and colors</li>
-</ul>
+      <h2><a id="a-sass--coffee-base" class="anchor" href="#a-sass--coffee-base" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Sass &amp; Javascript structure</h2>
 
-<h2><a id="grunt-to-make-your-life-easier" class="anchor" href="#grunt-to-make-your-life-easier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt to make your life easier</h2>
+      <ul>
+        <li>It follows <a href="https://www.youtube.com/watch?v=1OKZOV-iLj4">ITCSS</a> concepts</li>
+        <li>A simple font sizing : 1.6em = 16px</li>
+        <li>A collection of variables to manage default sizing, fonts and colors</li>
+      </ul>
 
-<ul>
-<li>Compiles your <code>*.scss</code> files</li>
-<li>Prefixes your css</li>
-<li>Bundles your Javascript files with <a href="http://browserify.org/">browserify</a> and <a href="http://babeljs.io/">Babeljs</a></li>
-<li>Serves your files</li>
-<li>Lint your files:
+      <h2><a id="gulp-to-make-your-life-easier" class="anchor" href="#gulp-to-make-your-life-easier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gulp to make your life easier</h2>
 
-<ul>
-<li><a href="https://github.com/dummy-team/dummy/blob/master/grunt/scss-lint.yml">Scss</a></li>
-<li><a href="https://github.com/dummy-team/dummy/blob/master/grunt/.jshintrc">jsHint</a></li>
-<li><a href="https://github.com/dummy-team/dummy/blob/master/grunt/.jscsrc">JSCS</a></li>
-</ul>
-</li>
-<li>Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)</li>
-</ul>
-<p class="align-center">
-  <img src="https://raw.githubusercontent.com/dummy-team/dummy/gh-pages/img/dummy-grunt.png" alt="">
-</p>
-<h1>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+      <ul>
+        <li>Compiles your <code>*.pug</code> pages</li>
+        <li>Compiles your <code>*.scss</code> files</li>
+        <li>Prefixes your css</li>
+        <li>Bundles your <code>*.js</code> files with <a href="http://browserify.org/">browserify</a> and <a href="http://babeljs.io/">Babeljs</a></li>
+        <li>Minify css and uglify js</li>
+        <li>Serves your files</li>
+        <li>Synchronizes and reloads your modifications across browsers with <a href="https://browsersync.io/">Browsersync</a></li>
+      </ul>
+      <!-- <p class="align-center">
+        <img src="https://raw.githubusercontent.com/dummy-team/dummy/gh-pages/img/dummy-grunt.png" alt="">
+      </p> -->
+      <h1><a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
 
-<p>First, ensure that you have the latest <a href="http://nodejs.org/">Node.js</a> and <a href="http://npmjs.org/">npm</a> installed. <a href="https://github.com/brigade/scss-lint#requirements">scss-lint</a> requires a gem from ruby.</p>
+      <p>To install and work with the Dummy, follow our <a href="https://github.com/dummy-team/dummy/tree/master#usage">guide</a>.</p>
 
-<p>Test that Grunt's CLI is installed by running <code>grunt --version</code>.  If the command isn't found, run <code>npm install -g grunt-cli</code>.  For more information about installing Grunt, see the <a href="http://gruntjs.com/getting-started">getting started guide</a>.</p>
 
-<h2>
-<a id="plug-and-play" class="anchor" href="#plug-and-play" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plug and play</h2>
+      <h1><a id="keep-in-touch" class="anchor" href="#keep-in-touch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep in touch</h1>
 
-<h3><a id="yo-dummies" class="anchor" href="#yo-dummies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yo Dummies!</h3>
-<p>Scaffold a dummy with the yeoman generator: 1. Install Yeoman && generator-dummies</p>
-<ol>
-  <li>Install <a href="http://yeoman.io/">Yeoman</a> && <a href="https://github.com/dummy-team/generator-dummies">generator-dummies</a></li>
-  <li>Go to your project folder, then run: <code>yo dummies</code></li>
-  <li>You can now import components from <a href="https://github.com/dummy-team/dummy-toolkit">dummy-toolkit</a> with <code>yo dummies:toolkit</code></li>
-</ol>
+      <p>If find any caveats using it or have suggestions to improve the tool we gladly accept <a href="https://github.com/dummy-team/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request">Pull Requests</a> and <a href="https://github.com/dummy-team/dummy/issues">issues</a>.</p>
 
-<h3><a id="manual" class="anchor" href="#manual" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual installation</h3>
-<ol>
-<li>Download <a href="https://github.com/dummy-team/dummy/releases">latest release</a>
-</li>
-<li>Go to the <code>grunt</code> subfolder</li>
-<li>Run <code>npm install</code> to install all dependencies</li>
-<li>To build <code>css</code> and<code>js</code> run <code>grunt build</code>
-</li>
-</ol>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/dummy-team/dummy">Dummy</a>.</span>
+      </footer>
+    </section>
 
-<h3>
-<a id="play" class="anchor" href="#play" aria-hidden="true"><span class="octicon octicon-link"></span></a>Play</h3>
-
-<ol>
-<li>Edit <a href="https://github.com/dummy-team/dummy/blob/master/grunt/parameters.coffee"><code>parameters.coffee</code></a> task to your need.</li>
-<li>To start working and serving files run <code>grunt</code> inside <code>grunt</code> folder</li>
-<li>Browser-sync will prompt the server url (<code>localhost:3000</code>)</li>
-<li>You can now edit <code>*.scss</code> &amp; <code>*.js</code> files, <code>*.css</code>and <code>*.js</code> will be overwritten</li>
-</ol>
-
-<h2>
-<a id="customize-tasks" class="anchor" href="#customize-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Customize tasks</h2>
-
-<p>The grunt tasks and file structure should work in most use cases. You may still need to do some changes, from file location to new grunt tasks.  </p>
-
-<h3>
-<a id="source-folders" class="anchor" href="#source-folders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source folders</h3>
-
-<p>You can change source and destination folders in the config object of the <a href="https://github.com/dummy-team/dummy/blob/master/grunt/gruntfile.coffee#L30"><code>gruntfile.coffee</code></a></p>
-
-<h3>
-<a id="add-grunt-tasks" class="anchor" href="#add-grunt-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add grunt tasks</h3>
-
-<p>We use a module based structure for our grunt tasks, so it should be easy to edit any existing task. All task configurations stored in the <a href="https://github.com/dummy-team/dummy/tree/master/grunt/tasks/options">options folder</a>. are loaded in the grunt file. Grunt task alias are in the <a href="https://github.com/dummy-team/dummy/tree/master/grunt/tasks">tasks folder</a>.</p>
-
-<p>To get farther into the mind behind this, checkout <a href="https://medium.com/dev-notes/diviser-pour-mieux-grunter-a745f41e1a32">Diviser pour mieux grunter (fr)</a>.</p>
-
-<h1>
-<a id="keep-in-touch" class="anchor" href="#keep-in-touch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep in touch</h1>
-
-<p>If find any caveats using it or have suggestions to improve the tool we gladly accept <a href="https://github.com/dummy-team/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request">Pull Requests</a> and <a href="https://github.com/dummy-team/dummy/issues">issues</a>.</p>
-
-    <footer class="site-footer">
-      <span class="site-footer-owner"><a href="https://github.com/dummy-team/dummy">Dummy</a>.</span>
-
-  </section>
-
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
   </body>
 </html>

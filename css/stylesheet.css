@@ -11,14 +11,15 @@ body {
 
 a {
   color: #68BBDB;
-  text-decoration: none; }
+  text-decoration: underline; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: none; }
 
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
   color: rgba(105, 187, 220, 1);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(105, 187, 220, 1);
   border-style: solid;
@@ -57,7 +58,7 @@ a {
   padding: 300px 0 5px 0 !important;
   color: #fff;
   text-align: center;
-  background: #68BBDB url('../img/dummy_banner.png') center center no-repeat; }
+  background: #68BBDB url('../../../img/dummy_banner.png') center center no-repeat; }
 
 .align-center { text-align: center; }
 
