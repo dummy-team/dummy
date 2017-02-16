@@ -9,18 +9,22 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 
 # Features
 
-## A Sass & Javascript base
+## Pug as templating system
+- Use layouts and partials to power your static websites
+
+## A Sass & Javascript structure
 - It follows [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) concepts
 - A simple font sizing : 1.6em = 16px
 - A collection of variables to manage default sizing, fonts and colors
 
 ## Gulp to make your life easier
-Check out our [memo](https://github.com/dummy-team/dummy/tree/gh-pages/img/memo/)!  
+- Compiles your `*.pug` pages
 - Compiles your `*.scss` files
 - Prefixes your css
-- Bundles your Javascript files with [browserify](http://browserify.org/) and [Babeljs](http://babeljs.io)
+- Bundles your `*.js` files with [browserify](http://browserify.org/) and [Babeljs](http://babeljs.io)
+- Minify css and uglify js
 - Serves your files
-- Synchronizes and reloads your modifications across browsers (many images added at once may cause performance issues)
+- Synchronizes and reloads your modifications across browsers
 
 # Usage
   First, ensure that you have the latest [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
@@ -31,7 +35,7 @@ Check out our [memo](https://github.com/dummy-team/dummy/tree/gh-pages/img/memo/
 #### Yo Dummies!
 Scaffold a dummy with the yeoman generator:
 
-1. Install [Yeoman](http://yeoman.io/) && [generator-dummies](https://github.com/dummy-team/generator-dummies)
+1. Install [Yeoman](http://yeoman.io/), [yarn](https://yarnpkg.com/fr/) && [generator-dummies](https://github.com/dummy-team/generator-dummies)
 - Go to your project folder, then run: `yo dummies`
 - You can now import components from [dummy-toolkit](https://github.com/dummy-team/dummy-toolkit) with `yo dummies:toolkit`
 
@@ -40,7 +44,7 @@ Get it from github:
 
 1. Download [latest release](https://github.com/dummy-team/dummy/releases)
 - Run `npm install` to install all dependencies
-- To build `css` and`js` run `gulp build`
+- To build `pug`, `css` and`js` run `gulp build`
 
 ```shell
 curl -L https://github.com/dummy-team/dummy/archive/master.tar.gz | tar zx && cd ./dummy-master/ && npm install && gulp
@@ -57,4 +61,4 @@ curl -L https://github.com/dummy-team/dummy/archive/master.tar.gz | tar zx && cd
 If you find any caveats using it or have suggestions to improve the tool we gladly accept [Pull Requests](https://github.com/dummy-team/dummy/tree/master/CONTRIBUTING.md#submitting-a-pull-request) and [issues](https://github.com/dummy-team/dummy/issues).
 
 # Thanks
-Thanks to Stéphanie who crafted such a nice logo !
+Thanks to Stéphanie Dragon who crafted such a nice logo !

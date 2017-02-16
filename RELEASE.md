@@ -4,6 +4,7 @@
 
 - **8.0.0**
   - Move to Gulp
+  - Add a templating system
 
 ##v7
 
