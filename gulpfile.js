@@ -43,7 +43,7 @@ gulp.task('scss', function(){
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream({match: '**/*.css'}))
 })
 
 gulp.task('js', () => {
