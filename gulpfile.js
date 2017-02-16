@@ -8,6 +8,8 @@ const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const pug = require('gulp-pug')
 const sass = require('gulp-sass')
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 const minifyCSS = require('gulp-csso')
 const sourcemaps = require('gulp-sourcemaps')
 const babel = require('gulp-babel')
@@ -40,6 +42,7 @@ gulp.task('scss', function(){
       })}))
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(postcss([autoprefixer({browsers: ['last 3 version']})]))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'))
