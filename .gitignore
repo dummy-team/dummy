@@ -1,15 +1,10 @@
 .sass-cache
 node_modules
 npm-debug.log
-Gemfile.lock
 
-css/*.css*
-js/*.js*
-/*.html
+dist
 
 !.gitkeep
 .db_thumb
 .DS_Store
 ._*
-
-*_local.*

@@ -1,7 +1,7 @@
 # ![Dummy](https://raw.githubusercontent.com/dummy-team/dummy/gh-pages/img/dummy.png)
 
 ## Solid foundations for modern development
-_Sass, javascript & automation_
+_Sass, Javascript & automation_
 
 The purpose of the dummy is to provide a consistent file structure with a normalized code and a collection of helpers and resets ([_Components served separately_](https://github.com/dummy-team/dummy-toolkit)). It wraps [ITCSS](http://itcss.io/) principles with a powerful automation system.
 
@@ -19,7 +19,7 @@ The purpose of the dummy is to provide a consistent file structure with a normal
 
 ## Gulp to make your life easier
 - Compiles your `*.pug` pages
-- Compiles your `*.scss` files
+- Compiles your `*.sass` files
 - Prefixes your css
 - Bundles your `*.js` files with [browserify](http://browserify.org/) and [Babeljs](http://babeljs.io)
 - Minify css and uglify js
@@ -40,21 +40,21 @@ Scaffold a dummy with the yeoman generator:
 - You can now import components from [dummy-toolkit](https://github.com/dummy-team/dummy-toolkit) with `yo dummies:toolkit`
 
 #### Manual installation
-Get it from github:  
+Get it from github:
 
 1. Download [latest release](https://github.com/dummy-team/dummy/releases)
 - Run `npm install` to install all dependencies
-- To build `pug`, `css` and`js` run `gulp build`
+- To build `pug`, `sass` and`js` run `gulp build`
 
 ```shell
-curl -L https://github.com/dummy-team/dummy/archive/master.tar.gz | tar zx && cd ./dummy-master/ && npm install && gulp
+curl -L https://github.com/dummy-team/dummy/archive/master.tar.gz | tar zx && cd ./dummy-master/ && npm i && gulp
 ```
 
 ### Play
 
 1. To start working and serving files run `gulp`
 - Browser-sync will prompt the server url (`localhost:3000`)
-- You can now edit `*.scss` & `*.js` files, `*.css` & `*.js` will be overwritten
+- You can now edit `*.pug`, `*.sass` & `*.js` files, `*.html`, `*.css`, `*.js` and assets will be overwritten
 
 # Keep in touch
 

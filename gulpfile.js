@@ -1,28 +1,21 @@
 const gulp = require('gulp')
-const batch = require('gulp-batch')
-const watch = require('gulp-watch')
 const plumber = require('gulp-plumber')
 const notify = require('gulp-notify')
-const gutil = require('gulp-util')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const pug = require('gulp-pug')
 const sass = require('gulp-sass')
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss')
+const autoprefixer = require('autoprefixer')
 const minifyCSS = require('gulp-csso')
 const sourcemaps = require('gulp-sourcemaps')
-const babel = require('gulp-babel')
 const browserify = require('browserify')
 const babelify = require('babelify')
-const es2015 = require('babel-preset-es2015')
-const uglify = require('gulp-uglify')
 const browserSync = require('browser-sync').create()
-
-
+const uglify = require('gulp-uglify')
 
 gulp.task('pug', function(){
-  return gulp.src('templates/page/*.pug')
+  return gulp.src('src/templates/page/*.pug')
     .pipe(plumber({errorHandler: notify.onError({
         message: "<%= error.message %>",
         title: "Template compilation"
@@ -30,12 +23,12 @@ gulp.task('pug', function(){
     .pipe(pug({
       basedir: '.'
     }))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream())
 })
 
-gulp.task('scss', function(){
-  return gulp.src('css/src/**/*.scss')
+gulp.task('sass', function(){
+  return gulp.src('src/sass/*.sass')
     .pipe(plumber({errorHandler: notify.onError({
         message: "<%= error.message %>",
         title: "CSS preprocessing"
@@ -45,13 +38,13 @@ gulp.task('scss', function(){
     .pipe(postcss([autoprefixer({browsers: ['last 3 version']})]))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream({match: '**/*.css'}))
 })
 
 gulp.task('js', () => {
-  browserify('./js/src/main.js')
-    .transform(babelify.configure({ presets: [es2015] }))
+  return browserify('src/js/main.js',  {debug: true})
+    .transform(babelify.configure({ presets: ["@babel/preset-env"], sourceMaps: true }))
     .on('error', notify.onError({
         message: "<%= error.message %>",
         title: "Babelify JS"
@@ -63,25 +56,31 @@ gulp.task('js', () => {
       }))
     .pipe(source('main.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('js'))
+    // .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(uglify())
+    // .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.stream())
+})
+
+gulp.task('copyAssets', function() {
+  return gulp.src('src/assets/**/*')
+    .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream())
 })
 
 gulp.task('serve', function() {
 
     browserSync.init({
-        server: "./",
+        server: "./dist/",
         open: false,
     })
 
-    gulp.watch("css/src/**/*.scss", ['scss'])
-    gulp.watch("js/src/**/*.js", ['js'])
-    gulp.watch("templates/**/*.pug", ['pug'])
-    gulp.watch('img/**/*', browserSync.reload)
-})
+    gulp.watch('src/sass/**/*.sass').on('all', gulp.parallel('sass'))
+    gulp.watch('src/js/**/*.js').on('all', gulp.parallel('js',))
+    gulp.watch('src/templates/**/*.pug').on('all', gulp.parallel('pug'))
+    gulp.watch('src/assets/**').on('all', gulp.parallel('copyAssets'))
+  })
 
-gulp.task('default', [ 'build', 'serve' ])
-gulp.task('build', [ 'pug', 'scss', 'js' ])
+gulp.task('build', gulp.parallel('copyAssets', 'pug', 'sass', 'js'))
+gulp.task('default', gulp.parallel('build', 'serve'))
